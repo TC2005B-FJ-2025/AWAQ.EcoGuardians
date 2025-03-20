@@ -1,5 +1,27 @@
-.aw {
+.carrusel-patrocinadores {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px; 
+  margin: auto;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 900px; 
+}
+
+.swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: fit-content;
+}
+
+.swiper-slide img {
+  width: auto;
+  height: 60px; 
+  max-height: 80px; 
+  object-fit: contain; 
 }
