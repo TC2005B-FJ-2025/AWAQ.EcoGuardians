@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import awaq from "./componentes/Imagen_logo_awaq.png";
-import universidad from "./componentes/Imagen_logo_universidad.png";
-import logo from "./componentes/Videojuego_fondo_frame.png";
+import awaq from "../componentes/Imagen_logo_awaq.png";
+import universidad from "../componentes/Imagen_logo_universidad.png";
+import logo from "../componentes/Videojuego_fondo_frame.png";
 
 const Inicio = () => {
   return (
