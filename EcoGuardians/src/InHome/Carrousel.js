@@ -4,11 +4,11 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "./App.css";
+import "../home.css";
 
-import tecLogo from './componentes/tec_logo1.png';
-import gitlogo from "./componentes/Github.png";
-import microsoftLogo from "./componentes/micro.png";
+import tecLogo from '../componentes/tec_logo1.png';
+import gitlogo from "../componentes/Github.png";
+import microsoftLogo from "../componentes/micro.png";
 
 
 const SponsorCarousel = () => {
