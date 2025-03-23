@@ -13,8 +13,8 @@ const sponsors = [
 
 const SponsorsSection = () => {
   return (
-    <div className="text-center py-12 bg-gray-100">
-      <h2 className="text-5xl font-bold text-green-700 mb-3">Nuestros Sponsors</h2>
+    <div className="text-center py-12 bg-gray-100 px-20">
+      <h2 className="text-5xl font-bold text-verde-claro mb-3">Nuestros Sponsors</h2>
       <p className="text-lg text-gray-600 max-w-xl mx-auto mb-10">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt vel turpis lobortis pretium. Fusce pharetra bibendum elit sit amet cursus.
       </p>
@@ -26,7 +26,7 @@ const SponsorsSection = () => {
             </div>
             <h3 className="text-xl font-semibold mt-4">{sponsor.name}</h3>
             <p className="text-gray-600 text-sm mt-2">{sponsor.description}</p>
-            <a href="#" className="block mt-3 text-green-700 font-bold hover:underline">Saber más...</a>
+            <a href="#" className="block mt-3 text-verde-fuerte font-bold hover:underline">Saber más...</a>
           </div>
         ))}
       </div>

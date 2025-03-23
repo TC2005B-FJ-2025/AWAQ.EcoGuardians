@@ -10,6 +10,7 @@
   .swiper {
     width: 100%;
     max-width: 900px; 
+    margin-top: 20px;
   }
   
   .swiper-slide {
@@ -24,4 +25,5 @@
     height: 60px; 
     max-height: 80px; 
     object-fit: contain; 
+    margin: 0 auto;
   }

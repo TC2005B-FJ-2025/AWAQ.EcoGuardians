@@ -42,25 +42,25 @@ const footer = function () {
             id="logos-socials"
           >
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/somosawaq"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faFacebook} size="2x" />
+              <FontAwesomeIcon icon={faFacebook} size="2x" className="hover:text-verde-fuerte"/>
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/awaqongd/?igshid=MTk0NTkyODZkYg%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faInstagram} size="2x" />
+              <FontAwesomeIcon icon={faInstagram} size="2x" className="hover:text-verde-fuerte" />
             </a>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/company/awaq-ongd/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faLinkedin} size="2x" />
+              <FontAwesomeIcon icon={faLinkedin} size="2x" className="hover:text-verde-fuerte "/>
             </a>
           </div>
         </div>
@@ -99,7 +99,7 @@ const footer = function () {
               src={imgTecSocioformador}
               alt="logo Socioformadores Tec"
             />
-            <span className="text-center">
+            <span className="text-center text-[10px]">
               Socios Formadores del Tecnológico de Monterrey
             </span>
           </div>
@@ -109,7 +109,7 @@ const footer = function () {
               src={imgProjectGalileo}
               alt="logo Project Galileo"
             />
-            <span>Powered by Project Galileo</span>
+            <span className="text-[10px]">Powered by Project Galileo</span>
           </div>
           <div className="w-1/3 flex flex-col items-center gap-3 justify-start">
             <img
@@ -117,11 +117,11 @@ const footer = function () {
               src={imgUptimerobot}
               alt="logo Uptimerobot"
             />
-            <span>Supported by Uptimerobot</span>
+            <span className="text-[10px]">Supported by Uptimerobot</span>
           </div>
         </div>
       </div>
-      <div className="w-fit mx-auto mt-4">
+      <div className="w-fit mx-auto mt-4 text-xs">
         <span>Copyright @ 2025 Awaq EcoGuardians</span>
       </div>
     </div>
