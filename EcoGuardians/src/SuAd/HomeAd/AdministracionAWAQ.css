@@ -1,0 +1,123 @@
+/* Estilos para el contenedor principal */
+.app-container {
+    font-family: 'Arial, sans-serif';
+    margin: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Estilos para mensajes de error */
+  .error-message {
+    color: red;
+    padding: 10px;
+    background-color: #ffeeee;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .error-message button {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Estilos para el estado de carga */
+  .loading-state {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Estilos para grupos de formulario */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos para la tabla */
+  .admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .admin-table th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .admin-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Estilos para botones */
+  .submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .status-button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para estados */
+  .active-status {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .inactive-status {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Estilos para el título */
+  .app-title {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .section-title {
+    color: #444;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }

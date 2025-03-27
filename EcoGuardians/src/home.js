@@ -8,7 +8,7 @@ import { useState } from "react";
 import Footer from "./InHome/footer.js";
 import Sponsors from "./InHome/sponsors.js";  
 import { AnimatePresence } from "framer-motion";
-import {Login} from "./overlays/index.js";
+import {Login} from "./Overlays/index.js";
 
 const Home = () => {
   const [cargando, setCargando] = useState(true); 
