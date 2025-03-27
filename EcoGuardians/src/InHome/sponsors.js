@@ -18,7 +18,7 @@ const SponsorsSection = () => {
       <p className="text-lg text-gray-600 max-w-xl mx-auto mb-10">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt vel turpis lobortis pretium. Fusce pharetra bibendum elit sit amet cursus.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4" id="id">
         {sponsors.map((sponsor) => (
           <div key={sponsor.id} className="bg-gray-100 p-6 rounded-lg shadow-lg text-center transform transition-transform duration-300 hover:-translate-y-1">
             <div className="w-full h-36 rounded-lg bg-gray-300 flex items-center justify-center">
@@ -26,7 +26,7 @@ const SponsorsSection = () => {
             </div>
             <h3 className="text-xl font-semibold mt-4">{sponsor.name}</h3>
             <p className="text-gray-600 text-sm mt-2">{sponsor.description}</p>
-            <a href="#" className="block mt-3 text-verde-fuerte font-bold hover:underline">Saber más...</a>
+            <a href="#id" className="block mt-3 text-verde-fuerte font-bold hover:underline">Saber más...</a>
           </div>
         ))}
       </div>
