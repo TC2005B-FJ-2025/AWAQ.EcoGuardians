@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import awaq from "../Componentes/Imagen_logo_awaq.png";
-import universidad from "../Componentes/Imagen_logo_universidad.png";
-import logo from "../Componentes/Videojuego_fondo_frame.png";
+import { Link } from "react-router-dom"; 
+import awaq from "../componentes/Imagen_logo_awaq.png";
+import universidad from "../componentes/Imagen_logo_universidad.png";
+import logo from "../componentes/Videojuego_fondo_frame.png";
 
-const Inicio = ({ onBienvenidaComoInvitado , onLogin}) => {
+const Inicio = ({ onBienvenidaComoInvitado }) => {
   return (
     <section className="flex flex-col items-center justify-center text-center min-h-screen w-full">
       <h1 className="text-2xl font-normal pb-1">AWAQ presenta</h1>
@@ -25,13 +26,18 @@ const Inicio = ({ onBienvenidaComoInvitado , onLogin}) => {
           Jugar como invitado
         </button>
 
-        <button className="bg-verde-claro text-white text-lg px-5 py-2 rounded-full hover:bg-verde-fuerte transition" onClick={onLogin}>
+        {/* Este Link navega a la ruta /login */}
+        <Link
+          to="/login"
+          className="bg-verde-claro text-white text-lg px-5 py-2 rounded-full hover:bg-verde-fuerte transition flex items-center justify-center"
+        >
           Iniciar sesión
-        </button>
+        </Link>
       </div>
     </section>
   );
 };
+
 
 const Nosotros = () => {
   const [mostrarTexto, setMostrarTexto] = useState(false);

@@ -1,9 +1,9 @@
 import "../home.css";
 import SponsorCarousel from "./Carrousel.js";
-import logoAwaq from "../Componentes/Imagen_logo_awaq.png";
-import imgTecSocioformador from "../Componentes/Socios Formadores.png";
-import imgProjectGalileo from "../Componentes/project galileo-7a8a11be.png";
-import imgUptimerobot from "../Componentes/uptimerobot-logo-98d24b91.png";
+import logoAwaq from "../componentes/Imagen_logo_awaq.png";
+import imgTecSocioformador from "../componentes/Socios Formadores.png";
+import imgProjectGalileo from "../componentes/project galileo-7a8a11be.png";
+import imgUptimerobot from "../componentes/uptimerobot-logo-98d24b91.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

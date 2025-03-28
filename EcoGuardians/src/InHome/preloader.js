@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import logo from "../Componentes/imagen-cargando.png"; 
+import logo from "../componentes/imagen-cargando.png"; 
 
 const Preloader = ({ alFinalizar }) => {
   useEffect(() => {
