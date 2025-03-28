@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Encabezado from "./encabezado";
 
-const Videojuego = () => {
+const VideojuegoInvitado = () => {
   const [isPortrait, setIsPortrait] = useState(false);
 
   useEffect(() => {
@@ -60,4 +60,4 @@ const Videojuego = () => {
   );
 };
 
-export default Videojuego;
+export default VideojuegoInvitado;

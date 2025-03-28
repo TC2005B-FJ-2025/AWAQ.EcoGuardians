@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 // Importación de componentes e imágenes
 import Encabezado from "./encabezado.js";
-import logo from "../Componentes/Videojuego_fondo_frame.png";
-import imagenBoton from "../Componentes/interfaz_inicio.png";
-import imagenIzquierda from "../Componentes/logos_unity.png";
-import imagenDerecha from "../Componentes/logo_pontificia.png";
+import logo from "../componentes/Videojuego_fondo_frame.png";
+import imagenBoton from "../componentes/interfaz_inicio.png";
+import imagenIzquierda from "../componentes/logos_unity.png";
+import imagenDerecha from "../componentes/logo_pontificia.png";
 
 // Componente principal 
 const BienvenidaComoInvitado = ({ onJugar }) => {

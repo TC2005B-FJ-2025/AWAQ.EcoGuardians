@@ -6,13 +6,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../home.css";
 
-import tecLogo from '../Componentes/tec_logo1.png';
-import gitlogo from "../Componentes/Github.png";
-import microsoftLogo from "../Componentes/micro.png";
-import universidadEanLogo from "../Componentes/universidad-ean-logo.png";
-import salesForceLogo from "../Componentes/salesforce-Logo.png";
-import SenaLogo from "../Componentes/SENA-Logo.png";
-import checLogo from "../Componentes/chec-logo.png";
+import tecLogo from '../componentes/tec_logo1.png';
+import gitlogo from "../componentes/Github.png";
+import microsoftLogo from "../componentes/micro.png";
+import universidadEanLogo from "../componentes/universidad-ean-logo.png";
+import salesForceLogo from "../componentes/salesforce-Logo.png";
+import SenaLogo from "../componentes/SENA-Logo.png";
+import checLogo from "../componentes/chec-logo.png";
 
 
 const SponsorCarousel = () => {
