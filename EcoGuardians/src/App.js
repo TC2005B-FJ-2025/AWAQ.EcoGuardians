@@ -15,6 +15,7 @@ function App() {
         <Route path="/registro" element={<Registro />} />
         <Route path="/bienvenida" element={<BienvenidaUsuarioRegistrado />} /> 
         <Route path="/juego" element={<VideojuegoRegistrado />} />
+        
       </Routes>
     </BrowserRouter>
   );

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './AdministracionAWAQ.css'; // Importamos los estilos CSS
+import './Crud_admin.css'; // Importamos los estilos CSS
 
-const AdministracionAWAQ = () => {
+export function AdministracionAWAQ() {
   // Estados del componente
   const [admins, setAdmins] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -293,6 +293,6 @@ const AdministracionAWAQ = () => {
       </div>
     </div>
   );
-};
+}
 
 export default AdministracionAWAQ;
