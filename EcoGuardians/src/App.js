@@ -5,6 +5,8 @@ import Registro from "./overlays/Registro.js";
 
 import BienvenidaUsuarioRegistrado from "./InHome/BienvenidaUsuarioRegistrado";
 import VideojuegoRegistrado from "./InHome/VideojuegoRegistrado";
+import BienvenidaComoInvitado from "./InHome/BienvenidaComoInvitado.js";
+import VideojuegoInvitado from "./InHome/VideojuegoInvitado.js";
 
 function App() {
   return (
@@ -14,8 +16,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<Registro />} />
         <Route path="/bienvenida" element={<BienvenidaUsuarioRegistrado />} /> 
+        <Route path="/bienvenidaInvitado" element={<BienvenidaComoInvitado />} />
         <Route path="/juego" element={<VideojuegoRegistrado />} />
-        
+        <Route path="/juegoInvitado" element={<VideojuegoInvitado/>} />
+        {/* Puedes agregar más rutas aquí */}
       </Routes>
     </BrowserRouter>
   );

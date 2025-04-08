@@ -60,12 +60,12 @@ const BienvenidaUsuarioRegistrado = () => {
             <img
               src={logoUnity}
               alt="Logo Unity"
-              className="w-[100px] h-[30px] sm:w-[150px] sm:h-[45px] md:w-[220px] md:h-[65px]"
+              className="w-[100px] h-[30px] sm:w-[150px] sm:h-[45px] md:w-[220px] md:h-[65px] translate-y-6 sm:translate-y-12 md:translate-y-16 lg:translate-y-20"
             />
             <img
               src={logoUniversidad}
               alt="Logo Universidad"
-              className="w-[80px] sm:w-[100px] md:w-[150px] -mr-5"
+              className="w-[80px] sm:w-[100px] md:w-[150px] -mr-5 translate-y-0"
             />
           </div>
         </div>

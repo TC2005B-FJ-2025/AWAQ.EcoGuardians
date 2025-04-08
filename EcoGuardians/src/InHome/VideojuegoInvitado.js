@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Encabezado from "./encabezado";
+import { useNavigate } from "react-router-dom";
+
 
 const VideojuegoInvitado = () => {
   const [isPortrait, setIsPortrait] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const checkOrientation = () => {
@@ -31,7 +35,11 @@ const VideojuegoInvitado = () => {
       </div>
 
       {/* Botón "Registrarse" arriba a la derecha */}
-      <button className="absolute top-20 right-4 sm:top-20 sm:right-8 bg-white text-green-700 text-lg px-4 sm:px-6 py-2 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] z-40">
+      <button className="absolute top-20 right-4 sm:top-20 sm:right-8 bg-white text-green-700 text-lg px-4 sm:px-6 py-2 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] z-40" 
+      onClick={event => {
+        event.preventDefault();
+        navigate("../registro")
+    }}>
         Registrarse
       </button>
 
