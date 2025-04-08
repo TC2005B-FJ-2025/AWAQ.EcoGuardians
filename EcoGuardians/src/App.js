@@ -7,6 +7,7 @@ import BienvenidaUsuarioRegistrado from "./InHome/BienvenidaUsuarioRegistrado";
 import VideojuegoRegistrado from "./InHome/VideojuegoRegistrado";
 import BienvenidaComoInvitado from "./InHome/BienvenidaComoInvitado.js";
 import VideojuegoInvitado from "./InHome/VideojuegoInvitado.js";
+import PreguntasFrecuentes from "./FAQs/PreguntasFrecuentes.js"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/bienvenidaInvitado" element={<BienvenidaComoInvitado />} />
         <Route path="/juego" element={<VideojuegoRegistrado />} />
         <Route path="/juegoInvitado" element={<VideojuegoInvitado/>} />
+        <Route path="/faqs" element={<PreguntasFrecuentes />} />
         {/* Puedes agregar más rutas aquí */}
       </Routes>
     </BrowserRouter>
