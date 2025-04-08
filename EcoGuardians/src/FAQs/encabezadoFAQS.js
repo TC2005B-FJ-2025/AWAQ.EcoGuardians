@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Importa Link de react-router-dom
+import { Link } from "react-router-dom"; 
 import LogoHeader from '../componentes/LogoHeader.png';
 
-const Encabezado = () => {
+const EncabezadoFAQS = () => {
     const [idioma, setIdioma] = useState("ES");
     const [mostrarDropdown, setMostrarDropdown] = useState(false);
 
@@ -14,10 +14,12 @@ const Encabezado = () => {
     return (
         <header className="w-full bg-[#2B5629] py-3 px-3 flex justify-between items-center relative ">
 
-            {/* Izquierda: Volver */}
-            <a href="https://somosawaq.org" className="text-white font-bold text-xs no-underline z-10">
-                &lt; Volver a la página de AWAQ
-            </a>
+            <Link 
+                    to="/" // Redirige a la ruta /faqs
+                    className="text-white font-bold text-xs no-underline z-10"
+                >
+                     &lt; Volver a la página principal
+            </Link>
 
             {/* Centro: Logo */}
             <div className="absolute left-1/2 transform -translate-x-1/2 z-0">
@@ -27,13 +29,6 @@ const Encabezado = () => {
             {/* Derecha: FAQs e Idioma */}
             <div className="flex items-center gap-4 z-10">
 
-                {/* Botón FAQs */}
-                <Link 
-                    to="/faqs" // Redirige a la ruta /faqs
-                    className="bg-[#2B5629] text-white border-2 border-white px-3.5 py-2 text-base rounded-xl hover:font-bold transition"
-                >
-                    FAQs
-                </Link>
 
                 {/* Dropdown idioma */}
                 <div className="relative">
@@ -67,4 +62,4 @@ const Encabezado = () => {
     );
 };
 
-export default Encabezado;
+export default EncabezadoFAQS;
