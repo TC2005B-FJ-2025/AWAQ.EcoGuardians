@@ -5,22 +5,22 @@ export const questions = [
             {        
             question: "¿Cómo puedo crear mi cuenta? ",
             answer:
-                "Si es tu primera vez jugando y todavía no cuentas con una cuenta, en la página principal presiona el botón de registro, este te llevará a la página de registro en donde se te solicitan tus datos.",
+                "Si es tu primera vez jugando y todavía no cuentas con una cuenta, en la página principal presiona el botón de Iniciar sesión, al final verás la opción de Regístrate, da click ahí y llena los campos que se te piden, al finalizar presiona el botón de Crear cuenta.",
             },
             {
             question: "¿Cómo inicio sesión si ya tengo una cuenta?  ",
             answer:
-                "Si ya tienes una cuenta, solamente ingresa tu correo electrónico y tu contraseña para volver a acceder, y da click en Iniciar Sesión.",
+                "Si ya tienes una cuenta, solamente presiona el botón de Iniciar Sesión en la página principal e ingresa tu correo electrónico y tu contraseña para volver a acceder, y da click en Iniciar Sesión.",
             },
             {
             question: "¿Cómo puedo recuperar mi contraseña?",
             answer:
-                "No te preocupes si no recuerdas tu contraseña, para restablecerla únicamente presiona el botón de Forgot your password , que se encuentra en la página principal, esto te redirigirá a la siguiente pantalla que te permitirá restablecer tu contraseña.",
+                "No te preocupes si no recuerdas tu contraseña, para restablecerla únicamente presiona el botón de He olvidado mi contraseña, que aparece en el formulario de inicio de sesión, esto te redirigirá a la siguiente pantalla que te permitirá restablecer tu contraseña.",
             },
             {
             question: "¿Qué es el código de verificación?",
             answer:
-                "Al momento de reestablecer tu contraseña, te llegara a tu correo un mensaje con un número de 6 dígitos los cuales debes de ingresar en la página de recuperación de contraseña para verificar su identidad.",
+                "Al momento de reestablecer su contraseña, le llegara a tu correo un mensaje con un número de 6 dígitos los cuales debe de ingresar en la página de recuperación de contraseña para verificar su identidad.",
             },
         ],
     },
@@ -58,7 +58,7 @@ export const questions = [
             {
             question: "¿Puedo jugar en el teléfono?",
             answer:
-                "No, por el momento el juego está habilitado para usarse en computadora.",
+                "No, por el momento el juego está habilitado para usarse unicamente en computadora.",
             },
         ],
     },
@@ -90,7 +90,7 @@ export const questions = [
             {
             question: "¿Cómo cambiar el idioma de la página?",
             answer:
-                "En la parte superior derecha de la página principal puedes encontrar un ícono del idioma.",
+                "En la parte superior derecha de la página principal puedes encontrar un ícono del idioma, al presionarlo le aparecen las opciones de idioma hábiles.",
             },
             {
             question: "¿Dónde puedo leer los términos y condiciones?",

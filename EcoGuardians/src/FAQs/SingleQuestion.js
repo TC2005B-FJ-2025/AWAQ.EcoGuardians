@@ -1,44 +1,34 @@
 import React, { useState } from "react";
-import { BiMinus } from "react-icons/bi";
-import { BsPlusLg } from "react-icons/bs";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io"; // Flechas
 
 export default function SingleQuestion({ question, answer }) {
   const [showAnswer, setShowAnswer] = useState(false);
 
   return (
-    <>
-      <div className="border border-gray-400 rounded-lg bg-white mb-4">
-        <article className="flex items-center justify-between p-4 lg:p-6">
-          <h2
-            className="cursor-pointer"
-            onClick={() => setShowAnswer(!showAnswer)}
-          >
-            {question}
-          </h2>
-          <ul>
-            {!showAnswer && (
-              <li>
-                <button onClick={() => setShowAnswer(true)}>
-                  <BsPlusLg />
-                </button>
-              </li>
-            )}
-            {showAnswer && (
-              <li>
-                <button onClick={() => setShowAnswer(false)}>
-                  <BiMinus />
-                </button>
-              </li>
-            )}
-          </ul>
-        </article>
-
-        <article
-          className={`${showAnswer && "border-t border-gray-400 p-4 lg:p-6"}`}
+      <div
+        className={`border border-gray-400 rounded-lg bg-white mb-4 transition-all duration-300 ${
+          showAnswer
+            ? "shadow-md shadow-[#5F874E]"  // sombra verde al abrir
+            : "shadow-sm shadow-gray-400"   // sombra gris al cerrar
+        }`}
+      >
+      <article className="flex items-center justify-between p-4 lg:p-6">
+        <h2
+          className="cursor-pointer text-black font-semibold text-[18px] font-heading"
+          onClick={() => setShowAnswer(!showAnswer)}
         >
-          {showAnswer && <p>{answer}</p>}
+          {question}
+        </h2>
+        <button onClick={() => setShowAnswer(!showAnswer)}>
+          {showAnswer ? <IoIosArrowUp size={20} /> : <IoIosArrowDown size={20} />}
+        </button>
+      </article>
+
+      {showAnswer && (
+        <article className="border-t border-gray-400 p-4 lg:p-6 text-[#484848] text-justify text-[16px] font-subheading">
+          <p>{answer}</p>
         </article>
-      </div>
-    </>
+      )}
+    </div>
   );
 }
