@@ -12,8 +12,8 @@ export default function App() {
       {/* Contenedor de preguntas frecuentes con fondo gris claro */}
       <div className="bg-gray-50 py-4 px-4">
         <div className="text-center mb-4 py-14 px-4">
-          <h2 className="text-7xl font-bold text-[#2A552B] font-title">
-            EcoGuardianes 2.0
+          <h2 className="text-7xl font-bold text-[#5F874E] font-title">
+            Ecoguardianes 2.0
           </h2>
         </div>
 
