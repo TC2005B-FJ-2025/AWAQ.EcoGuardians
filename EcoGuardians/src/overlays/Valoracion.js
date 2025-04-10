@@ -13,6 +13,8 @@ function Valoracion() {
       <FontAwesomeIcon
         icon={faXmark}
         className="absolute right-[10px] fa-xl text-gray-400 top-[10px] cursor-pointer"
+        role="button"
+        aria-label="Cerrar ventana"
       ></FontAwesomeIcon>
 
       <div className="mx-auto w-fit flex items-center flex-col">
@@ -33,24 +35,31 @@ function Valoracion() {
             strokeWidth="1"
             onClick={() => handleStarClick(star)}
             className="cursor-pointer"
+            role="button"
+            aria-label={`Seleccionar ${star} estrellas`}
           >
             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
           </svg>
         ))}
-
-        
       </div>
 
-      <div className="mb-2 mx-auto" id ="problem">
-          <p className="text-[15px]">¿Tienes algun problema? <span className="cursor-pointer text-verde-fuerte font-semibold"><a href="#problem">Reportar un error</a></span></p>
-        </div>
+      <div className="mb-2 mx-auto" id="problem">
+        <p className="text-[15px]">
+          ¿Tienes algun problema? 
+          <span className="cursor-pointer text-verde-fuerte font-semibold">
+            <a href="#problem">Reportar un error</a>
+          </span>
+        </p>
+      </div>
 
-        <button
-          className="bg-verde-claro rounded-3xl p-2 text-white"
-          disabled={rating === 0}
-        >
-          Enviar
-        </button>
+      <button
+        className="bg-verde-claro rounded-3xl p-2 text-white"
+        disabled={rating === 0}
+        aria-disabled={rating === 0}
+        aria-label="Enviar valoración"
+      >
+        Enviar
+      </button>
     </div>
   );
 }
