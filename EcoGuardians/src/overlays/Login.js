@@ -145,7 +145,7 @@ function Login() {
               className="absolute right-[10px] fa-xl text-gray-400 top-[10px] cursor-pointer"
             />
 
-            <h2 className="bg-verde-claro rounded-3xl p-2  mt-4">
+            <h2 className="mx-auto w-fit font-semibold text-[22px]">
               Iniciar sesión
             </h2>
 
@@ -160,6 +160,7 @@ function Login() {
                 onChange={(e) => setUsername(e.target.value)}
                 className="border-2 border-black p-[2px] px-2 rounded-2xl peer"
                 required
+                aria-label="Correo electrónico"
               />
               <div className="text-red-500 hidden peer-invalid:block">
                 ¡Correo inválido!
@@ -182,6 +183,7 @@ function Login() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
+                  aria-label="Contraseña"
                 />
                 <button
                   className="absolute right-2 cursor-pointer"
@@ -189,6 +191,7 @@ function Login() {
                     event.preventDefault();
                     setVisibility(!visibility);
                   }}
+                  aria-label="Mostrar/Ocultar contraseña"
                 >
                   <FontAwesomeIcon icon={visibility ? faEyeSlash : faEye} />
                 </button>
@@ -228,6 +231,7 @@ function Login() {
               <button
                 type="submit"
                 className="bg-verde-claro rounded-3xl p-2 text-white mt-4"
+                aria-label="Iniciar sesión"
               >
                 Iniciar sesión
               </button>

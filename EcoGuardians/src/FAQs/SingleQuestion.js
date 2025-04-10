@@ -12,7 +12,9 @@ export default function SingleQuestion({ question, answer }) {
             : "shadow-sm shadow-gray-400"   // sombra gris al cerrar
         }`}
       >
-      <article className="flex items-center justify-between p-4 lg:p-6">
+      <article className="flex items-center justify-between p-4 lg:p-6"
+       role="region"
+       aria-labelledby={`question-${question}`}>
         <h2
           className="cursor-pointer text-black font-semibold text-[18px] font-heading"
           onClick={() => setShowAnswer(!showAnswer)}

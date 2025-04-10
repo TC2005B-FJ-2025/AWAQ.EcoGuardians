@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import awaq from "../componentes/Imagen_logo_awaq.png";
 import universidad from "../componentes/Imagen_logo_universidad.png";
 import logo from "../componentes/Videojuego_fondo_frame.png";
@@ -22,6 +22,7 @@ const Inicio = ({ onBienvenidaComoInvitado }) => {
         <button
           onClick={onBienvenidaComoInvitado}
           className="bg-white text-black text-lg px-5 py-2 rounded-full border-black border-2 hover:bg-verde-fuerte hover:border-transparent hover:text-white transition"
+          aria-label="Jugar como invitado"
         >
           Jugar como invitado
         </button>
@@ -30,6 +31,7 @@ const Inicio = ({ onBienvenidaComoInvitado }) => {
         <Link
           to="/login"
           className="bg-verde-claro text-white text-lg px-5 py-2 rounded-full hover:bg-verde-fuerte transition flex items-center justify-center"
+          aria-label="Iniciar sesión"
         >
           Iniciar sesión
         </Link>
@@ -37,7 +39,6 @@ const Inicio = ({ onBienvenidaComoInvitado }) => {
     </section>
   );
 };
-
 
 const Nosotros = () => {
   const [mostrarTexto, setMostrarTexto] = useState(false);

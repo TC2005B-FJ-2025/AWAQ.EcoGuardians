@@ -1,6 +1,6 @@
 import React from "react";
 import { questions } from "./questions";
-import CategoryAccordion from "./CategoryAccordion";
+import CategoryAccordion from "./CategoryAccordion.js";
 import EncabezadoFAQS from "./encabezadoFAQS.js"; 
 import Footer from "../InHome/footer.js";
 

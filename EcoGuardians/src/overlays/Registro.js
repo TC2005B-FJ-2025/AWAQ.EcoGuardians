@@ -129,6 +129,7 @@ function Registro() {
                     value={formData.name}
                     onChange={handleChange}
                     className="border-2 border-black p-[2px] px-2 rounded-2xl mb-5"
+                    aria-label="Nombre completo"
                   />
                 </div>
 
@@ -164,6 +165,7 @@ function Registro() {
                 value={formData.email}
                 onChange={handleChange}
                 className="border-2 border-black p-[2px] px-2 rounded-2xl mb-5"
+                aria-label="Correo electrónico"
               />
 
               <label htmlFor="password" className="mb-2">
@@ -250,26 +252,26 @@ function Registro() {
               <button
                 type="submit"
                 className="bg-verde-claro hover:bg-verde-fuerte transition-colors rounded-3xl p-2 text-white mt-4 font-medium"
+                aria-label="Registrarse"
               >
                 Registrarse
               </button>
             </form>
           </div>
-
         </div>
 
         <div className="absolute bottom-4 w-full flex justify-between px-4 sm:px-10">
-            <img
-              src={imagenIzquierda}
-              alt="Logo Unity"
-              className="w-[100px] h-[30px] sm:w-[150px] sm:h-[45px] md:w-[220px] md:h-[65px] translate-y-6 sm:translate-y-12 md:translate-y-16 lg:translate-y-20"
-            />
-            <img
-              src={imagenDerecha}
-              alt="Logo Universidad"
-              className="w-[80px] sm:w-[100px] md:w-[150px] -mr-5 translate-y-0"
-            />
-          </div>
+          <img
+            src={imagenIzquierda}
+            alt="Logo Unity"
+            className="w-[100px] h-[30px] sm:w-[150px] sm:h-[45px] md:w-[220px] md:h-[65px] translate-y-6 sm:translate-y-12 md:translate-y-16 lg:translate-y-20"
+          />
+          <img
+            src={imagenDerecha}
+            alt="Logo Universidad"
+            className="w-[80px] sm:w-[100px] md:w-[150px] -mr-5 translate-y-0"
+          />
+        </div>
       </div>
     </motion.div>
   );
