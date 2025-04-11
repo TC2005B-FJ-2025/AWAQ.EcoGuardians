@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Encabezado from "./encabezado";
 import { useNavigate } from "react-router-dom";
+import NotificationBanner from "../overlays/NotificationBanner";
 
 const VideojuegoInvitado = () => {
   const [isPortrait, setIsPortrait] = useState(false);
@@ -27,8 +28,9 @@ const VideojuegoInvitado = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="w-full min-h-screen bg-white flex flex-col overflow-auto relative"
     >
+      <NotificationBanner className=" relative z-100"/>
       {/* Encabezado */}
-      <div className="sticky top-0 z-50">
+      <div className="sticky top-0">
         <Encabezado />
       </div>
 

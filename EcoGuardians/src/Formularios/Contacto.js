@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Contacto() {
+function Contacto({onHandleClose}) {
   const [formData, setFormData] = useState({
     name: "",
     username: "",
@@ -119,13 +119,13 @@ function Contacto() {
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: "100%", opacity: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="flex justify-center items-center h-screen w-screen bg-white"
+      className="flex justify-center items-center bg-white"
     >
-      <div className="w-[500px] border-2 border-verde-claro relative p-4 rounded-xl">
+      <div className="w-[500px] relative p-4 ">
         <FontAwesomeIcon
           icon={faXmark}
           className="absolute right-[10px] fa-xl text-gray-400 top-[10px] cursor-pointer"
-          onClick={() => navigate("/")}
+          onClick={() => onHandleClose()}
         />
 
         <h2 className="mx-auto w-fit font-semibold text-[22px]">Únete a nuestra red de contactos</h2>
@@ -222,6 +222,7 @@ function Contacto() {
           <button
             type="submit"
             className="bg-verde-claro hover:bg-verde-fuerte transition-colores rounded-3xl p-2 text-white mt-4 font-medium"
+            onClick={() => onHandleClose()}
           >
             Unirme
           </button>

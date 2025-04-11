@@ -3,6 +3,7 @@ import BannerNotificacion from "../componentes/BannerNotificaciones-bg.jpg";
 import LogoAwaq from "../componentes/Imagen_logo_awaq.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import Contacto from "../Formularios/Contacto";
 
 const NotificationBanner = () => {
   const [showEmailInput, setShowEmailInput] = useState(false);
@@ -27,9 +28,6 @@ const NotificationBanner = () => {
     setShowEmailInput(true);
   };
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
 
   const handleSubmitEmail = (e) => {
     e.preventDefault();
@@ -45,7 +43,19 @@ const NotificationBanner = () => {
   // Si no debe renderizarse, retorna null
   if (!shouldRender) return null;
 
+  if(showEmailInput && !submitted){
+    return(
+    <div
+      className={`fixed top-0 bg-white right-1/2 translate-x-1/2 border border-gray-200 shadow-lg px-3 py-2 rounded-lg w-[450px] font-sans z-50 bg-cover bg-center transition-transform duration-1000 ease-out
+        ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+    >
+    <Contacto onHandleClose={() => handleClose()}/>
+    </div>
+    )
+}
+
   return (
+    
     <div
       className={`fixed top-0 right-1/2 translate-x-1/2 border border-gray-200 shadow-lg px-3 py-2 rounded-lg w-[450px] font-sans z-50 bg-cover bg-center transition-transform duration-1000 ease-out
         ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
@@ -74,42 +84,11 @@ const NotificationBanner = () => {
               className="px-3 py-2 bg-verde-fuerte text-white rounded-xl"
               onClick={handleSubscribe}
             >
-              Suscríbete
+              Volverme Contacto
             </button>
           </div>
         </>
       )}
-
-
-      {showEmailInput && !submitted && (
-        <form
-          onSubmit={handleSubmitEmail}
-          className="flex flex-col space-y-3 h-[192px] justify-center"
-        >
-          <label
-            className="mx-auto font-semibold"
-            htmlFor="email-notification-banner"
-          >
-            Ingresa tu correo para recibir noticias de AWAQ
-          </label>
-          <input
-            id="email-notification-banner"
-            type="email"
-            placeholder="Ingresa tu correo"
-            value={email}
-            onChange={handleEmailChange}
-            required
-            className="px-3 py-2 border border-gray-300 rounded"
-          />
-          <button
-            type="submit"
-            className="px-3 py-2 bg-verde-fuerte text-white rounded-xl"
-          >
-            Enviar
-          </button>
-        </form>
-      )}
-
       
       {submitted && (
         <div className="flex flex-col items-center justify-center h-[192px]">
