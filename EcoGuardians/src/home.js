@@ -9,6 +9,7 @@ import { AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom"; // Importa useNavigate desde react-router-dom
 import SponsorInfoSection from "./InHome/seccionColabora.js";
 import NotificationBanner from "./overlays/NotificationBanner.js";
+import Contacto from "./Formularios/Contacto.js";
 
 const Home = () => {
   const [cargando, setCargando] = useState(true); 
@@ -23,14 +24,14 @@ const Home = () => {
             <>
               <Encabezado />
               <NotificationBanner />
-              <Inicio 
-                onBienvenidaComoInvitado={() => navigate("/bienvenidaInvitado")} 
-                onLogin={() => navigate("/login")} 
-              />
+              <Inicio />
               <Nosotros />
               <Sponsors />
               <SponsorInfoSection />
               <Footer />
+
+              <Contacto />
+
             </>
 
         </AnimatePresence>
