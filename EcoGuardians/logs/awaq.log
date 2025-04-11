@@ -1,0 +1,44 @@
+2025-04-11 00:51:29,269 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-11 00:51:29,269 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-11 00:51:29,285 [INFO]  * Restarting with stat
+2025-04-11 00:51:30,732 [WARNING]  * Debugger is active!
+2025-04-11 00:51:30,737 [INFO]  * Debugger PIN: 262-538-948
+2025-04-11 00:54:00,427 [INFO] 127.0.0.1 - - [11/Apr/2025 00:54:00] "OPTIONS /sponsors HTTP/1.1" 200 -
+2025-04-11 00:54:00,432 [INFO] 
+--- [POST] /registro ---
+2025-04-11 00:54:00,788 [INFO] 127.0.0.1 - - [11/Apr/2025 00:54:00] "POST /sponsors HTTP/1.1" 200 -
+2025-04-11 00:55:52,522 [INFO] 127.0.0.1 - - [11/Apr/2025 00:55:52] "OPTIONS /sponsors HTTP/1.1" 200 -
+2025-04-11 00:55:52,528 [INFO] 
+--- [POST] /registro ---
+2025-04-11 00:55:52,789 [INFO] 127.0.0.1 - - [11/Apr/2025 00:55:52] "POST /sponsors HTTP/1.1" 200 -
+2025-04-11 01:02:22,609 [INFO]  * Detected change in 'c:\\Users\\Hp\\OneDrive\\Escritorio\\development\\AwaqResp\\AWAQ.EcoGuardians\\EcoGuardians\\src\\back\\sponsors\\sponsors.py', reloading
+2025-04-11 01:02:22,667 [INFO]  * Restarting with stat
+2025-04-11 01:02:24,361 [WARNING]  * Debugger is active!
+2025-04-11 01:02:24,362 [INFO]  * Debugger PIN: 262-538-948
+2025-04-11 01:02:26,382 [INFO]  * Detected change in 'c:\\Users\\Hp\\OneDrive\\Escritorio\\development\\AwaqResp\\AWAQ.EcoGuardians\\EcoGuardians\\src\\back\\sponsors\\sponsors.py', reloading
+2025-04-11 01:02:26,425 [INFO]  * Restarting with stat
+2025-04-11 01:02:27,734 [WARNING]  * Debugger is active!
+2025-04-11 01:02:27,738 [INFO]  * Debugger PIN: 262-538-948
+2025-04-11 01:02:32,770 [INFO]  * Detected change in 'c:\\Users\\Hp\\OneDrive\\Escritorio\\development\\AwaqResp\\AWAQ.EcoGuardians\\EcoGuardians\\src\\back\\sponsors\\sponsors.py', reloading
+2025-04-11 01:02:32,819 [INFO]  * Restarting with stat
+2025-04-11 01:02:34,159 [WARNING]  * Debugger is active!
+2025-04-11 01:02:34,164 [INFO]  * Debugger PIN: 262-538-948
+2025-04-11 01:02:37,185 [INFO]  * Detected change in 'c:\\Users\\Hp\\OneDrive\\Escritorio\\development\\AwaqResp\\AWAQ.EcoGuardians\\EcoGuardians\\src\\back\\sponsors\\sponsors.py', reloading
+2025-04-11 01:02:37,233 [INFO]  * Restarting with stat
+2025-04-11 01:02:38,720 [WARNING]  * Debugger is active!
+2025-04-11 01:02:38,724 [INFO]  * Debugger PIN: 262-538-948
+2025-04-11 01:09:09,956 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-11 01:09:09,957 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-11 01:09:09,958 [INFO]  * Restarting with stat
+2025-04-11 01:09:11,255 [WARNING]  * Debugger is active!
+2025-04-11 01:09:11,267 [INFO]  * Debugger PIN: 262-538-948
+2025-04-11 01:09:15,855 [INFO] 127.0.0.1 - - [11/Apr/2025 01:09:15] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-11 01:09:16,103 [INFO] 
+--- [POST] /contacto ---
+2025-04-11 01:09:16,375 [INFO] 127.0.0.1 - - [11/Apr/2025 01:09:16] "POST /contacto HTTP/1.1" 200 -
+2025-04-11 01:13:10,683 [INFO] 127.0.0.1 - - [11/Apr/2025 01:13:10] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-11 01:13:10,945 [INFO] 
+--- [POST] /contacto ---
+2025-04-11 01:13:11,214 [INFO] 127.0.0.1 - - [11/Apr/2025 01:13:11] "POST /contacto HTTP/1.1" 200 -

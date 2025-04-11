@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS  # Importa CORS
+from flask_cors import CORS 
 from simple_salesforce import Salesforce
 
 app = Flask(__name__)

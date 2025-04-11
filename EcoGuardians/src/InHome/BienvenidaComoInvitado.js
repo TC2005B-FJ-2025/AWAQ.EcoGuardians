@@ -8,7 +8,7 @@ import logo from "../componentes/Videojuego_fondo_frame.png";
 import imagenBoton from "../componentes/interfaz_inicio.png";
 import imagenIzquierda from "../componentes/logos_unity.png";
 import imagenDerecha from "../componentes/logo_pontificia.png";
-import { useNavigate } from "react-router-dom"; // Importa useNavigate desde react-router-dom
+import { useNavigate } from "react-router-dom";
 
 
 // Componente principal 

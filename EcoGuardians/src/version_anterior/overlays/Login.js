@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
-import Encabezado from "../InHome/encabezado";
+import Encabezado from "../../InHome/encabezado";
 import logo from "../componentes/Videojuego_fondo_frame.png";
 import imagenIzquierda from "../componentes/logos_unity.png";
 import imagenDerecha from "../componentes/logo_pontificia.png";
