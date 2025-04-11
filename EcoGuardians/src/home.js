@@ -2,26 +2,17 @@ import { Inicio, Nosotros } from "./InHome/inicio.js";
 import './index.css';
 import Preloader from "./InHome/preloader.js";
 import Encabezado from "./InHome/encabezado.js";
-import BienvenidaComoInvitado from "./InHome/BienvenidaComoInvitado.js";
-import BienvenidaUsuarioRegistrado from "./InHome/BienvenidaUsuarioRegistrado.js";
-import VideojuegoInvitado from "./InHome/VideojuegoInvitado.js";
-import VideojuegoRegistrado from "./InHome/VideojuegoRegistrado.js";
 import { useState } from "react";
 import Footer from "./InHome/footer.js";
 import Sponsors from "./InHome/sponsors.js";  
 import { AnimatePresence } from "framer-motion";
-import { Login } from "./overlays/index.js";
-import { Routes, Route } from 'react-router-dom';
-import Registro from "./overlays/Registro.js"; 
-
-<Routes>
-  <Route path="/registro" element={<Registro />} />
-</Routes>
-
+import { useNavigate } from "react-router-dom"; // Importa useNavigate desde react-router-dom
+import SponsorInfoSection from "./InHome/seccionColabora.js";
+import NotificationBanner from "./overlays/NotificationBanner.js";
 
 const Home = () => {
   const [cargando, setCargando] = useState(true); 
-  const [pantalla, setPantalla] = useState("inicio"); 
+  const navigate = useNavigate();
 
   return (
     <div className="w-full min-h-screen overflow-x-hidden">
@@ -29,34 +20,19 @@ const Home = () => {
         <Preloader alFinalizar={() => setCargando(false)} />
       ) : (
         <AnimatePresence>
-          {pantalla === "inicio" && (
             <>
               <Encabezado />
+              <NotificationBanner />
               <Inicio 
-                onBienvenidaComoInvitado={() => setPantalla("bienvenidaInvitado")} 
-                onLogin={() => setPantalla("login")} 
+                onBienvenidaComoInvitado={() => navigate("/bienvenidaInvitado")} 
+                onLogin={() => navigate("/login")} 
               />
               <Nosotros />
               <Sponsors />
+              <SponsorInfoSection />
               <Footer />
             </>
-          )}
 
-{pantalla === "bienvenidaInvitado" && (
-  <BienvenidaComoInvitado onJugar={() => setPantalla("juegoI")} />
-)}
-
-{pantalla === "bienvenidaUsuario" && (
-  <BienvenidaUsuarioRegistrado onJugar={() => setPantalla("juegoR")} />
-)}
-
-
-          {pantalla === "juegoI" && <VideojuegoInvitado />}
-          {pantalla === "juegoR" && <VideojuegoRegistrado />}
-
-          {pantalla === "login" && (
-            <Login onJugar={() => setPantalla("bienvenidaUsuario")} />
-          )}
         </AnimatePresence>
       )}
     </div>

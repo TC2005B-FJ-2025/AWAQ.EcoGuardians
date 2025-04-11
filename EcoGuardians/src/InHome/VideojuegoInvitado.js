@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Encabezado from "./encabezado";
+import { useNavigate } from "react-router-dom";
 
 const VideojuegoInvitado = () => {
   const [isPortrait, setIsPortrait] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const checkOrientation = () => {
@@ -23,20 +25,32 @@ const VideojuegoInvitado = () => {
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: "100%", opacity: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="w-full h-screen bg-white flex flex-col overflow-hidden relative"
+      className="w-full min-h-screen bg-white flex flex-col overflow-auto relative"
     >
-      {/* Encabezado fijo */}
+      {/* Encabezado */}
       <div className="sticky top-0 z-50">
         <Encabezado />
       </div>
 
-      {/* Botón "Registrarse" arriba a la derecha */}
-      <button className="absolute top-20 right-4 sm:top-20 sm:right-8 bg-white text-green-700 text-lg px-4 sm:px-6 py-2 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] z-40">
-        Registrarse
-      </button>
+      {/* Botones flotantes */}
+      <div className="fixed top-28 right-4 sm:right-6 flex flex-col gap-4 z-40 max-w-[90vw]">
+        <button
+          className="bg-white text-green-700 text-sm px-3 sm:px-4 py-1.5 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[180px]"
+          onClick={() => navigate("../registro")}
+        >
+          Contáctanos
+        </button>
+
+        <button
+          className="bg-white text-green-700 text-sm px-3 sm:px-4 py-1.5 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[180px]"
+          onClick={() => navigate("../registro")}
+        >
+          Regístrate como Sponsor
+        </button>
+      </div>
 
       {/* Contenido */}
-      <div className="flex-grow flex items-center justify-center px-4 pb-4 overflow-hidden">
+      <div className="flex-grow flex items-center justify-center px-4 pb-2 mt-2 overflow-hidden">
         {isPortrait ? (
           <div className="text-center text-black">
             <p className="text-xl font-semibold mb-4">
@@ -44,13 +58,13 @@ const VideojuegoInvitado = () => {
             </p>
           </div>
         ) : (
-          <div className="w-full max-w-6xl max-h-[calc(100vh-6rem)] aspect-video overflow-hidden rounded-xl shadow-lg">
+          <div className="w-full h-screen relative pr-0 sm:pr-[200px]">
             <iframe
               src="https://ecoguardians2-0.github.io/EcoGuardians-2-0/"
               title="Ecoguardianes 2.0"
               allowFullScreen
               frameBorder="0"
-              className="w-full h-full"
+              className="absolute top-[-26px] left-0 w-full h-full"
               style={{ border: "none" }}
             ></iframe>
           </div>

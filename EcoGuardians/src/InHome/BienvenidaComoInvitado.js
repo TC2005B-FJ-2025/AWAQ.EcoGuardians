@@ -8,9 +8,18 @@ import logo from "../componentes/Videojuego_fondo_frame.png";
 import imagenBoton from "../componentes/interfaz_inicio.png";
 import imagenIzquierda from "../componentes/logos_unity.png";
 import imagenDerecha from "../componentes/logo_pontificia.png";
+import { useNavigate } from "react-router-dom"; // Importa useNavigate desde react-router-dom
+
 
 // Componente principal 
-const BienvenidaComoInvitado = ({ onJugar }) => {
+const BienvenidaComoInvitado = () => {
+
+    const navigate = useNavigate(); // Hook para la navegación
+    // Función para manejar el clic en el botón "JUGAR"
+    const handleJugarClick = (event) => {
+        event.preventDefault()
+        navigate("/juegoInvitado"); // Navega a la ruta "/juego"
+    };
     return (
         <motion.section
             initial={{ y: "100%", opacity: 0 }}
@@ -21,9 +30,41 @@ const BienvenidaComoInvitado = ({ onJugar }) => {
             <Encabezado />
 
             {/* Botón "Registrarse" */}
-            <button className="absolute top-16 right-4 sm:top-20 sm:right-8 bg-white text-green-700 text-lg px-4 sm:px-6 py-2 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] z-50">
-                Registrarse
-            </button>
+            <div className="absolute top-20 right-4 sm:right-8 flex flex-col gap-4 z-50">
+                {/* Botón Contactanos */}
+                <button
+                    className="bg-white text-green-700 text-lg px-4 sm:px-6 py-2 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[230px]"
+                    onClick={event => {
+                    event.preventDefault();
+                    navigate("../registro");
+                    }}
+                >
+                    Contáctanos
+                </button>
+
+                {/* Botón Sponsor */}
+                <button
+                    className="bg-white text-green-700 text-lg px-4 sm:px-6 py-2 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[230px]"
+                    onClick={event => {
+                    event.preventDefault();
+                    navigate("../registro");
+                    }}
+                >
+                    Regístrate como Sponsor
+                </button>
+
+                {/* Botón Registrate */}
+                <button
+                    className="bg-white text-green-700 text-lg px-4 sm:px-6 py-2 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[230px]"
+                    onClick={event => {
+                    event.preventDefault();
+                    navigate("../registro");
+                    }}
+                > 
+                    Regístrate como Contacto 
+                </button>
+            </div>
+
 
             <div className="flex-grow relative">  
                 {/* Fondo del juego */}
@@ -45,7 +86,7 @@ const BienvenidaComoInvitado = ({ onJugar }) => {
 
                         {/* Botón JUGAR */}
                         <button
-                            onClick={onJugar}
+                            onClick={handleJugarClick} // Maneja el clic en el botón
                             className="absolute top-[70%] left-1/2 transform -translate-x-1/2 bg-white text-green-700 text-lg w-[280px] sm:w-[350px] py-2 rounded-full border-2 border-green-700 shadow-[4px_3px_0px_0px_rgba(47,85,47,1)]"
                         >
                             <div className="flex items-center gap-2 justify-start w-full pl-6"> 
