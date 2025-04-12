@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Encabezado from "./encabezado";
+import NotificationBanner from "../overlays/NotificationBanner";
 
 const VideojuegoRegistrado = () => {
   const [isPortrait, setIsPortrait] = useState(false);
@@ -25,8 +26,9 @@ const VideojuegoRegistrado = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="w-full h-screen bg-white flex flex-col overflow-hidden relative"
     >
+      <NotificationBanner className=" relative z-100"/>
       {/* Encabezado fijo */}
-      <div className="sticky top-0 z-50">
+      <div className="sticky top-0">
         <Encabezado />
       </div>
 
