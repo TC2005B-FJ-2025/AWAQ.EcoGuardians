@@ -36,7 +36,7 @@ const BienvenidaComoInvitado = () => {
                     className="bg-white text-green-700 text-lg px-4 sm:px-6 py-2 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[230px]"
                     onClick={event => {
                     event.preventDefault();
-                    navigate("../registro");
+                    navigate("../Prospecto");
                     }}
                 >
                     Contáctanos
@@ -47,7 +47,7 @@ const BienvenidaComoInvitado = () => {
                     className="bg-white text-green-700 text-lg px-4 sm:px-6 py-2 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[230px]"
                     onClick={event => {
                     event.preventDefault();
-                    navigate("../registro");
+                    navigate("../Sponsors");
                     }}
                 >
                     Regístrate como Sponsor
@@ -58,7 +58,7 @@ const BienvenidaComoInvitado = () => {
                     className="bg-white text-green-700 text-lg px-4 sm:px-6 py-2 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[230px]"
                     onClick={event => {
                     event.preventDefault();
-                    navigate("../registro");
+                    navigate("../Contacto");
                     }}
                 > 
                     Regístrate como Contacto 

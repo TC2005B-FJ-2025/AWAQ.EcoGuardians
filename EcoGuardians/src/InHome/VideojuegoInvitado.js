@@ -38,14 +38,14 @@ const VideojuegoInvitado = () => {
       <div className="fixed top-28 right-4 sm:right-6 flex flex-col gap-4 z-40 max-w-[90vw]">
         <button
           className="bg-white text-green-700 text-sm px-3 sm:px-4 py-1.5 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[180px]"
-          onClick={() => navigate("../registro")}
+          onClick={() => navigate("../Prospecto")}
         >
           Contáctanos
         </button>
 
         <button
           className="bg-white text-green-700 text-sm px-3 sm:px-4 py-1.5 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[180px]"
-          onClick={() => navigate("../registro")}
+          onClick={() => navigate("../Sponsors")}
         >
           Regístrate como Sponsor
         </button>

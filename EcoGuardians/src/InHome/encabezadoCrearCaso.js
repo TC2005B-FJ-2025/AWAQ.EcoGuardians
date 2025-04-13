@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom"; // Importa Link de react-router-dom
-import { Smile } from "lucide-react"; // implementación de lucide-react para el icono de la carita feliz
 import LogoHeader from "../componentes/LogoHeader.png";
 
 const Encabezado = () => {
@@ -29,13 +28,6 @@ const Encabezado = () => {
 
       {/* Derecha: FAQs e Idioma */}
       <div className="flex items-center gap-4 z-10">
-        {/* Botón Cases */}
-        <Link to="/CrearCaso"
-          className="bg-[#2B5629] text-white border-2 border-white px-3.5 py-2 rounded-xl transition flex items-center justify-center hover:font-bold hover:text-white/80 transition"
-          aria-label="Crear caso"
-        >
-        <Smile className="w-5 h-5" />
-        </Link>
 
         {/* Botón FAQs */}
         <Link

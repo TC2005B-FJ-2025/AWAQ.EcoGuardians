@@ -1,4 +1,6 @@
 import { useState } from "react";
+import React from "react";
+import EncabezadoCrearCaso from "../InHome/encabezadoCrearCaso"; 
 
 function CrearCaso() {
     const [formData, setFormData] = useState({
@@ -13,16 +15,14 @@ function CrearCaso() {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({
-            ...formData,
+        setFormData(prev => ({
+            ...prev,
             [name]: value
-        });
+        }));
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
-        // Validar que los campos requeridos no estén vacíos
         if (!formData.subject || !formData.description || !formData.nombre_usuario || !formData.supplied_email) {
             alert("Por favor completa todos los campos requeridos");
             return;
@@ -39,7 +39,6 @@ function CrearCaso() {
 
             if (response.ok) {
                 alert("Caso creado con éxito");
-                // Limpiar el formulario después de enviar
                 setFormData({
                     subject: '',
                     description: '',
@@ -57,93 +56,103 @@ function CrearCaso() {
         }
     };
 
-    return (
-        <div>
-            <h1>Crear Nuevo Caso</h1>
-            <p>Por favor completa el formulario para crear un nuevo caso:</p>
+    const colorVerde = "#2F5621";
 
-            <form id="caso-form" onSubmit={handleSubmit}>
-                <label htmlFor="subject">Asunto:</label>
-                <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    placeholder="Ingrese el asunto"
-                    required
-                    value={formData.subject}
-                    onChange={handleChange}
-                />
+    return React.createElement(
+        "div",
+        { className: "min-h-screen bg-gray-50" },
 
-                <label htmlFor="description">Descripción:</label>
-                <textarea
-                    id="description"
-                    name="description"
-                    placeholder="Ingrese la descripción"
-                    required
-                    value={formData.description}
-                    onChange={handleChange}
-                ></textarea>
+        // Nuevo encabezado importado
+        React.createElement(EncabezadoCrearCaso, null),
 
-                <label htmlFor="priority">Prioridad:</label>
-                <select
-                    id="priority"
-                    name="priority"
-                    required
-                    value={formData.priority}
-                    onChange={handleChange}
-                >
-                    <option value="Low">Baja</option>
-                    <option value="Medium">Media</option>
-                    <option value="High">Alta</option>
-                </select>
+        // Formulario
+        React.createElement(
+            "div",
+            { className: "flex justify-center p-6" },
+            React.createElement(
+                "form",
+                {
+                    onSubmit: handleSubmit,
+                    className: "w-full max-w-2xl bg-white p-6 rounded-2xl shadow-md border",
+                    style: { borderColor: colorVerde }
+                },
 
-                <label htmlFor="nombre_usuario">Nombre de Usuario:</label>
-                <input
-                    type="text"
-                    id="nombre_usuario"
-                    name="nombre_usuario"
-                    placeholder="Ingrese su nombre"
-                    required
-                    value={formData.nombre_usuario}
-                    onChange={handleChange}
-                />
+                React.createElement("h2", { className: "text-xl font-bold mb-4 text-center text-green-800" }, "Quejas y Sugerencias"),
 
-                <label htmlFor="supplied_email">Correo Electrónico:</label>
-                <input
-                    type="email"
-                    id="supplied_email"
-                    name="supplied_email"
-                    placeholder="Ingrese su correo electrónico"
-                    required
-                    value={formData.supplied_email}
-                    onChange={handleChange}
-                />
+                createField("Asunto", "subject", "text", formData.subject, handleChange, colorVerde),
+                createTextArea("Descripción", "description", formData.description, handleChange, colorVerde),
+                createSelect("Prioridad", "priority", formData.priority, handleChange, colorVerde, [
+                    { value: "Low", label: "Baja" },
+                    { value: "Medium", label: "Media" },
+                    { value: "High", label: "Alta" }
+                ]),
+                createField("Nombre de Usuario", "nombre_usuario", "text", formData.nombre_usuario, handleChange, colorVerde),
+                createField("Correo Electrónico", "supplied_email", "email", formData.supplied_email, handleChange, colorVerde),
+                createSelect("Tipo de Opinión", "tipo_opinion", formData.tipo_opinion, handleChange, colorVerde, [
+                    { value: "Queja", label: "Queja" },
+                    { value: "Sugerencia", label: "Sugerencia" },
+                    { value: "Otro", label: "Otro" }
+                ]),
+                createTextArea("Opiniones o Sugerencias", "opiniones_sugerencias", formData.opiniones_sugerencias, handleChange, colorVerde),
 
-                <label htmlFor="tipo_opinion">Tipo de Opinión:</label>
-                <select
-                    id="tipo_opinion"
-                    name="tipo_opinion"
-                    required
-                    value={formData.tipo_opinion}
-                    onChange={handleChange}
-                >
-                    <option value="Queja">Queja</option>
-                    <option value="Sugerencia">Sugerencia</option>
-                    <option value="Otro">Otro</option>
-                </select>
+                React.createElement(
+                    "button",
+                    {
+                        type: "submit",
+                        className: "mt-4 w-full text-white font-semibold py-2 rounded-xl transition hover:brightness-110",
+                        style: { backgroundColor: colorVerde }
+                    },
+                    "Enviar"
+                )
+            )
+        )
+    );
+}
 
-                <label htmlFor="opiniones_sugerencias">Opiniones o Sugerencias:</label>
-                <textarea
-                    id="opiniones_sugerencias"
-                    name="opiniones_sugerencias"
-                    placeholder="Ingrese sus opiniones o sugerencias"
-                    value={formData.opiniones_sugerencias}
-                    onChange={handleChange}
-                ></textarea>
+// Helpers
+function createField(label, name, type, value, onChange, borderColor) {
+    return React.createElement(React.Fragment, null,
+        React.createElement("label", { className: "block text-sm font-medium text-gray-700 mb-1 mt-4" }, label),
+        React.createElement("input", {
+            type,
+            name,
+            value,
+            onChange,
+            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-400",
+            required: true,
+            style: { borderColor }
+        })
+    );
+}
 
-                <button type="submit">Crear Caso</button>
-            </form>
-        </div>
+function createTextArea(label, name, value, onChange, borderColor) {
+    return React.createElement(React.Fragment, null,
+        React.createElement("label", { className: "block text-sm font-medium text-gray-700 mb-1 mt-4" }, label),
+        React.createElement("textarea", {
+            name,
+            value,
+            onChange,
+            rows: 4,
+            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-400",
+            style: { borderColor }
+        })
+    );
+}
+
+function createSelect(label, name, value, onChange, borderColor, options) {
+    return React.createElement(React.Fragment, null,
+        React.createElement("label", { className: "block text-sm font-medium text-gray-700 mb-1 mt-4" }, label),
+        React.createElement("select", {
+            name,
+            value,
+            onChange,
+            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-400",
+            style: { borderColor }
+        },
+            options.map(opt =>
+                React.createElement("option", { key: opt.value, value: opt.value }, opt.label)
+            )
+        )
     );
 }
 

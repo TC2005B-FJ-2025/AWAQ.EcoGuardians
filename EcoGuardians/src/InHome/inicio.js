@@ -3,7 +3,7 @@ import awaq from "../componentes/Imagen_logo_awaq.png";
 import universidad from "../componentes/Imagen_logo_universidad.png";
 import logo from "../componentes/Videojuego_fondo_frame.png";
 
-const Inicio = ({ onBienvenidaComoInvitado }) => {
+const Inicio = ({ onBienvenidaComoInvitado, onProspecto }) => {
   return (
     <section className="flex flex-col items-center justify-center text-center min-h-screen w-full">
       <h1 className="text-2xl font-normal pb-1">AWAQ presenta</h1>
@@ -18,6 +18,15 @@ const Inicio = ({ onBienvenidaComoInvitado }) => {
         />
       </div>
       <div className="flex gap-4 mt-5">
+
+          {/* Botón Contáctanos */}
+        <button
+          onClick={onProspecto} // Por ahora no hace nada
+          className="bg-white text-black text-lg px-5 py-2 rounded-full border-black border-2 hover:bg-verde-fuerte hover:border-transparent hover:text-white transition"
+        >
+          Contáctanos
+        </button>
+
         <button
           onClick={onBienvenidaComoInvitado}
           className="bg-verde-claro text-white text-lg px-5 py-2 rounded-full hover:bg-verde-fuerte transition flex items-center justify-center"
