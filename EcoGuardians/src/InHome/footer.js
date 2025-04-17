@@ -1,4 +1,3 @@
-import "../home.css";
 import SponsorCarousel from "./Carrousel.js";
 import logoAwaq from "../componentes/Imagen_logo_awaq.png";
 import imgTecSocioformador from "../componentes/Socios Formadores.png";

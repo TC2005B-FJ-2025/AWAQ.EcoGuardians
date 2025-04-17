@@ -9,6 +9,7 @@ import imagenBoton from "../componentes/interfaz_inicio.png";
 import imagenIzquierda from "../componentes/logos_unity.png";
 import imagenDerecha from "../componentes/logo_pontificia.png";
 import { useNavigate } from "react-router-dom";
+import SwipperImages from "./SwipperImages.js";
 
 
 // Componente principal 
@@ -68,11 +69,9 @@ const BienvenidaComoInvitado = () => {
 
             <div className="flex-grow relative">  
                 {/* Fondo del juego */}
-                <img 
-                    src={logo} 
-                    alt="Pantalla del juego" 
-                    className="absolute inset-0 w-full h-full object-cover"
-                />
+                <div className="absolute inset-0 w-full h-full object-cover">
+                <SwipperImages />
+                </div>
                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
                 {/* Contenido principal */}
