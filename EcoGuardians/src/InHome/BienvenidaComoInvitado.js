@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 // Importación de componentes e imágenes
 import Encabezado from "./encabezado.js";
-import logo from "../componentes/Videojuego_fondo_frame.png";
 import imagenBoton from "../componentes/interfaz_inicio.png";
 import imagenIzquierda from "../componentes/logos_unity.png";
 import imagenDerecha from "../componentes/logo_pontificia.png";
 import { useNavigate } from "react-router-dom";
+import SwipperImages from "./SwipperImages.js";
 
 
 // Componente principal 
@@ -27,7 +27,7 @@ const BienvenidaComoInvitado = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="flex flex-col w-full h-screen bg-white overflow-hidden"
         >
-            <Encabezado />
+            <Encabezado onHome={false}/>
 
             {/* Botón "Registrarse" */}
             <div className="absolute top-20 right-4 sm:right-8 flex flex-col gap-4 z-50">
@@ -68,11 +68,9 @@ const BienvenidaComoInvitado = () => {
 
             <div className="flex-grow relative">  
                 {/* Fondo del juego */}
-                <img 
-                    src={logo} 
-                    alt="Pantalla del juego" 
-                    className="absolute inset-0 w-full h-full object-cover"
-                />
+                <div className="absolute inset-0 w-full h-full object-cover">
+                <SwipperImages />
+                </div>
                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
                 {/* Contenido principal */}

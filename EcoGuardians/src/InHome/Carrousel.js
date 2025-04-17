@@ -4,7 +4,6 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "../home.css";
 
 import tecLogo from '../componentes/tec_logo1.png';
 import gitlogo from "../componentes/Github.png";
@@ -27,18 +26,19 @@ const SponsorCarousel = () => {
   ];
 
   return (
-    <div className="carrusel-patrocinadores">
+    <div className="flex items-center mt-[20px] w-full max-w-[1200px] m-auto">
       <Swiper
         modules={[Autoplay]}
+        className="w-full max-w-[900px] mt-[20px]"
         spaceBetween={2}
         slidesPerView={window.innerWidth < 768 ? 1 : 5}
         autoplay={{ delay: 3000 }}
         loop
       >
         {sponsors.map(([sponsorICon, sponsorUrl], index) => (          
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="flex justify-center items-center w-fit">
             <a href={sponsorUrl} target="_blank" rel="noreferrer">
-              <img src={sponsorICon} alt={`Sponsor ${index + 1}`} />
+              <img src={sponsorICon} alt={`Sponsor ${index + 1}`} className="w-auto h-[60px] max-h-[80px] object-contain my-0 mx-auto"/>
             </a>
           </SwiperSlide>
         ))}

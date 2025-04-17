@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import awaq from "../componentes/Imagen_logo_awaq.png";
 import universidad from "../componentes/Imagen_logo_universidad.png";
-import logo from "../componentes/Videojuego_fondo_frame.png";
+import SwipperImages from "./SwipperImages";
 
 const Inicio = ({ onBienvenidaComoInvitado, onProspecto }) => {
   return (
@@ -10,12 +10,8 @@ const Inicio = ({ onBienvenidaComoInvitado, onProspecto }) => {
       <h2 className="text-7xl text-verde-claro font-bold pt-1 mb-10">
         Ecoguardianes 2.0
       </h2>
-      <div className="flex justify-center mb-5">
-        <img
-          src={logo}
-          alt="Imagen del juego Ecoguardians"
-          className="w-[656px] h-[253px] rounded-[18px] object-cover"
-        />
+      <div className="mb-5 w-[656px] h-[290px] rounded-[18px] p-0 overflow-hidden">
+          <SwipperImages />
       </div>
       <div className="flex gap-4 mt-5">
 
