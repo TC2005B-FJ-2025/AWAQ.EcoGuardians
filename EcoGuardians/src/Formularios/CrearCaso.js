@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import EncabezadoCrearCaso from "../InHome/encabezadoCrearCaso"; 
+import EncabezadoCrearCaso from "../InHome/encabezadoCrearCaso";
 
 function CrearCaso() {
     const [formData, setFormData] = useState({
@@ -23,7 +23,7 @@ function CrearCaso() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        if (!formData.subject || !formData.description || !formData.nombre_usuario || !formData.supplied_email) {
+        if (!formData.tipo_opinion || !formData.supplied_email || !formData.opiniones_sugerencias) {
             alert("Por favor completa todos los campos requeridos");
             return;
         }
@@ -62,7 +62,7 @@ function CrearCaso() {
         "div",
         { className: "min-h-screen bg-gray-50" },
 
-        // Nuevo encabezado importado
+        // Encabezado
         React.createElement(EncabezadoCrearCaso, null),
 
         // Formulario
@@ -79,22 +79,20 @@ function CrearCaso() {
 
                 React.createElement("h2", { className: "text-xl font-bold mb-4 text-center text-green-800" }, "Quejas y Sugerencias"),
 
-                createField("Asunto", "subject", "text", formData.subject, handleChange, colorVerde),
-                createTextArea("Descripción", "description", formData.description, handleChange, colorVerde),
-                createSelect("Prioridad", "priority", formData.priority, handleChange, colorVerde, [
-                    { value: "Low", label: "Baja" },
-                    { value: "Medium", label: "Media" },
-                    { value: "High", label: "Alta" }
-                ]),
-                createField("Nombre de Usuario", "nombre_usuario", "text", formData.nombre_usuario, handleChange, colorVerde),
-                createField("Correo Electrónico", "supplied_email", "email", formData.supplied_email, handleChange, colorVerde),
+                // Campo TIPO DE OPINION 
                 createSelect("Tipo de Opinión", "tipo_opinion", formData.tipo_opinion, handleChange, colorVerde, [
                     { value: "Queja", label: "Queja" },
                     { value: "Sugerencia", label: "Sugerencia" },
                     { value: "Otro", label: "Otro" }
                 ]),
+
+                // Campo OPINIONES O SUGERENCIAS
                 createTextArea("Opiniones o Sugerencias", "opiniones_sugerencias", formData.opiniones_sugerencias, handleChange, colorVerde),
 
+                // Campo CORREO ELECTRONICO 
+                createFieldWithNote("Correo Electrónico", "supplied_email", "email", formData.supplied_email, handleChange, colorVerde),
+
+                // Botón ENVIO
                 React.createElement(
                     "button",
                     {
@@ -118,10 +116,26 @@ function createField(label, name, type, value, onChange, borderColor) {
             name,
             value,
             onChange,
-            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-400",
+            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-800",
             required: true,
             style: { borderColor }
         })
+    );
+}
+
+function createFieldWithNote(label, name, type, value, onChange, borderColor) {
+    return React.createElement(React.Fragment, null,
+        React.createElement("label", { className: "block text-sm font-medium text-gray-700 mb-1 mt-4" }, label),
+        React.createElement("input", {
+            type,
+            name,
+            value,
+            onChange,
+            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-800",
+            required: true,
+            style: { borderColor }
+        }),
+        React.createElement("p", { className: "text-xs text-gray-700 mt-1" }, "* este campo es obligatorio, para darle seguimiento a tu caso")
     );
 }
 
@@ -133,7 +147,7 @@ function createTextArea(label, name, value, onChange, borderColor) {
             value,
             onChange,
             rows: 4,
-            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-400",
+            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-800",
             style: { borderColor }
         })
     );
@@ -146,7 +160,7 @@ function createSelect(label, name, value, onChange, borderColor, options) {
             name,
             value,
             onChange,
-            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-400",
+            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-800",
             style: { borderColor }
         },
             options.map(opt =>

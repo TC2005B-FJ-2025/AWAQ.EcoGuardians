@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Contacto({onHandleClose}) {
+function Contacto() {
   const [formData, setFormData] = useState({
     name: "",
     username: "",
@@ -105,12 +105,16 @@ function Contacto({onHandleClose}) {
           country: "",
           region: ""
         });
-        navigate("/login");
+        navigate(-1);
       }, 2000);
 
     } catch (error) {
       setMensaje({ texto: error.message, tipo: "error" });
     }
+  };
+
+  const handleClose = () => {
+    navigate(-1); 
   };
 
   return (
@@ -125,7 +129,7 @@ function Contacto({onHandleClose}) {
         <FontAwesomeIcon
           icon={faXmark}
           className="absolute right-[10px] fa-xl text-gray-400 top-[10px] cursor-pointer"
-          onClick={() => onHandleClose()}
+          onClick={handleClose}
         />
 
         <h2 className="mx-auto w-fit font-semibold text-[22px]">Únete a nuestra red de contactos</h2>
@@ -222,7 +226,7 @@ function Contacto({onHandleClose}) {
           <button
             type="submit"
             className="bg-verde-claro hover:bg-verde-fuerte transition-colores rounded-3xl p-2 text-white mt-4 font-medium"
-            onClick={() => onHandleClose()}
+            onClick={handleSubmit}
           >
             Unirme
           </button>

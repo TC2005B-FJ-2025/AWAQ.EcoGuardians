@@ -57,6 +57,10 @@ function SponsorsForm() {
     }
   };
 
+  const handleClose = () => {
+    navigate(-1); 
+  };
+
   return (
     <motion.div
       initial={{ y: "100%", opacity: 0 }}
@@ -69,7 +73,7 @@ function SponsorsForm() {
         <FontAwesomeIcon
           icon={faXmark}
           className="absolute right-[10px] fa-xl text-gray-400 top-[10px] cursor-pointer"
-          onClick={() => navigate("/")} // Usa navigate aquí
+          onClick={handleClose}
         />
         
         <h2 className="mx-auto w-fit font-semibold text-[22px]">Solicitud de Sponsor</h2>

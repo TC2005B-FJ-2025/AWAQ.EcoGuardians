@@ -1,8 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Puntuacion() {
+  const navigate = useNavigate();
   const [rating, setRating] = useState(0);
   const [enviado, setEnviado] = useState(false);
   const [error, setError] = useState("");
@@ -35,11 +37,16 @@ function Puntuacion() {
     }
   };
 
+  const handleClose = () => {
+    navigate(-1); 
+  };
+
   return (
     <div className="w-[354px] border-2 border-verde-claro relative rounded-xl mx-auto flex flex-col px-6 py-4">
       <FontAwesomeIcon
         icon={faXmark}
         className="absolute right-[10px] fa-xl text-gray-400 top-[10px] cursor-pointer"
+        onClick={handleClose}
       />
 
       <div className="mx-auto w-fit flex items-center flex-col">
@@ -79,8 +86,10 @@ function Puntuacion() {
           <div className="mb-2 mx-auto" id="problem">
             <p className="text-[15px]">
               ¿Tienes algún problema?{" "}
-              <span className="cursor-pointer text-verde-fuerte font-semibold">
-                <a href="#problem">Reportar un error</a>
+              <span className="cursor-pointer text-verde-fuerte font-semibold"
+              onClick={() => navigate("/CrearCaso")}
+              >
+                Reportar un error
               </span>
             </p>
           </div>

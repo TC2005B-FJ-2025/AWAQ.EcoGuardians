@@ -82,7 +82,9 @@ def create_payment():
         return jsonify({"error": error_msg, "code": "INVALID_EMAIL"}), 400
 
     try:
-        return_url = f"http://localhost:3000/execute-payment?email={quote(email)}"
+        # Asegurarnos de que el email esté codificado correctamente para la URL
+        encoded_email = quote(email)
+        return_url = f"http://localhost:3000/execute-payment?email={encoded_email}"
         print(f"🔗 URL de retorno construida: {return_url}")
 
         payment = paypalrestsdk.Payment({
@@ -193,7 +195,9 @@ def execute_payment():
                         'ReferenceEntityType': 'Payment',  # Valor del picklist
                         'ResultingBalance': donation_amount,  # Campo obligatorio
                         'TotalAmountWithTax': donation_amount,
-                        'EffectiveDate': transaction_date
+                        'EffectiveDate': transaction_date,
+                        'OwnerId': "00GgK000000vn5d",
+                        'email_usuario__c' : email
                     })
                     
                     if response.get('success'):

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Encabezado from "./encabezado";
 import { useNavigate } from "react-router-dom";
 import NotificationBanner from "../overlays/NotificationBanner";
+import { FaStar } from 'react-icons/fa';
 
 const VideojuegoInvitado = () => {
   const [isPortrait, setIsPortrait] = useState(false);
@@ -48,6 +49,13 @@ const VideojuegoInvitado = () => {
           onClick={() => navigate("../Sponsors")}
         >
           Regístrate como Sponsor
+        </button>
+
+        <button
+          className="bg-white text-green-700 text-sm px-3 sm:px-4 py-1.5 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[180px] flex items-center justify-center"
+          onClick={() => navigate("../Puntuacion")}
+        >
+          <FaStar className="text-xl" />
         </button>
       </div>
 

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function Paypal() {
     const [amount, setAmount] = useState("");
@@ -7,6 +8,7 @@ function Paypal() {
     const [paymentStatus, setPaymentStatus] = useState(null);
     const [email, setEmail] = useState("");
     const [emailError, setEmailError] = useState("");
+    const location = useLocation();
 
     const validateEmail = (email) => {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -18,6 +20,24 @@ function Paypal() {
         const paymentId = urlParams.get('paymentId');
         const payerId = urlParams.get('PayerID');
         const emailFromUrl = urlParams.get('email');
+
+        if (location.pathname === "/cancel-payment") {
+            // 🔄 Hacer fetch para activar el endpoint en Flask
+            fetch("http://localhost:5000/cancel-payment")
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log("🛑 Backend respondió:", data);
+                })
+                .catch((err) => {
+                    console.error("❌ Error al contactar el backend:", err);
+                });
+        
+            setPaymentStatus({
+                success: false,
+                message: "El pago fue cancelado por el usuario.",
+            });
+            return;
+        }
 
         if (paymentId && payerId) {
             const finalEmail = emailFromUrl || email;

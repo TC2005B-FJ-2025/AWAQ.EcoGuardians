@@ -11,6 +11,8 @@ import Contacto from "./Formularios/Contacto.js"
 import Sponsors from "./Formularios/Sponsors.js"
 import Prospecto from "./Formularios/Prospecto.js"
 import CrearCaso from "./Formularios/CrearCaso.js"; 
+import Puntuacion from "./Formularios/Puntuacion.js"
+import Donaciones from "./InHome/Donaciones.js"
 
 
 function App() {
@@ -28,6 +30,9 @@ function App() {
         <Route path="/Sponsors" element={<Sponsors />} />
         <Route path="/Prospecto" element={<Prospecto />} />
         <Route path="/CrearCaso" element={<CrearCaso />} />
+        <Route path="/Puntuacion" element={<Puntuacion />} />
+        <Route path="/execute-payment" element={<Donaciones />} />
+        <Route path="/cancel-payment" element={<Donaciones />} />
         {/* Puedes agregar más rutas aquí */}
       </Routes>
     </BrowserRouter>

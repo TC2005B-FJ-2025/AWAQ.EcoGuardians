@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; 
+import { Link, useNavigate  } from "react-router-dom"; 
 import LogoHeader from '../componentes/LogoHeader.png';
 import { Smile } from "lucide-react"; // implementación de lucide-react para el icono de la carita feliz
 
 const EncabezadoFAQS = () => {
     const [idioma, setIdioma] = useState("ES");
     const [mostrarDropdown, setMostrarDropdown] = useState(false);
+    const navigate = useNavigate()
 
     const seleccionarIdioma = (lang) => {
         setIdioma(lang);
@@ -14,13 +15,13 @@ const EncabezadoFAQS = () => {
 
     return (
         <header className="w-full bg-[#2B5629] py-3 px-3 flex justify-between items-center relative ">
-
-            <Link 
-                    to="/" // Redirige a la ruta /faqs
-                    className="text-white font-bold text-xs no-underline z-10"
-                >
-                     &lt; Volver a la página principal
-            </Link>
+            <button
+                onClick={() => navigate(-1)} // Navegar hacia atrás
+                className="bg-[#2B5629] text-white border-2 border-white px-3.5 py-2 text-base rounded-xl hover:font-bold transition flex items-center justify-center w-[80px]"
+                aria-label="Volver a la página anterior"
+            >
+                Volver
+            </button>
 
             {/* Centro: Logo */}
             <div className="absolute left-1/2 transform -translate-x-1/2 z-0">
