@@ -6,41 +6,51 @@ from datetime import datetime
 from flask_mail import Mail, Message
 import re
 from urllib.parse import quote
+import json 
+import os
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000"]) 
-app.config['SECRET_KEY'] = "tsfyguaistyatuis589566875623568956"
-app.config['MAIL_SERVER'] = "smtp.gmail.com"
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = "awaq.pruebas@gmail.com"
-app.config['MAIL_PASSWORD'] = "xuvr lstw tncf upny"
 
-# Inicializar Flask-Mail
+# Ruta ABSOLUTA al config.json (la más segura)
+#CONFIG_PATH = r'C:\Users\HP\Desktop\desarrollo\awaq2\AWAQ.EcoGuardians\EcoGuardians\json\config.json'
+
+# O si prefieres ruta relativa (desde paypal.py):
+CONFIG_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..', 'json', 'config.json'))
+
+# Verificación adicional
+if not os.path.exists(CONFIG_PATH):
+    raise FileNotFoundError(f"❌ No se encontró config.json en: {CONFIG_PATH}")
+
+# Cargar configuración
+with open(CONFIG_PATH, 'r', encoding='utf-8') as config_file:
+    config = json.load(config_file)
+
+print(f"✅ Configuración cargada correctamente desde: {CONFIG_PATH}")
+
+
+# Configuración general
+CORS(app, origins=["http://localhost:3000"]) 
+app.config['SECRET_KEY'] = config['flask_secret_key']
+
+# Configuración de email
+app.config.update(
+    MAIL_SERVER=config['email']['mail_server'],
+    MAIL_PORT=config['email']['mail_port'],
+    MAIL_USE_TLS=True,
+    MAIL_USERNAME=config['email']['mail_username'],
+    MAIL_PASSWORD=config['email']['mail_password']
+)
 mail = Mail(app)
 
-# Configuración de PayPal
-paypalrestsdk.configure({
-    "mode": "sandbox",
-    "client_id": "AbnxxsUd9iRkjhAV5ZBZXYaR1wndy-SRb1GYpAO0v8sxltgXr8b95LcXlTXkap0dtW00dsjKHN99tSvn",
-    "client_secret": "EHBHSkyg_wN403HCgo2KQH3NmMOyUXZtweda05n_CIsPgMyOkuq9bkZ_O1m4rQsFSVi1lP3X5KLLYo2r"
-})
+# Configuración PayPal
+paypalrestsdk.configure(config['paypal'])  # Usa todo el bloque PayPal del JSON
 
-# Configuración de Salesforce
+# Configuración Salesforce
 sf = None
-sf_connection_status = {
-    'connected': False,
-    'error': None
-}
+sf_connection_status = {'connected': False, 'error': None}
 
 try:
-    sf = Salesforce(
-        username='c3170600750@agentforce.com',
-        password='salesforcin2',
-        security_token='G0dXIw88ZtgYjiHNllRZ9gpHF',
-        consumer_key='3MVG9rZjd7MXFdLhTtQ3o7490SYfft0KQKGUGhfDAdo9IH8TvkFVU7ZbP51y9n42LRAPsKJXiHkAtvEuwZ.rK',
-        consumer_secret='DB514D96E146B86A35C94684D7632DB0F3D659741F42AC04C9437DEA1E9D1AB7'
-    )
+    sf = Salesforce(**config['salesforce'])  # Desempaqueta automáticamente las credenciales
     sf.query("SELECT Id FROM User LIMIT 1")
     sf_connection_status = {'connected': True, 'error': None}
     print("\n✅ [SALESFORCE] Conexión exitosa")

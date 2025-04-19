@@ -1,10 +1,48 @@
-2025-04-17 19:16:27,766 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-04-15 18:04:10,913 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2025-04-17 19:16:27,766 [INFO] [33mPress CTRL+C to quit[0m
-2025-04-17 19:16:27,771 [INFO]  * Restarting with stat
-2025-04-17 19:16:29,866 [WARNING]  * Debugger is active!
-2025-04-17 19:16:29,870 [INFO]  * Debugger PIN: 102-914-109
-2025-04-17 19:23:25,113 [INFO] 127.0.0.1 - - [17/Apr/2025 19:23:25] "OPTIONS /sponsors HTTP/1.1" 200 -
-2025-04-17 19:23:25,113 [INFO] 
+2025-04-15 18:04:10,915 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-15 18:04:10,922 [INFO]  * Restarting with stat
+2025-04-15 18:04:15,205 [WARNING]  * Debugger is active!
+2025-04-15 18:04:15,221 [INFO]  * Debugger PIN: 767-699-448
+2025-04-15 18:49:34,223 [INFO] 127.0.0.1 - - [15/Apr/2025 18:49:34] "OPTIONS /sponsors HTTP/1.1" 200 -
+2025-04-15 18:49:34,232 [INFO] 
 --- [POST] /registro ---
-2025-04-17 19:23:25,642 [INFO] 127.0.0.1 - - [17/Apr/2025 19:23:25] "POST /sponsors HTTP/1.1" 200 -
+2025-04-15 18:49:36,463 [INFO] 127.0.0.1 - - [15/Apr/2025 18:49:36] "POST /sponsors HTTP/1.1" 200 -
+2025-04-15 18:50:19,626 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 18:50:19,633 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-15 18:50:19,639 [INFO]  * Restarting with stat
+2025-04-15 18:50:23,294 [WARNING]  * Debugger is active!
+2025-04-15 18:50:23,305 [INFO]  * Debugger PIN: 767-699-448
+2025-04-15 18:50:33,888 [INFO] 127.0.0.1 - - [15/Apr/2025 18:50:33] "OPTIONS /sponsors HTTP/1.1" 200 -
+2025-04-15 18:50:33,895 [INFO] 
+--- [POST] /registro ---
+2025-04-15 18:50:34,326 [INFO] 127.0.0.1 - - [15/Apr/2025 18:50:34] "POST /sponsors HTTP/1.1" 200 -
+2025-04-18 15:15:59,377 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-18 15:15:59,383 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-18 15:15:59,385 [INFO]  * Restarting with stat
+2025-04-18 15:16:02,111 [WARNING]  * Debugger is active!
+2025-04-18 15:16:02,113 [INFO]  * Debugger PIN: 767-699-448
+2025-04-18 15:16:48,919 [INFO] 127.0.0.1 - - [18/Apr/2025 15:16:48] "OPTIONS /sponsors HTTP/1.1" 200 -
+2025-04-18 15:16:48,922 [INFO] 
+--- [POST] /registro ---
+2025-04-18 15:16:49,356 [INFO] 127.0.0.1 - - [18/Apr/2025 15:16:49] "POST /sponsors HTTP/1.1" 200 -
+2025-04-18 15:22:31,430 [INFO]  * Detected change in 'C:\\Users\\HP\\Desktop\\desarrollo\\awaq2\\AWAQ.EcoGuardians\\EcoGuardians\\src\\back\\sponsors\\sponsors.py', reloading
+2025-04-18 15:22:31,563 [INFO]  * Restarting with stat
+2025-04-18 15:22:33,973 [WARNING]  * Debugger is active!
+2025-04-18 15:22:33,976 [INFO]  * Debugger PIN: 767-699-448
+2025-04-18 15:23:05,852 [INFO]  * Detected change in 'C:\\Users\\HP\\Desktop\\desarrollo\\awaq2\\AWAQ.EcoGuardians\\EcoGuardians\\src\\back\\sponsors\\sponsors.py', reloading
+2025-04-18 15:23:06,011 [INFO]  * Restarting with stat
+2025-04-18 15:23:08,233 [WARNING]  * Debugger is active!
+2025-04-18 15:23:08,235 [INFO]  * Debugger PIN: 767-699-448
+2025-04-18 17:24:50,652 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-18 17:24:50,653 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-18 17:24:50,655 [INFO]  * Restarting with stat
+2025-04-18 17:24:52,592 [WARNING]  * Debugger is active!
+2025-04-18 17:24:52,594 [INFO]  * Debugger PIN: 767-699-448
+2025-04-18 17:25:26,432 [INFO] 127.0.0.1 - - [18/Apr/2025 17:25:26] "OPTIONS /sponsors HTTP/1.1" 200 -
+2025-04-18 17:25:26,437 [INFO] 
+--- [POST] /registro ---
+2025-04-18 17:25:27,041 [INFO] 127.0.0.1 - - [18/Apr/2025 17:25:27] "POST /sponsors HTTP/1.1" 200 -
