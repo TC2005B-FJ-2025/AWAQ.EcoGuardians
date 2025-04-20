@@ -12,7 +12,7 @@ CORS(app)  # Permitir CORS desde cualquier origen
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'awaq2'
+app.config['MYSQL_DB'] = 'awaq__db'
 
 mysql = MySQL(app)
 

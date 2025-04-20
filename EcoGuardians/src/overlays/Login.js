@@ -20,6 +20,7 @@ function Login() {
         <FontAwesomeIcon
           icon={faXmark}
           className="absolute right-[10px] fa-xl text-gray-400 top-[10px] cursor-pointer"
+          onClick={() => navigate("/")}
         />
 
         <h2 className="mx-auto w-fit font-semibold text-[22px]">
@@ -27,7 +28,7 @@ function Login() {
         </h2>
 
         <form className="flex flex-col mt-4">
-          {/*  Campo correo */}
+          {/* Campo correo */}
           <label htmlFor="input-email">Correo electrónico</label>
           <input
             type="email"
@@ -39,11 +40,16 @@ function Login() {
             ¡Correo inválido!
           </div>
 
-          {/*  Campo contraseña */}
+          {/* Campo contraseña */}
           <label htmlFor="input-contraseña" className="mt-5">
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center">
               <span>Contraseña</span>
-              <button>He olvidado mi contraseña</button>
+              <Link
+                to="/forgot-password"
+                className="text-verde-fuerte hover:underline text-sm"
+              >
+                He olvidado mi contraseña
+              </Link>
             </div>
           </label>
 
