@@ -9,10 +9,12 @@ import imagenIzquierda from "../componentes/logos_unity.png";
 import imagenDerecha from "../componentes/logo_pontificia.png";
 import { useNavigate } from "react-router-dom";
 import SwipperImages from "./SwipperImages.js";
+import { useTranslation } from "react-i18next";
 
 
 // Componente principal 
 const BienvenidaComoInvitado = () => {
+    const { t } = useTranslation();
 
     const navigate = useNavigate(); // Hook para la navegación
     // Función para manejar el clic en el botón "JUGAR"
@@ -30,7 +32,7 @@ const BienvenidaComoInvitado = () => {
             <Encabezado onHome={false}/>
 
             {/* Botón "Registrarse" */}
-            <div className="absolute top-20 right-4 sm:right-8 flex flex-col gap-4 z-50">
+            <div className="absolute top-48 sm:top-36 right-4 sm:right-8 flex flex-col gap-4 z-50 w-[200px] sm:w-[230px]">
                 {/* Botón Contactanos */}
                 <button
                     className="bg-white text-green-700 text-lg px-4 sm:px-6 py-2 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[230px]"
@@ -39,7 +41,7 @@ const BienvenidaComoInvitado = () => {
                     navigate("../Prospecto");
                     }}
                 >
-                    Contáctanos
+                    {t("bienvenida.contactanos")}
                 </button>
 
                 {/* Botón Sponsor */}
@@ -50,7 +52,7 @@ const BienvenidaComoInvitado = () => {
                     navigate("../Sponsors");
                     }}
                 >
-                    Regístrate como Sponsor
+                    {t("bienvenida.registro_sponsor")}
                 </button>
 
                 {/* Botón Registrate */}
@@ -61,7 +63,7 @@ const BienvenidaComoInvitado = () => {
                     navigate("../Contacto");
                     }}
                 > 
-                    Regístrate como Contacto 
+                   {t("bienvenida.registro_contacto")} 
                 </button>
             </div>
 
@@ -91,13 +93,13 @@ const BienvenidaComoInvitado = () => {
                                 <div className="flex items-center justify-center w-8 h-8 border-2 border-green-700 rounded-full">
                                     <span className="text-green-700">▶</span> 
                                 </div>
-                                <span className="pl-3">Jugar</span>
+                                <span className="pl-3">{t("bienvenida.jugar")}</span>
                             </div>
                         </button>
                     </div>
 
                     {/* Logos institucionales */}
-                    <div className="absolute bottom-4 w-full flex justify-between px-4 sm:px-10">
+                    <div className="absolute bottom-4 w-full flex justify-between items-end px-4 sm:px-10">
                         <img 
                             src={imagenIzquierda} 
                             alt="Logo Unity" 

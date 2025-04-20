@@ -27,11 +27,11 @@ const VideojuegoInvitado = () => {
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: "100%", opacity: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="w-full min-h-screen bg-white flex flex-col overflow-auto relative"
+      className="w-full min-h-screen bg-white flex flex-col overflow-auto relative pt-24"
     >
       <NotificationBanner className=" relative z-100"/>
       {/* Encabezado */}
-      <div className="sticky top-0">
+      <div>
         <Encabezado />
       </div>
 
@@ -74,7 +74,7 @@ const VideojuegoInvitado = () => {
               title="Ecoguardianes 2.0"
               allowFullScreen
               frameBorder="0"
-              className="absolute top-[-26px] left-0 w-full h-full"
+              className="absolute top-0 left-0 w-full h-full"
               style={{ border: "none" }}
             ></iframe>
           </div>

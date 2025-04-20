@@ -46,3 +46,13 @@
 2025-04-18 17:25:26,437 [INFO] 
 --- [POST] /registro ---
 2025-04-18 17:25:27,041 [INFO] 127.0.0.1 - - [18/Apr/2025 17:25:27] "POST /sponsors HTTP/1.1" 200 -
+2025-04-20 15:07:27,323 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-20 15:07:27,323 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-20 15:07:27,324 [INFO]  * Restarting with stat
+2025-04-20 15:07:29,418 [WARNING]  * Debugger is active!
+2025-04-20 15:07:29,426 [INFO]  * Debugger PIN: 102-914-109
+2025-04-20 15:07:33,477 [INFO] 127.0.0.1 - - [20/Apr/2025 15:07:33] "OPTIONS /sponsors HTTP/1.1" 200 -
+2025-04-20 15:07:33,477 [INFO] 
+--- [POST] /registro ---
+2025-04-20 15:07:33,958 [INFO] 127.0.0.1 - - [20/Apr/2025 15:07:33] "POST /sponsors HTTP/1.1" 200 -

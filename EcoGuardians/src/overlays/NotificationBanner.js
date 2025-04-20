@@ -43,21 +43,14 @@ const NotificationBanner = () => {
   // Si no debe renderizarse, retorna null
   if (!shouldRender) return null;
 
-  if(showEmailInput && !submitted){
-    return(
-    <div
-      className={`fixed top-0 bg-white right-1/2 translate-x-1/2 border border-gray-200 shadow-lg px-3 py-2 rounded-lg w-[450px] font-sans z-50 bg-cover bg-center transition-transform duration-1000 ease-out
-        ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
-    >
-    <Contacto onHandleClose={() => handleClose()}/>
-    </div>
-    )
-}
+  if (showEmailInput && !submitted) {
+    return <Contacto onHandleClose={handleClose} />;
+  }  
 
   return (
     
     <div
-      className={`fixed top-0 right-1/2 translate-x-1/2 border border-gray-200 shadow-lg px-3 py-2 rounded-lg w-[450px] font-sans z-50 bg-cover bg-center transition-transform duration-1000 ease-out
+      className={`fixed top-0 right-1/2 translate-x-1/2 border border-gray-200 shadow-lg px-3 py-2 rounded-lg max-w-[450px] font-sans z-[999] bg-cover bg-center transition-transform duration-1000 ease-out
         ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
       style={{ backgroundImage: `url(${BannerNotificacion})` }}
     >

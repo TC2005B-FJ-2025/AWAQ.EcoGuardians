@@ -1,0 +1,89 @@
+{
+    "header": {
+      "back_AWAQ": "< Back to AWAQ website",
+      "faqs": "FAQs",
+      "select_language": "Select language",
+      "es": "ES",
+      "en": "EN",
+      "back": "Back"
+    },
+    "bienvenida": {
+      "contactanos": "Contact us",
+      "registro_sponsor": "Register as Sponsor",
+      "registro_contacto": "Register as Contact",
+      "jugar": "Play"
+    },
+    "inicio": {
+    "presenta": "AWAQ presents",
+    "titulo": "Ecoguardians 2.0",
+    "contactanos": "Contact us",
+    "jugar": "Play",
+    "sobre_nosotros": "About Us",
+    "titulo_seccion": "About us",
+    "descripcion_breve": "EcoGuardians 2.0 is an educational game designed to promote environmental awareness.",
+    "descripcion_larga": "AWAQ ONGD is a global organization committed to empowering and preserving communities in their mission to protect and restore biodiversity. Using emerging technologies to help people and communities around the world protect and restore their biodiversity.",
+    "descripcion_expandida": " Since 2019, AWAQ has worked on projects that promote ecosystem conservation and positive impact on local communities. One of its main focuses is the Northern Caldas Biological Station (EBNC), a key space for research, ecotourism, and environmental awareness.",
+    "saber_mas": "Read more...",
+    "mostrar_menos": "Show less..."
+    },
+    "donaciones": {
+    "procesando": "Processing your payment...",
+    "espera": "Please wait while we complete the transaction.",
+    "monto": "Amount donated",
+    "no_email": "Confirmation email could not be sent",
+    "reintentar": "Retry with current email",
+    "otra_donacion": "Make another donation",
+    "titulo": "Donations",
+    "subtitulo": "Would you like to help?",
+    "descripcion": "Your support helps us continue our mission. Please enter your details to process the donation.",
+    "elegir_monto": "Choose an amount",
+    "o_ingresa": "Or you can also",
+    "placeholder_monto": "Enter the amount",
+    "placeholder_email": "Your email address",
+    "procesando_btn": "Processing...",
+    "boton_donar": "Donate with PayPal",
+    "error_email": "Please enter a valid email",
+    "error_monto_invalido": "Please enter a valid donation amount",
+    "error_pago": "Error processing payment: ",
+    "error_ejecucion": "Error executing the payment",
+    "error_email_url": "Please enter a valid email before continuing",
+    "backend_answer": "Backend answer:",
+    "backend_err": "Error contacting the backend:",
+    "payment_cancel": "The payment was cancelled by the user.",
+    "ir_inicio": "Go to Home",
+    "completado": "Thanks for your donation!"
+    },
+    "sponsors": {
+    "titulo": "Our Sponsors",
+    "descripcion": "Thanks to our partners, we continue to support impactful environmental and social projects.",
+    "saber_mas": "Learn more...",
+    "error_sponsor":"Error charging the sponsors:"
+    },
+    "sponsorSection": {
+  "titleColabora": "Collaborate",
+  "titleInformate": "Get Informed",
+  "sponsorHeading": "Become a Sponsor",
+  "sponsorText1": "Would you like to support us? Sign up as a sponsor!",
+  "sponsorText2": "By becoming a sponsor...",
+  "sponsorButton": "Register as Sponsor",
+  "contactHeading": "Learn More",
+  "contactText1": "Do you like what you see? Become a contact!",
+  "contactText2": "By becoming a contact you'll receive all the news...",
+  "contactButton": "Register as Contact"
+},
+"footer": {
+  "contacto": "Contact",
+  "direccion": "Carrera 110 N 69 B-59, Bogotá DC (Colombia)", 
+  "legal": "Legal Information",
+  "privacidad": "Privacy Policy",
+  "cookies": "Cookies Policy",
+  "aviso": "Legal Notice",
+  "colaboradores": "Our Partners",
+  "meritos": "Merits",
+  "tec": "Educational Partners of Tecnológico de Monterrey",
+  "galileo": "Powered by Project Galileo",
+  "uptimerobot": "Supported by Uptimerobot"
+}
+
+
+  }  

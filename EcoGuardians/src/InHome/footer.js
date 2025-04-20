@@ -3,6 +3,7 @@ import logoAwaq from "../componentes/Imagen_logo_awaq.png";
 import imgTecSocioformador from "../componentes/Socios Formadores.png";
 import imgProjectGalileo from "../componentes/project galileo-7a8a11be.png";
 import imgUptimerobot from "../componentes/uptimerobot-logo-98d24b91.png";
+import { useTranslation } from "react-i18next";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,123 +11,117 @@ import {
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-const footer = function () {
+
+const Footer = () => {
+  const { t } = useTranslation(); 
+
   return (
-    <div className="w-full bg-[#F3F3F3] pt-6">
-      <div className="w-[80%] mx-auto pb-4">
-        <div
-          className="w-250 mx-auto sm:flex sm:w-[100%] h-[180px]"
-          id="div-informacion-general"
-        >
-          <div
-            className="w-[30%] flex flex-col justify-start pl-2 h-fit pt-6 gap-1 items-center"
-            id="div-contacto"
-          >
-            <span className="font-bold">Contacto</span>
-            <span>Carrera 110 N 69 B-59, Bogota DC (Colombia)</span>
-            <span>
-              <a href="mailto:info@somosawaq.org">info@somosawaq.org</a>
-            </span>
+    <footer className="w-full bg-[#F3F3F3] pt-6">
+      <div className="w-[90%] max-w-[1200px] mx-auto pb-8">
+
+        {/* Sección general */}
+        <div className="flex flex-col md:flex-row justify-between gap-10 mb-10">
+          
+          {/* Contacto */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-2 md:w-1/3">
+            <h4 className="font-bold text-lg">{t("footer.contacto")}</h4>
+            <p>{t("footer.direccion")}</p>
+            <a
+              href="mailto:info@somosawaq.org"
+              className="text-blue-600 hover:underline"
+            >
+              info@somosawaq.org
+            </a>
           </div>
-          <div
-            className="w-[40%] flex flex-col items-center justify-center gap-4"
-            id="div-logo-redes"
-          >
+
+          {/* Logo y redes */}
+          <div className="flex flex-col items-center gap-4 md:w-1/3">
             <img
               src={logoAwaq}
-              alt="logo de Awaq"
-              className="max-w-[200px] w-[100%]"
+              alt="Logo Awaq"
+              className="max-w-[160px] w-full"
             />
-            <div
-              className="w-full max-w-[200px] flex justify-between"
-              id="logos-socials"
-            >
+            <div className="flex justify-center gap-6 text-2xl">
               <a
                 href="https://www.facebook.com/somosawaq"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={faFacebook} size="2x" className="hover:text-verde-fuerte"/>
+                <FontAwesomeIcon icon={faFacebook} className="hover:text-verde-fuerte" />
               </a>
               <a
-                href="https://www.instagram.com/awaqongd/?igshid=MTk0NTkyODZkYg%3D%3D"
+                href="https://www.instagram.com/awaqongd"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={faInstagram} size="2x" className="hover:text-verde-fuerte" />
+                <FontAwesomeIcon icon={faInstagram} className="hover:text-verde-fuerte" />
               </a>
               <a
                 href="https://www.linkedin.com/company/awaq-ongd/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={faLinkedin} size="2x" className="hover:text-verde-fuerte "/>
+                <FontAwesomeIcon icon={faLinkedin} className="hover:text-verde-fuerte" />
               </a>
             </div>
           </div>
-          <div
-            className="w-[30%] flex flex-col justify-start items-center gap-1 pr-4 pt-6" 
-            id="div-informacion-legal"
-          >
-            <span className="font-bold">Informacion Legal</span>
-            <span>
-              <a href="https://www.somosawaq.org/politica-de-privacidad">
-                Políticas de Privacidad
-              </a>
-            </span>
-            <span>
-              <a href="https://www.somosawaq.org/politica-de-cookies">
-                Políticas de Cookies
-              </a>
-            </span>
-            <span>
-              <a href="https://www.somosawaq.org/aviso-legal">Aviso Legal</a>
-            </span>
+
+          {/* Información legal */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-2 md:w-1/3">
+            <h4 className="font-bold text-lg">{t("footer.legal")}</h4>
+            <a
+              href="https://www.somosawaq.org/politica-de-privacidad"
+              className="hover:underline"
+            >
+              {t("footer.privacidad")}
+            </a>
+            <a
+              href="https://www.somosawaq.org/politica-de-cookies"
+              className="hover:underline"
+            >
+              {t("footer.cookies")}
+            </a>
+            <a
+              href="https://www.somosawaq.org/aviso-legal"
+              className="hover:underline"
+            >
+              {t("footer.aviso")}
+            </a>
           </div>
         </div>
-        <div className="flex flex-col items-center mt-4" id="div-colaboradores">
-          <span className="w-fit font-bold" id="span-colaboradores">
-            Nuestros Colaboradores
-          </span>
+
+        {/* Colaboradores */}
+        <div className="flex flex-col items-center mt-8">
+          <h4 className="font-bold text-lg mb-4">{t("footer.colaboradores")}</h4>
           <SponsorCarousel />
         </div>
-        <div className="mt-4 w-1/2 mx-auto" id="div-meritos">
-          <h3 className="font-bold w-fit mx-auto mb-10 mt-5">Méritos</h3>
-          <div className="flex mt-4" id="logos-organizaciones-meritos">
-            <div className="w-1/3 flex flex-col items-center gap-3 justify-start">
-              <img
-                className="w-[40px] h-16 object-contain"
-                src={imgTecSocioformador}
-                alt="logo Socioformadores Tec"
-              />
-              <span className="text-center text-[10px]">
-                Socios Formadores del Tecnológico de Monterrey
-              </span>
+
+        {/* Méritos */}
+        <div className="mt-10">
+          <h4 className="text-center font-bold text-lg mb-6">{t("footer.meritos")}</h4>
+          <div className="flex flex-col sm:flex-row justify-around items-center gap-8">
+            <div className="flex flex-col items-center gap-2 text-center max-w-[180px]">
+              <img src={imgTecSocioformador} alt="Socios Formadores" className="w-10 h-16 object-contain" />
+              <span className="text-xs">{t("footer.tec")}</span>
             </div>
-            <div className="w-1/3 flex flex-col items-center gap-3 justify-start">
-              <img
-                className="h-16 object-contain"
-                src={imgProjectGalileo}
-                alt="logo Project Galileo"
-              />
-              <span className="text-[10px]">Powered by Project Galileo</span>
+            <div className="flex flex-col items-center gap-2 text-center max-w-[180px]">
+              <img src={imgProjectGalileo} alt="Project Galileo" className="h-16 object-contain" />
+              <span className="text-xs">{t("footer.galileo")}</span>
             </div>
-            <div className="w-1/3 flex flex-col items-center gap-3 justify-start">
-              <img
-                className="h-16 object-contain"
-                src={imgUptimerobot}
-                alt="logo Uptimerobot"
-              />
-              <span className="text-[10px]">Supported by Uptimerobot</span>
+            <div className="flex flex-col items-center gap-2 text-center max-w-[180px]">
+              <img src={imgUptimerobot} alt="Uptimerobot" className="h-16 object-contain" />
+              <span className="text-xs">{t("footer.uptimerobot")}</span>
             </div>
           </div>
         </div>
-        <div className="w-fit mx-auto mt-4 text-xs">
-          <span>Copyright @ 2025 Awaq EcoGuardians</span>
+
+        {/* Copyright */}
+        <div className="text-center text-xs mt-10">
+          © 2025 Awaq EcoGuardians
         </div>
       </div>
-    </div> 
+    </footer>
   );
 };
 
-export default footer;
+export default Footer;

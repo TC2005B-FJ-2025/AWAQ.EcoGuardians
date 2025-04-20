@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import fondoFormularios from "../componentes/fondoFormularios.png";
 
 function Puntuacion() {
   const navigate = useNavigate();
@@ -38,18 +39,26 @@ function Puntuacion() {
   };
 
   const handleClose = () => {
-    navigate(-1); 
+    navigate(-1);
   };
 
   return (
-    <div className="w-[354px] border-2 border-verde-claro relative rounded-xl mx-auto flex flex-col px-6 py-4">
+    <div
+      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 z-50"
+      style={{
+        backgroundImage: `url(${fondoFormularios})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+    <div className="w-full max-w-sm border-2 border-verde-claro relative rounded-xl mx-auto flex flex-col px-6 py-6 sm:px-8 bg-white shadow-md">
       <FontAwesomeIcon
         icon={faXmark}
-        className="absolute right-[10px] fa-xl text-gray-400 top-[10px] cursor-pointer"
+        className="absolute right-3 top-3 fa-xl text-gray-400 cursor-pointer"
         onClick={handleClose}
       />
 
-      <div className="mx-auto w-fit flex items-center flex-col">
+      <div className="mx-auto w-full text-center">
         <h2 className="text-lg font-semibold mb-2">¿Te gusta el juego?</h2>
         <p className="mb-2">Tu valoración nos ayuda a mejorar</p>
       </div>
@@ -59,8 +68,8 @@ function Puntuacion() {
           <svg
             key={star}
             xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
+            width="28"
+            height="28"
             viewBox="0 0 24 24"
             fill={star <= rating ? "#5F874E" : "none"}
             stroke="#5F874E"
@@ -83,11 +92,12 @@ function Puntuacion() {
         </p>
       ) : (
         <>
-          <div className="mb-2 mx-auto" id="problem">
+          <div className="mb-2 mx-auto text-center">
             <p className="text-[15px]">
               ¿Tienes algún problema?{" "}
-              <span className="cursor-pointer text-verde-fuerte font-semibold"
-              onClick={() => navigate("/CrearCaso")}
+              <span
+                className="cursor-pointer text-verde-fuerte font-semibold"
+                onClick={() => navigate("/CrearCaso")}
               >
                 Reportar un error
               </span>
@@ -95,8 +105,8 @@ function Puntuacion() {
           </div>
 
           <button
-            className={`bg-verde-claro rounded-3xl p-2 text-white ${
-              rating === 0 ? "opacity-50 cursor-not-allowed" : ""
+            className={`bg-verde-claro rounded-3xl p-2 text-white transition duration-300 ${
+              rating === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-verde-fuerte"
             }`}
             onClick={handleEnviar}
             disabled={rating === 0}
@@ -105,6 +115,7 @@ function Puntuacion() {
           </button>
         </>
       )}
+    </div>
     </div>
   );
 }

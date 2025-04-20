@@ -1,0 +1,92 @@
+
+{
+    "header": {
+      "back_AWAQ": "< Volver a la página de AWAQ",
+      "faqs": "FAQs",
+      "select_language": "Seleccionar idioma",
+      "es": "ES",
+      "en": "EN",
+      "back": "Volver"
+    },
+    "bienvenida": {
+      "contactanos": "Contáctanos",
+      "registro_sponsor": "Regístrate como Sponsor",
+      "registro_contacto": "Regístrate como Contacto",
+      "jugar": "Jugar"
+    },
+    "inicio": {
+    "presenta": "AWAQ presenta",
+    "titulo": "Ecoguardianes 2.0",
+    "contactanos": "Contáctanos",
+    "jugar": "Jugar",
+    "sobre_nosotros": "Sobre Nosotros",
+    "titulo_seccion": "Sobre nosotros",
+    "descripcion_breve": "EcoGuardians 2.0 es un juego educativo diseñado para promover la conciencia ambiental.",
+    "descripcion_larga": "AWAQ ONGD es una organización global comprometida con empoderar y conservar a las comunidades en su misión de proteger y restaurar la biodiversidad. Usando tecnologías emergentes para que las personas y comunidades de todo el mundo protejan y restauren su biodiversidad.",
+    "descripcion_expandida": " Desde 2019, AWAQ ha trabajado en proyectos que promueven la conservación de ecosistemas y el impacto positivo en comunidades locales. Uno de sus principales enfoques es la Estación Biológica del Norte de Caldas (EBNC), un espacio clave para la investigación, el ecoturismo y la concientización ambiental.",
+    "saber_mas": "Saber más...",
+    "mostrar_menos": "Mostrar menos..."
+    },
+    "donaciones": {
+    "procesando": "Procesando tu pago...",
+    "espera": "Por favor espera mientras completamos la transacción.",
+    "monto": "Monto donado",
+    "no_email": "No se pudo enviar el correo de confirmación",
+    "reintentar": "Reintentar con el email actual",
+    "otra_donacion": "Hacer otra donación",
+    "titulo": "Donaciones",
+    "subtitulo": "¿Quieres colaborar?",
+    "descripcion": "Tu apoyo nos ayuda a continuar con nuestra labor. Por favor ingresa tus datos para procesar la donación.",
+    "elegir_monto": "Elige una cantidad",
+    "o_ingresa": "O también puedes",
+    "placeholder_monto": "Ingresa el monto",
+    "placeholder_email": "Tu correo electrónico",
+    "procesando_btn": "Procesando...",
+    "boton_donar": "Donar con PayPal",
+    "error_email": "Por favor ingresa un email válido",
+    "error_monto_invalido": "Por favor ingresa una cantidad válida para la donación",
+    "error_pago": "Error al procesar el pago: ",
+    "error_ejecucion": "Error al ejecutar el pago",
+    "error_email_url": "Por favor ingresa un email válido antes de continuar",
+    "backend_answer": "Backend respondió:",
+    "backend_err": "Error al contactar el backend:",
+    "payment_cancel": "El pago fue cancelado por el usuario.",
+    "ir_inicio": "Volver a Inicio",
+    "completado": "Gracias por su donación!"
+    },
+    "sponsors": {
+    "titulo": "Nuestros Sponsors",
+    "descripcion": "Gracias a nuestros aliados podemos seguir impulsando proyectos de impacto ambiental y social.",
+    "saber_mas": "Saber más...",
+    "error_sponsor":"Error al cargar los sponsors:"
+  },
+  "sponsorSection": {
+    "titleColabora": "Colabora",
+    "titleInformate": "Infórmate",
+    "sponsorHeading": "Hazte Sponsor",
+    "sponsorText1": "¿Te gustaría apoyarnos? ¡Regístrate como sponsor!",
+    "sponsorText2": "Al volverte sponsor...",
+    "sponsorButton": "Regístrate como Sponsor",
+    "contactHeading": "Conoce más",
+    "contactText1": "¿Te gusta lo que ves? ¡Vuélvete contacto!",
+    "contactText2": "Al volverte contacto recibirás todas las noticias...",
+    "contactButton": "Regístrate como Contacto"
+  },
+  "footer": {
+    "contacto": "Contacto",
+    "direccion": "Carrera 110 N 69 B-59, Bogotá DC (Colombia)",
+    "legal": "Información Legal",
+    "privacidad": "Políticas de Privacidad",
+    "cookies": "Políticas de Cookies",
+    "aviso": "Aviso Legal",
+    "colaboradores": "Nuestros Colaboradores",
+    "meritos": "Méritos",
+    "tec": "Socios Formadores del Tecnológico de Monterrey",
+    "galileo": "Con el apoyo de Project Galileo",
+    "uptimerobot": "Soporte de Uptimerobot"
+  }
+  
+  
+  
+  }
+  

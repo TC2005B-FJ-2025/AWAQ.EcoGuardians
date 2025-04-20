@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "name": "Sponsor 1",
+      "description": "Descripción del sponsor 1.",
+      "image": "/sponsors/sponsor1.png",
+      "link": "https://tec.mx/es?srsltid=AfmBOopAjjUUQKu7s9fyoTJ2ybt2l1OqGQqYeEfNRuaoacDj8M-21HpF"
+    },
+    {
+      "id": 2,
+      "name": "Sponsor 2",
+      "description": "Descripción del sponsor 2.",
+      "image": "/sponsors/sponsor2.png",
+      "link": "https://www.somosawaq.org/"
+    }
+  ]
+  

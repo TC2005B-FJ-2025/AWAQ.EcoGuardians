@@ -13,6 +13,8 @@ function CrearCaso() {
         opiniones_sugerencias: ''
     });
 
+    const [mensaje, setMensaje] = useState({ texto: '', tipo: '' });
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({
@@ -24,7 +26,8 @@ function CrearCaso() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         if (!formData.tipo_opinion || !formData.supplied_email || !formData.opiniones_sugerencias) {
-            alert("Por favor completa todos los campos requeridos");
+            setMensaje({ texto: "Por favor completa todos los campos requeridos", tipo: "error" });
+            limpiarMensaje();
             return;
         }
 
@@ -38,7 +41,7 @@ function CrearCaso() {
             const data = await response.json();
 
             if (response.ok) {
-                alert("Caso creado con éxito");
+                setMensaje({ texto: "¡Registro exitoso!", tipo: "exito" });
                 setFormData({
                     subject: '',
                     description: '',
@@ -49,18 +52,26 @@ function CrearCaso() {
                     opiniones_sugerencias: ''
                 });
             } else {
-                alert("Hubo un problema al crear el caso. Intenta nuevamente.");
+                setMensaje({ texto: "Hubo un problema al crear el caso. Intenta nuevamente.", tipo: "error" });
             }
         } catch (error) {
-            alert("Error al crear el caso: " + error.message);
+            setMensaje({ texto: "Error al crear el caso: " + error.message, tipo: "error" });
         }
+
+        limpiarMensaje();
+    };
+
+    const limpiarMensaje = () => {
+        setTimeout(() => {
+            setMensaje({ texto: '', tipo: '' });
+        }, 4000);
     };
 
     const colorVerde = "#2F5621";
 
     return React.createElement(
         "div",
-        { className: "min-h-screen bg-gray-50" },
+        { className: "min-h-screen bg-gray-50 pt-[120px] sm:pt-[100px]" },
 
         // Encabezado
         React.createElement(EncabezadoCrearCaso, null),
@@ -79,20 +90,30 @@ function CrearCaso() {
 
                 React.createElement("h2", { className: "text-xl font-bold mb-4 text-center text-green-800" }, "Quejas y Sugerencias"),
 
-                // Campo TIPO DE OPINION 
                 createSelect("Tipo de Opinión", "tipo_opinion", formData.tipo_opinion, handleChange, colorVerde, [
                     { value: "Queja", label: "Queja" },
                     { value: "Sugerencia", label: "Sugerencia" },
                     { value: "Otro", label: "Otro" }
                 ]),
 
-                // Campo OPINIONES O SUGERENCIAS
                 createTextArea("Opiniones o Sugerencias", "opiniones_sugerencias", formData.opiniones_sugerencias, handleChange, colorVerde),
 
-                // Campo CORREO ELECTRONICO 
                 createFieldWithNote("Correo Electrónico", "supplied_email", "email", formData.supplied_email, handleChange, colorVerde),
 
-                // Botón ENVIO
+                // Mensaje bonito de éxito o error
+                mensaje.texto && React.createElement(
+                    "div",
+                    {
+                        className: `mt-4 p-3 rounded text-sm text-center font-medium ${
+                            mensaje.tipo === "error"
+                                ? "bg-red-100 text-red-700 border border-red-300"
+                                : "bg-green-100 text-green-700 border border-green-300"
+                        }`
+                    },
+                    mensaje.texto
+                ),
+
+                // Botón enviar
                 React.createElement(
                     "button",
                     {
