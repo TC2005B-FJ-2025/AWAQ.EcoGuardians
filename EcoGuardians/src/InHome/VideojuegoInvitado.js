@@ -3,10 +3,13 @@ import { motion } from "framer-motion";
 import Encabezado from "./encabezado";
 import { useNavigate } from "react-router-dom";
 import NotificationBanner from "../overlays/NotificationBanner";
+import { FaStar } from 'react-icons/fa';
+import { useTranslation } from "react-i18next";
 
 const VideojuegoInvitado = () => {
   const [isPortrait, setIsPortrait] = useState(false);
   const navigate = useNavigate();
+  const { t } = useTranslation(); 
 
   useEffect(() => {
     const checkOrientation = () => {
@@ -26,28 +29,35 @@ const VideojuegoInvitado = () => {
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: "100%", opacity: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="w-full min-h-screen bg-white flex flex-col overflow-auto relative"
+      className="w-full min-h-screen bg-white flex flex-col overflow-auto relative pt-24"
     >
       <NotificationBanner className=" relative z-100"/>
       {/* Encabezado */}
-      <div className="sticky top-0">
+      <div>
         <Encabezado />
       </div>
 
       {/* Botones flotantes */}
-      <div className="fixed top-28 right-4 sm:right-6 flex flex-col gap-4 z-40 max-w-[90vw]">
+      <div className="xl:fixed 2xl:top-28 2xl:right-4 sm:right-6 2xl:flex-col xl:gap-4 z-40 2xl:max-w-[90vw] hidden xl:flex">
         <button
           className="bg-white text-green-700 text-sm px-3 sm:px-4 py-1.5 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[180px]"
           onClick={() => navigate("../Prospecto")}
         >
-          Contáctanos
+          {t("videogameGuest.contact")}
         </button>
 
         <button
           className="bg-white text-green-700 text-sm px-3 sm:px-4 py-1.5 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[180px]"
           onClick={() => navigate("../Sponsors")}
         >
-          Regístrate como Sponsor
+          {t("videogameGuest.registerSponsor")}
+        </button>
+
+        <button
+          className="bg-white text-green-700 text-sm px-3 sm:px-4 py-1.5 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[180px] flex items-center justify-center"
+          onClick={() => navigate("../Puntuacion")}
+        >
+          <FaStar className="text-xl" />
         </button>
       </div>
 
@@ -56,7 +66,7 @@ const VideojuegoInvitado = () => {
         {isPortrait ? (
           <div className="text-center text-black">
             <p className="text-xl font-semibold mb-4">
-              📲 Por favor, gira tu dispositivo para jugar en modo horizontal.
+              {t("videogameGuest.rotateDevice")}
             </p>
           </div>
         ) : (
@@ -66,7 +76,7 @@ const VideojuegoInvitado = () => {
               title="Ecoguardianes 2.0"
               allowFullScreen
               frameBorder="0"
-              className="absolute top-[-26px] left-0 w-full h-full"
+              className="absolute top-0 left-0 w-full h-full"
               style={{ border: "none" }}
             ></iframe>
           </div>

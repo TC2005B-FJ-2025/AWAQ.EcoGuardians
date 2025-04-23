@@ -15,3 +15,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Estilo para navegadores WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Hacemos que no tenga fondo */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none; /* Esto oculta el scrollbar en Firefox */
+}
+
+/* Opcional: evita que se corte el scroll por completo */
+body {
+  overflow-y: scroll; /* Para mantener el scroll funcional aunque no se vea */
+}

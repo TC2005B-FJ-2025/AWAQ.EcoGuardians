@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom"; // Asegúrate de importar useNavigate
+import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import fondoFormularios from "../componentes/fondoFormularios.png";
+import { useTranslation } from "react-i18next"; 
 
 function SponsorsForm() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,7 +15,12 @@ function SponsorsForm() {
     razones: ''
   });
 
-  const navigate = useNavigate(); // Usa el hook useNavigate
+  const [mensaje, setMensaje] = useState({
+    texto: "",
+    tipo: "" // "exito" o "error"
+  });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,9 +33,8 @@ function SponsorsForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Validar que los campos requeridos no estén vacíos
     if (!formData.name || !formData.email || !formData.url || !formData.razones) {
-      alert("Por favor completa todos los campos requeridos");
+      setMensaje({ texto: t("sponsorForm.complete_all"), tipo: "error" });
       return;
     }
 
@@ -38,95 +45,135 @@ function SponsorsForm() {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
+      //const data = await response.json();
 
       if (response.ok) {
-        alert("Solicitud de Sponsor creado con éxito");
-        // Limpiar el formulario después de enviar
+        setMensaje({ texto: t("sponsorForm.success"), tipo: "exito" });
+
         setFormData({
           name: '',
           email: '',
           url: '',
           razones: ''
         });
+
+        setTimeout(() => {
+          navigate(-1);
+        }, 2500);
       } else {
-        alert("Hubo un problema al crear la solicitud de sponsor. Intenta nuevamente.");
+        setMensaje({ texto: t("sponsorForm.error"), tipo: "error" });
       }
     } catch (error) {
-      alert("Error al crear solicitud de sponsor: " + error.message);
+      setMensaje({ texto: t("sponsorForm.error") + error.message, tipo: "error" });
     }
+  };
+
+  const handleClose = () => {
+    navigate(-1);
   };
 
   return (
     <motion.div
-      initial={{ y: "100%", opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      exit={{ y: "100%", opacity: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="flex justify-center items-center h-screen w-screen bg-white"
+      initial={{ opacity: 0, y: "100%" }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: "100%" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black/50"
+      style={{
+        backgroundImage: `url(${fondoFormularios})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}
     >
-      <div className="w-[500px] border-2 border-verde-claro relative p-4 rounded-xl">
+      <div className="w-[500px] border-2 border-verde-claro bg-white rounded-xl shadow-lg relative p-4">
         <FontAwesomeIcon
           icon={faXmark}
           className="absolute right-[10px] fa-xl text-gray-400 top-[10px] cursor-pointer"
-          onClick={() => navigate("/")} // Usa navigate aquí
+          onClick={handleClose}
         />
-        
-        <h2 className="mx-auto w-fit font-semibold text-[22px]">Solicitud de Sponsor</h2>
 
-        <form className="flex flex-col mt-4" onSubmit={handleSubmit}>
-          <label htmlFor="name" className="mb-2">Nombre Completo</label>
+        <h2 className="mx-auto w-fit font-semibold text-[22px]">{t("sponsorForm.title")}</h2>
+
+        <AnimatePresence>
+          {mensaje.texto && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.4 }}
+              className={`mt-4 mb-2 p-3 rounded text-center text-sm font-medium ${
+                mensaje.tipo === "error"
+                  ? "bg-red-100 text-red-700"
+                  : "bg-green-100 text-green-700"
+              }`}
+            >
+              {mensaje.texto}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <form
+          className="flex flex-col mt-2"
+          onSubmit={handleSubmit}
+          aria-label={t("sponsorForm.title")}
+        >
+          <label htmlFor="name" className="mb-2">{t("sponsorForm.name")}</label>
           <input
             id="name"
             type="text"
             name="name"
-            placeholder="Nombre De la Empresa/Contacto"
+            placeholder={t("sponsorForm.name_placeholder")}
             required
             value={formData.name}
             onChange={handleChange}
             className="border-2 border-black p-[2px] px-2 rounded-2xl mb-5"
+            aria-label={t("sponsorForm.name")}
           />
 
-          <label htmlFor="email" className="mb-2">Correo Electrónico</label>
+          <label htmlFor="email" className="mb-2">{t("sponsorForm.email")}</label>
           <input
             id="email"
             type="email"
             name="email"
-            placeholder="tucorreo@ejemplo.com"
+            placeholder={t("sponsorForm.email_placeholder")}
             required
             value={formData.email}
             onChange={handleChange}
             className="border-2 border-black p-[2px] px-2 rounded-2xl mb-5"
+            aria-label={t("sponsorForm.email")}
           />
 
-          <label htmlFor="url" className="mb-2">Sitio Web</label>
+          <label htmlFor="url" className="mb-2">{t("sponsorForm.website")}</label>
           <input
             id="url"
             type="url"
             name="url"
-            placeholder="https://www.ejemplo.com"
+            placeholder={t("sponsorForm.website_placeholder")} 
             required
             value={formData.url}
             onChange={handleChange}
             className="border-2 border-black p-[2px] px-2 rounded-2xl mb-5"
+            aria-label={t("sponsorForm.website")}
           />
 
-          <label htmlFor="razones" className="mb-2">Razones para patrocinar</label>
+          <label htmlFor="razones" className="mb-2">{t("sponsorForm.reasons")}</label>
           <textarea
             id="razones"
             name="razones"
-            placeholder="Explique las razones para patrocinar"
+            placeholder={t("sponsorForm.reasons_placeholder")} 
             required
             value={formData.razones}
             onChange={handleChange}
             className="border-2 border-black p-[2px] px-2 rounded-2xl mb-5"
+            aria-label={t("sponsorForm.reasons")}
           ></textarea>
 
           <button
             type="submit"
             className="bg-verde-claro hover:bg-verde-fuerte transition-colores rounded-3xl p-2 text-white mt-4 font-medium"
+            aria-label={t("sponsorForm.submit")}
           >
-            Crear Solicitud
+            {t("sponsorForm.submit")}
           </button>
         </form>
       </div>

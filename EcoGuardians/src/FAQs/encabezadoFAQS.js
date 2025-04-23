@@ -1,73 +1,85 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; 
-import LogoHeader from '../componentes/LogoHeader.png';
-import { Smile } from "lucide-react"; // implementación de lucide-react para el icono de la carita feliz
+import { useNavigate, Link } from "react-router-dom";
+import LogoHeader from "../componentes/LogoHeader.png";
+import { Smile } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-const EncabezadoFAQS = () => {
-    const [idioma, setIdioma] = useState("ES");
-    const [mostrarDropdown, setMostrarDropdown] = useState(false);
+const EncabezadoFAQS = ({ onHome }) => {
+  const { t, i18n } = useTranslation(); 
+  const [mostrarDropdown, setMostrarDropdown] = useState(false);
+  const navigate = useNavigate();
 
-    const seleccionarIdioma = (lang) => {
-        setIdioma(lang);
-        setMostrarDropdown(false);
-    };
+  const seleccionarIdioma = (lang) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("i18nextLng", lang);
+    setMostrarDropdown(false);
+  };
 
-    return (
-        <header className="w-full bg-[#2B5629] py-3 px-3 flex justify-between items-center relative ">
+  return (
+    <header className="w-full bg-[#2B5629] py-3 px-4 flex items-center justify-between md:fixed top-0 z-50">
+      {/* Columna izquierda: Volver */}
+      <div className="flex-1 flex justify-start">
+        <button
+          onClick={() => navigate(-1)}
+          className="text-white font-bold text-sm no-underline"
+          aria-label={t("faqHeader.back")}
+        >
+          {t("faqHeader.back")}
+        </button>
+      </div>
 
-            <Link 
-                    to="/" // Redirige a la ruta /faqs
-                    className="text-white font-bold text-xs no-underline z-10"
-                >
-                     &lt; Volver a la página principal
-            </Link>
+      {/* Columna central: Logo */}
+      <div className="flex-1 flex justify-center">
+        <img
+          src={LogoHeader}
+          alt="Logo AWAQ"
+          className="h-12"
+        />
+      </div>
 
-            {/* Centro: Logo */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 z-0">
-                <img src={LogoHeader} alt="Logo AWAQ" className="h-12" />
+      {/* Columna derecha: FAQs + idioma */}
+      <div className="flex-1 flex justify-end items-center gap-2 flex-wrap">
+        {/* Botón Cases */}
+        <Link to="/CrearCaso"
+        className="bg-[#2B5629] text-white border-2 border-white px-3.5 py-2 rounded-xl transition flex items-center justify-center hover:font-bold hover:text-white/80 transition"
+        aria-label="Crear caso"
+        >
+        <Smile className="w-5 h-5" />
+        </Link>
+
+        {/* Idioma Dropdown */}
+        <div className="relative">
+          <button
+            onClick={() => setMostrarDropdown(!mostrarDropdown)}
+            className="bg-[#2B5629] text-white border-2 border-white px-4 py-2 text-sm rounded-xl flex items-center hover:font-bold transition"
+            aria-haspopup="menu"
+            aria-expanded={mostrarDropdown}
+            aria-label={t("faqHeader.selectLanguage")}
+          >
+            {i18n.language.toUpperCase()}
+            <span className="text-sm ml-1">˅</span>
+          </button>
+
+          {mostrarDropdown && (
+            <div className="absolute right-0 mt-2 w-[65px] bg-[#2B5629] text-white rounded-xl shadow-lg z-20 border border-white">
+              <button
+                onClick={() => seleccionarIdioma("es")}
+                className="block w-full text-left px-3.5 py-2 hover:font-bold hover:text-gray-400 rounded-t-xl transition"
+              >
+                {t("faqHeader.es")}
+              </button>
+              <button
+                onClick={() => seleccionarIdioma("en")}
+                className="block w-full text-left px-3.5 py-2 hover:font-bold hover:text-gray-400 rounded-b-xl transition"
+              >
+                {t("faqHeader.en")}
+              </button>
             </div>
-
-            {/* Derecha: FAQs e Idioma */}
-            <div className="flex items-center gap-4 z-10">
-
-                {/* Botón Cases */}
-                <Link to="/CrearCaso"
-                className="bg-[#2B5629] text-white border-2 border-white px-3.5 py-2 rounded-xl transition flex items-center justify-center hover:font-bold hover:text-white/80 transition"
-                aria-label="Crear caso"
-                >
-                <Smile className="w-5 h-5" />
-                </Link>
-
-                {/* Dropdown idioma */}
-                <div className="relative">
-                    <button 
-                        onClick={() => setMostrarDropdown(!mostrarDropdown)}
-                        className="bg-[#2B5629] text-white border-2 border-white px-3.5 py-2 text-base rounded-xl flex items-center hover:font-bold transition"
-                    >
-                        {idioma}
-                        <span className="text-sm ml-1">˅</span>
-                    </button>
-
-                    {mostrarDropdown && (
-                        <div className="absolute right-0 mt-2 w-[65px] bg-[#2B5629] text-white rounded-xl shadow-lg z-20 border border-white">
-                            <button 
-                                onClick={() => seleccionarIdioma("ES")}
-                                className="block w-full text-left px-3.5 py-2 hover:font-bold hover:text-gray-500 rounded-t-xl transition"
-                            >
-                                ES
-                            </button>
-                            <button 
-                                onClick={() => seleccionarIdioma("EN")}
-                                className="block w-full text-left px-3.5 py-2 hover:font-bold hover:text-gray-500 rounded-b-xl transition"
-                            >
-                                EN
-                            </button>
-                        </div>
-                    )}
-                </div>
-            </div>
-        </header>
-    );
+          )}
+        </div>
+      </div>
+    </header>
+  );
 };
 
 export default EncabezadoFAQS;

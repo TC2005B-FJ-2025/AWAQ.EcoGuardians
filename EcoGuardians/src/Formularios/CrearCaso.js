@@ -1,8 +1,11 @@
 import { useState } from "react";
 import React from "react";
-import EncabezadoCrearCaso from "../InHome/encabezadoCrearCaso"; 
+import EncabezadoCrearCaso from "../InHome/encabezadoCrearCaso";
+import { useTranslation } from "react-i18next";
 
 function CrearCaso() {
+    const { t } = useTranslation();
+    
     const [formData, setFormData] = useState({
         subject: '',
         description: '',
@@ -12,6 +15,8 @@ function CrearCaso() {
         tipo_opinion: 'Queja',
         opiniones_sugerencias: ''
     });
+
+    const [mensaje, setMensaje] = useState({ texto: '', tipo: '' });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -23,8 +28,9 @@ function CrearCaso() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        if (!formData.subject || !formData.description || !formData.nombre_usuario || !formData.supplied_email) {
-            alert("Por favor completa todos los campos requeridos");
+        if (!formData.tipo_opinion || !formData.supplied_email || !formData.opiniones_sugerencias) {
+            setMensaje({ texto: t("crearCaso.alert_campos"), tipo: "error" });
+            limpiarMensaje();
             return;
         }
 
@@ -35,10 +41,10 @@ function CrearCaso() {
                 body: JSON.stringify(formData),
             });
 
-            const data = await response.json();
+            //const data = await response.json();
 
             if (response.ok) {
-                alert("Caso creado con éxito");
+                setMensaje({ texto: t("crearCaso.success"), tipo: "exito" });
                 setFormData({
                     subject: '',
                     description: '',
@@ -49,20 +55,28 @@ function CrearCaso() {
                     opiniones_sugerencias: ''
                 });
             } else {
-                alert("Hubo un problema al crear el caso. Intenta nuevamente.");
+                setMensaje({ texto: t("crearCaso.error_general"), tipo: "error" });
             }
         } catch (error) {
-            alert("Error al crear el caso: " + error.message);
+            setMensaje({ texto: t("crearCaso.error_crear") + error.message, tipo: "error" });
         }
+
+        limpiarMensaje();
+    };
+
+    const limpiarMensaje = () => {
+        setTimeout(() => {
+            setMensaje({ texto: '', tipo: '' });
+        }, 4000);
     };
 
     const colorVerde = "#2F5621";
 
     return React.createElement(
         "div",
-        { className: "min-h-screen bg-gray-50" },
+        { className: "min-h-screen bg-gray-50 pt-[120px] sm:pt-[100px]" },
 
-        // Nuevo encabezado importado
+        // Encabezado
         React.createElement(EncabezadoCrearCaso, null),
 
         // Formulario
@@ -74,27 +88,37 @@ function CrearCaso() {
                 {
                     onSubmit: handleSubmit,
                     className: "w-full max-w-2xl bg-white p-6 rounded-2xl shadow-md border",
-                    style: { borderColor: colorVerde }
+                    style: { borderColor: colorVerde },
+                    "aria-label": t("crearCaso.titulo")
                 },
 
-                React.createElement("h2", { className: "text-xl font-bold mb-4 text-center text-green-800" }, "Quejas y Sugerencias"),
+                React.createElement("h2", { className: "text-xl font-bold mb-4 text-center text-green-800" },  t("crearCaso.titulo")),
 
-                createField("Asunto", "subject", "text", formData.subject, handleChange, colorVerde),
-                createTextArea("Descripción", "description", formData.description, handleChange, colorVerde),
-                createSelect("Prioridad", "priority", formData.priority, handleChange, colorVerde, [
-                    { value: "Low", label: "Baja" },
-                    { value: "Medium", label: "Media" },
-                    { value: "High", label: "Alta" }
+                createSelect(t("crearCaso.label_tipo"), "tipo_opinion", formData.tipo_opinion, handleChange, colorVerde, [
+                    { value: "Queja", label: t("crearCaso.queja") },
+                    { value: "Sugerencia", label: t("crearCaso.sugerencia") },
+                    { value: "Otro", label: t("crearCaso.otro") }
                 ]),
-                createField("Nombre de Usuario", "nombre_usuario", "text", formData.nombre_usuario, handleChange, colorVerde),
-                createField("Correo Electrónico", "supplied_email", "email", formData.supplied_email, handleChange, colorVerde),
-                createSelect("Tipo de Opinión", "tipo_opinion", formData.tipo_opinion, handleChange, colorVerde, [
-                    { value: "Queja", label: "Queja" },
-                    { value: "Sugerencia", label: "Sugerencia" },
-                    { value: "Otro", label: "Otro" }
-                ]),
-                createTextArea("Opiniones o Sugerencias", "opiniones_sugerencias", formData.opiniones_sugerencias, handleChange, colorVerde),
 
+                createTextArea(t("crearCaso.label_opiniones"), "opiniones_sugerencias", formData.opiniones_sugerencias, handleChange, colorVerde),
+
+                createFieldWithNote(t("crearCaso.label_email"), "supplied_email", "email", formData.supplied_email, handleChange, colorVerde,t),
+
+                // Mensaje bonito de éxito o error
+                mensaje.texto && React.createElement(
+                    "div",
+                    {
+                        className: `mt-4 p-3 rounded text-sm text-center font-medium ${
+                            mensaje.tipo === "error"
+                                ? "bg-red-100 text-red-700 border border-red-300"
+                                : "bg-green-100 text-green-700 border border-green-300"
+                        }`,
+                        "aria-live": "polite"
+                    },
+                    mensaje.texto
+                ),
+
+                // Botón enviar
                 React.createElement(
                     "button",
                     {
@@ -102,14 +126,14 @@ function CrearCaso() {
                         className: "mt-4 w-full text-white font-semibold py-2 rounded-xl transition hover:brightness-110",
                         style: { backgroundColor: colorVerde }
                     },
-                    "Enviar"
+                    t("crearCaso.boton_enviar")
                 )
             )
         )
     );
 }
 
-// Helpers
+/*Helpers
 function createField(label, name, type, value, onChange, borderColor) {
     return React.createElement(React.Fragment, null,
         React.createElement("label", { className: "block text-sm font-medium text-gray-700 mb-1 mt-4" }, label),
@@ -118,10 +142,26 @@ function createField(label, name, type, value, onChange, borderColor) {
             name,
             value,
             onChange,
-            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-400",
+            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-800",
             required: true,
             style: { borderColor }
         })
+    );
+}*/
+
+function createFieldWithNote(label, name, type, value, onChange, borderColor,t) {
+    return React.createElement(React.Fragment, null,
+        React.createElement("label", { className: "block text-sm font-medium text-gray-700 mb-1 mt-4" }, label),
+        React.createElement("input", {
+            type,
+            name,
+            value,
+            onChange,
+            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-800",
+            required: true,
+            style: { borderColor }
+        }),
+        React.createElement("p", { className: "text-xs text-gray-700 mt-1" }, t("crearCaso.campo_obligatorio"))
     );
 }
 
@@ -133,7 +173,7 @@ function createTextArea(label, name, value, onChange, borderColor) {
             value,
             onChange,
             rows: 4,
-            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-400",
+            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-800",
             style: { borderColor }
         })
     );
@@ -146,7 +186,7 @@ function createSelect(label, name, value, onChange, borderColor, options) {
             name,
             value,
             onChange,
-            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-400",
+            className: "w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-800",
             style: { borderColor }
         },
             options.map(opt =>

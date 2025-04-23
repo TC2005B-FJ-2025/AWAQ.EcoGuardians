@@ -1,0 +1,21 @@
+{
+    "salesforce": {
+        "username": "c3170600750@agentforce.com",
+        "password": "salesforcin2",
+        "security_token": "G0dXIw88ZtgYjiHNllRZ9gpHF",
+        "consumer_key": "3MVG9rZjd7MXFdLhTtQ3o7490SYfft0KQKGUGhfDAdo9IH8TvkFVU7ZbP51y9n42LRAPsKJXiHkAtvEuwZ.rK",
+        "consumer_secret": "DB514D96E146B86A35C94684D7632DB0F3D659741F42AC04C9437DEA1E9D1AB7"
+    },
+    "paypal": {
+        "mode": "sandbox",
+        "client_id": "AbnxxsUd9iRkjhAV5ZBZXYaR1wndy-SRb1GYpAO0v8sxltgXr8b95LcXlTXkap0dtW00dsjKHN99tSvn",
+        "client_secret": "EHBHSkyg_wN403HCgo2KQH3NmMOyUXZtweda05n_CIsPgMyOkuq9bkZ_O1m4rQsFSVi1lP3X5KLLYo2r"
+    },
+    "email": {
+        "mail_server": "smtp.gmail.com",
+        "mail_port": 587,
+        "mail_username": "awaq.pruebas@gmail.com",
+        "mail_password": "xuvr lstw tncf upny"
+    },
+    "flask_secret_key": "tsfyguaistyatuis589566875623568956"
+}

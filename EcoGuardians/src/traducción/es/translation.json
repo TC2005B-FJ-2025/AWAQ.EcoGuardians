@@ -1,0 +1,262 @@
+
+{
+  "header": {
+    "back_AWAQ": "< Volver a la página de AWAQ",
+    "faqs": "FAQs",
+    "select_language": "Seleccionar idioma",
+    "es": "ES",
+    "en": "EN",
+    "back": "< Volver",
+    "quejas": "Quejas",
+    "valoracion": "Valoración"
+  },
+  "bienvenida": {
+    "contactanos": "Contáctanos",
+    "registro_sponsor": "Regístrate como Sponsor",
+    "registro_contacto": "Regístrate como Contacto",
+    "jugar": "Jugar"
+  },
+  "inicio": {
+  "presenta": "AWAQ presenta",
+  "titulo": "Ecoguardianes 2.0",
+  "contactanos": "Contáctanos",
+  "jugar": "Jugar",
+  "sobre_nosotros": "Sobre Nosotros",
+  "titulo_seccion": "Sobre nosotros",
+  "descripcion_breve": "EcoGuardians 2.0 es un juego educativo diseñado para promover la conciencia ambiental.",
+  "descripcion_larga": "AWAQ ONGD es una organización global comprometida con empoderar y conservar a las comunidades en su misión de proteger y restaurar la biodiversidad. Usando tecnologías emergentes para que las personas y comunidades de todo el mundo protejan y restauren su biodiversidad.",
+  "descripcion_expandida": " Desde 2019, AWAQ ha trabajado en proyectos que promueven la conservación de ecosistemas y el impacto positivo en comunidades locales. Uno de sus principales enfoques es la Estación Biológica del Norte de Caldas (EBNC), un espacio clave para la investigación, el ecoturismo y la concientización ambiental.",
+  "saber_mas": "Saber más...",
+  "mostrar_menos": "Mostrar menos..."
+  },
+  "donaciones": {
+  "procesando": "Procesando tu pago...",
+  "espera": "Por favor espera mientras completamos la transacción.",
+  "monto": "Monto donado",
+  "no_email": "No se pudo enviar el correo de confirmación",
+  "reintentar": "Reintentar con el email actual",
+  "otra_donacion": "Hacer otra donación",
+  "titulo": "Donaciones",
+  "subtitulo": "¿Quieres colaborar?",
+  "descripcion": "Tu apoyo nos ayuda a continuar con nuestra labor. Por favor ingresa tus datos para procesar la donación.",
+  "elegir_monto": "Elige una cantidad",
+  "o_ingresa": "O también puedes",
+  "placeholder_monto": "Ingresa el monto",
+  "placeholder_email": "Tu correo electrónico",
+  "procesando_btn": "Procesando...",
+  "boton_donar": "Donar con PayPal",
+  "error_email": "Por favor ingresa un email válido",
+  "error_monto_invalido": "Por favor ingresa una cantidad válida para la donación",
+  "error_pago": "Error al procesar el pago: ",
+  "error_ejecucion": "Error al ejecutar el pago",
+  "error_email_url": "Por favor ingresa un email válido antes de continuar",
+  "backend_answer": "Backend respondió:",
+  "backend_err": "Error al contactar el backend:",
+  "payment_cancel": "El pago fue cancelado por el usuario.",
+  "ir_inicio": "Volver a Inicio",
+  "completado": "Gracias por su donación!"
+  },
+  "sponsors": {
+  "titulo": "Nuestros Sponsors",
+  "descripcion": "Gracias a nuestros aliados podemos seguir impulsando proyectos de impacto ambiental y social.",
+  "saber_mas": "Saber más...",
+  "error_sponsor":"Error al cargar los sponsors:"
+},
+"sponsorSection": {
+  "titleColabora": "Colabora",
+  "titleInformate": "Infórmate",
+  "sponsorHeading": "Hazte Sponsor",
+  "sponsorText1": "¿Te gustaría apoyarnos? ¡Regístrate como sponsor!",
+  "sponsorText2": "Al volverte sponsor...",
+  "sponsorButton": "Regístrate como Sponsor",
+  "contactHeading": "Conoce más",
+  "contactText1": "¿Te gusta lo que ves? ¡Vuélvete contacto!",
+  "contactText2": "Al volverte contacto recibirás todas las noticias...",
+  "contactButton": "Regístrate como Contacto"
+},
+"footer": {
+  "contacto": "Contacto",
+  "direccion": "Carrera 110 N 69 B-59, Bogotá DC (Colombia)",
+  "legal": "Información Legal",
+  "privacidad": "Políticas de Privacidad",
+  "cookies": "Políticas de Cookies",
+  "aviso": "Aviso Legal",
+  "colaboradores": "Nuestros Colaboradores",
+  "meritos": "Méritos",
+  "tec": "Socios Formadores del Tecnológico de Monterrey",
+  "galileo": "Con el apoyo de Project Galileo",
+  "uptimerobot": "Soporte de Uptimerobot"
+},
+"videogameGuest": {
+"contact": "Contáctanos",
+"registerSponsor": "Regístrate como Sponsor",
+"rotateDevice": "📲 Por favor, gira tu dispositivo para jugar en modo horizontal."
+},
+"notification": {
+"message": "Suscríbete a nuestras notificaciones para recibir las últimas actualizaciones y noticias relacionadas con AWAQ",
+"noThanks": "No, Gracias",
+"becomeContact": "Volverme Contacto",
+"thankYou": "¡Muchas Gracias!"
+},
+"faqHeader": {
+"back": "< Volver",
+"selectLanguage": "Seleccionar idioma",
+"es": "ES",
+"en": "EN"
+},
+"faqs": {
+"title": "Ecoguardianes 2.0",
+"subtitle": "Preguntas Frecuentes",
+"categories": {
+  "ecoguardian": "EcoGuardians",
+  "donations": "Donaciones",
+  "sponsors": "Sponsors",
+  "contacto": "Red de Contactos AWAQ",
+  "opinion": "Quejas y sugerencias",
+  "idioma": "Idioma",
+  "general": "Generalidades",
+  "mas": "¿Más dudas?"
+},
+"ecoguardian": {
+  "q1": {
+    "question": "¿En qué consiste el juego?",
+    "answer": "El juego simula las instalaciones de AWAQ, en donde como jugador podrás interactuar con todo lo que hay en las instalaciones físicas y completar las actividades."
+  },
+  "q2": {
+    "question": "¿Cómo jugar?",
+    "answer": "Para empezar a jugar simplemente presiona el botón Jugar, si es tu primera vez jugando verás un tutorial que te indicará todos los comandos para interactuar"
+  },
+  "q3": {
+    "question": "¿Puedo jugar en el teléfono?",
+    "answer": "No, por el momento el juego está habilitado solamente para usarse en computadora."
+  },
+  "q4": {
+    "question": "¿Te gustaría calificar el juego?",
+    "answer": "Nos encanta saber tu opinión, califica qué te pareció el videojuego con el botón que contiene una estrella que se encuentra a lado del juego."
+  }
+},
+"donations": {
+  "q1": {
+    "question": "¿En dónde puedo donar?",
+    "answer": "En la página principal, encontrarás un apartado de donaciones, el cual está conectado con Paypal, por medio de este recurso es que recibimos donaciones."
+  },
+  "q2": {
+    "question": "¿Qué necesito para donar?",
+    "answer": "Únicamente necesitas contar con una cuenta de paypal; se te solicitarán tus datos de paypal para proceder con la donación."
+  }
+},
+"sponsors": {
+  "q1": {
+    "question": "¿Cómo me puedo volver sponsor de AWAQ?",
+    "answer": "Al dar click en Jugar, a tu derecha podrás ver diferentes botones, el botón Regístrate como Sponsor te redirigirá a un formulario donde podrás llenar tu solicitud. Este mismo botón también lo puedes encontrar en la página principal, casi al final del lado izquierdo."
+  },
+  "q2": {
+    "question": "¿Qué necesito para ser sponsor?",
+    "answer": "En el formulario mencionado anteriormente, deberás proporcionarnos el nombre de la empresa o contacto, un correo electrónico para contactarte, el URL del sitio web de la empresa patrocinadora y un breve párrafo con las razones para volverte patrocinador de AWAQ."
+  }
+},
+"contacto": {
+  "q1": {
+    "question": "¿Cómo puedo recibir más información?",
+    "answer": "Si te interesa recibir más información y noticias sobre AWAQ, vuélvete parte de nuestra red de contactos. En la página principal, casi al final del lado derecho, podrás encontrar el botón Regístrate como Contacto, donde podrás dejar tus datos para poder estar informado de todas las novedades. Este botón también lo podrás encontrar al dar click en Jugar. "
+  }
+},
+"opinion": {
+  "q1": {
+    "question": "Tengo alguna queja o alguna sugerencia",
+    "answer": "En caso de contar con alguna opinión que te gustaría darnos, únicamente presiona el botón del encabezado que tiene una carita feliz, este te redirigirá a un formulario de quejas y sugerencias por el cual podrás enviarnos tus comentarios"
+  },
+  "q2": {
+    "question": "¿Para qué debo brindar mi correo electrónico al enviar una opinión?",
+    "answer": "Es necesario que proporciones un correo electrónico al enviar una opinión para que se pueda dar seguimiento a tu queja o sugerencia de forma personalizada."
+  }
+},
+"idioma": {
+  "q1": {
+    "question": "¿Cómo cambiar el idioma de la página?",
+    "answer": "En la parte superior derecha de la página principal puedes encontrar un botón con una flecha desplegable y cambiar el idioma a tu preferencia."
+  }
+},
+"mas": {
+  "q1": {
+    "question": "¿Más dudas?",
+    "answer": "Si tienes dudas más específicas o deseas que te contactemos personalmente, en la página principal, debajo de la imagen de vista previa del juego, encontrarás el botón Contáctanos, donde podrás dejarnos tus datos y cualquier inquietud que tengas. Este mismo botón también se encuentra al dar click en Jugar, del lado derecho. "
+  }
+}
+},
+"crearCaso": {
+"titulo": "Quejas y Sugerencias",
+"label_tipo": "Tipo de Opinión",
+"label_opiniones": "Opiniones o Sugerencias",
+"label_email": "Correo Electrónico",
+"queja": "Queja",
+"sugerencia": "Sugerencia",
+"otro": "Otro",
+"boton_enviar": "Enviar",
+"alert_campos": "Por favor completa todos los campos requeridos",
+"success": "Opinion enviada con éxito",
+"error_general": "Hubo un problema al crear el caso. Intenta nuevamente.",
+"error_crear": "Error al crear el caso: ",
+"campo_obligatorio": "* este campo es obligatorio, para darle seguimiento a tu caso"
+},
+"contact": {
+"title": "Únete a nuestra red de contactos",
+"name": "Nombre Completo",
+"name_placeholder": "Tu nombre completo",
+"age_range": "Rango de Edad",
+"age": {
+  "0_12": "0-12 años",
+  "13_17": "13-17 años",
+  "18_25": "18-25 años",
+  "26_35": "26-35 años",
+  "36_50": "36-50 años",
+  "51_plus": "51+ años"
+},
+"email": "Correo Electrónico",
+"email_placeholder": "tucorreo@ejemplo.com",
+"country": "País",
+"country_placeholder": "Tu país",
+"region": "Región/Estado",
+"region_placeholder": "Tu región o estado",
+"captcha_error": "Por favor, verifica que no eres un robot",
+"success": "¡Registro exitoso!",
+"submit": "Unirme"
+},
+"sponsorForm": {
+"title": "Solicitud de Sponsor",
+"name": "Nombre Completo",
+"name_placeholder": "Nombre De la Empresa/Contacto",
+"email": "Correo Electrónico",
+"email_placeholder": "tucorreo@ejemplo.com",
+"website": "Sitio Web",
+"website_placeholder": "https://www.ejemplo.com",
+"reasons": "Razones para patrocinar",
+"reasons_placeholder": "Explica las razones para patrocinar",
+"submit": "Crear Solicitud",
+"success": "Solicitud de Sponsor creada con éxito",
+"error": "Hubo un problema al crear la solicitud de sponsor. Intenta nuevamente.",
+"complete_all": "Por favor completa todos los campos requeridos"
+},
+"puntuacion": {
+"error_envio": "Error al enviar la valoración",
+"error_red":"Error de red",
+"gusta": "¿Te gusta el juego?",
+"valoracion": "Tu valoración nos ayuda a mejorar",
+"gracias":"¡Gracias por tu valoración!",
+"problema": "¿Tienes algún problema?",
+"reportar":"Reportar un error",
+"Enviar": "Enviar"
+},
+"prospect": {
+"title": "Contáctanos",
+"name": "Nombre:",
+"name_placeholder": "Ingresa tu nombre completo",
+"email": "Email:",
+"email_placeholder": "ejemplo@email.com",
+"description": "Descripción:",
+"description_placeholder": "Describe tu consulta o solicitud",
+"submit": "Enviar Solicitud"
+}  
+
+}
+

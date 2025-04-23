@@ -1,0 +1,259 @@
+{
+  "header": {
+    "back_AWAQ": "< Back to AWAQ website",
+    "faqs": "FAQs",
+    "select_language": "Select language",
+    "es": "ES",
+    "en": "EN",
+    "back": "< Back",
+    "quejas": "Complaints",
+    "valoracion": "Rating"
+  },
+  "bienvenida": {
+    "contactanos": "Contact us",
+    "registro_sponsor": "Register as Sponsor",
+    "registro_contacto": "Register as Contact",
+    "jugar": "Play"
+  },
+  "inicio": {
+  "presenta": "AWAQ presents",
+  "titulo": "Ecoguardians 2.0",
+  "contactanos": "Contact us",
+  "jugar": "Play",
+  "sobre_nosotros": "About Us",
+  "titulo_seccion": "About us",
+  "descripcion_breve": "EcoGuardians 2.0 is an educational game designed to promote environmental awareness.",
+  "descripcion_larga": "AWAQ ONGD is a global organization committed to empowering and preserving communities in their mission to protect and restore biodiversity. Using emerging technologies to help people and communities around the world protect and restore their biodiversity.",
+  "descripcion_expandida": " Since 2019, AWAQ has worked on projects that promote ecosystem conservation and positive impact on local communities. One of its main focuses is the Northern Caldas Biological Station (EBNC), a key space for research, ecotourism, and environmental awareness.",
+  "saber_mas": "Read more...",
+  "mostrar_menos": "Show less..."
+  },
+  "donaciones": {
+  "procesando": "Processing your payment...",
+  "espera": "Please wait while we complete the transaction.",
+  "monto": "Amount donated",
+  "no_email": "Confirmation email could not be sent",
+  "reintentar": "Retry with current email",
+  "otra_donacion": "Make another donation",
+  "titulo": "Donations",
+  "subtitulo": "Would you like to help?",
+  "descripcion": "Your support helps us continue our mission. Please enter your details to process the donation.",
+  "elegir_monto": "Choose an amount",
+  "o_ingresa": "Or you can also",
+  "placeholder_monto": "Enter the amount",
+  "placeholder_email": "Your email address",
+  "procesando_btn": "Processing...",
+  "boton_donar": "Donate with PayPal",
+  "error_email": "Please enter a valid email",
+  "error_monto_invalido": "Please enter a valid donation amount",
+  "error_pago": "Error processing payment: ",
+  "error_ejecucion": "Error executing the payment",
+  "error_email_url": "Please enter a valid email before continuing",
+  "backend_answer": "Backend answer:",
+  "backend_err": "Error contacting the backend:",
+  "payment_cancel": "The payment was cancelled by the user.",
+  "ir_inicio": "Go to Home",
+  "completado": "Thanks for your donation!"
+  },
+  "sponsors": {
+  "titulo": "Our Sponsors",
+  "descripcion": "Thanks to our partners, we continue to support impactful environmental and social projects.",
+  "saber_mas": "Learn more...",
+  "error_sponsor":"Error charging the sponsors:"
+  },
+  "sponsorSection": {
+"titleColabora": "Collaborate",
+"titleInformate": "Get Informed",
+"sponsorHeading": "Become a Sponsor",
+"sponsorText1": "Would you like to support us? Sign up as a sponsor!",
+"sponsorText2": "By becoming a sponsor...",
+"sponsorButton": "Register as Sponsor",
+"contactHeading": "Learn More",
+"contactText1": "Do you like what you see? Become a contact!",
+"contactText2": "By becoming a contact you'll receive all the news...",
+"contactButton": "Register as Contact"
+},
+"footer": {
+"contacto": "Contact",
+"direccion": "Carrera 110 N 69 B-59, Bogotá DC (Colombia)", 
+"legal": "Legal Information",
+"privacidad": "Privacy Policy",
+"cookies": "Cookies Policy",
+"aviso": "Legal Notice",
+"colaboradores": "Our Partners",
+"meritos": "Merits",
+"tec": "Educational Partners of Tecnológico de Monterrey",
+"galileo": "Powered by Project Galileo",
+"uptimerobot": "Supported by Uptimerobot"
+},
+"videogameGuest": {
+"contact": "Contact Us",
+"registerSponsor": "Register as Sponsor",
+"rotateDevice": "📲 Please rotate your device to play in landscape mode."
+},
+"notification": {
+"message": "Subscribe to our notifications to receive the latest updates and news related to AWAQ",
+"noThanks": "No, Thanks",
+"becomeContact": "Become a Contact",
+"thankYou": "Thank you very much!"
+},
+"faqHeader": {
+"back": "< Back",
+"selectLanguage": "Select language",
+"es": "ES",
+"en": "EN"
+},
+"faqs": {
+"title": "Ecoguardians 2.0",
+"subtitle": "Frequently Asked Questions",
+"categories": {
+  "ecoguardian": "EcoGuardians",
+  "donations": "Donations",
+  "sponsors": "Sponsors",
+  "contacto": "AWAQ Contact Network",
+  "opinion": "Complaints and Suggestions",
+  "idioma": "Language",
+  "general": "General",
+  "mas": "More questions?"
+},
+"ecoguardian": {
+  "q1": {
+    "question": "What is the game about?",
+    "answer": "The game simulates the AWAQ facilities, where as a player you can interact with everything in the physical space and complete activities."
+  },
+  "q2": {
+    "question": "How to play?",
+    "answer": "To start playing, just press the Play button. If it’s your first time, you’ll see a tutorial that will guide you through all the commands to interact."
+  },
+  "q3": {
+    "question": "Can I play on my phone?",
+    "answer": "Not yet. For now, the game is only available on computers."
+  },
+  "q4": {
+    "question": "Would you like to rate the game?",
+    "answer": "We love to hear your opinion! Rate your experience by clicking the star button next to the game."
+  }
+},
+"donations": {
+  "q1": {
+    "question": "Where can I donate?",
+    "answer": "On the main page, you will find a donation section connected to PayPal. This is the method we use to receive donations."
+  },
+  "q2": {
+    "question": "What do I need to donate?",
+    "answer": "You only need a PayPal account. Your PayPal details will be requested to proceed with the donation."
+  }
+},
+"sponsors": {
+  "q1": {
+    "question": "How can I become a sponsor of AWAQ?",
+    "answer": "Clicking on Play will show several buttons on the right. The 'Register as Sponsor' button will take you to a form to submit your application. You can also find this button near the bottom left of the main page."
+  },
+  "q2": {
+    "question": "What do I need to become a sponsor?",
+    "answer": "In the mentioned form, you will need to provide your company or contact name, an email address, your companys website URL, and a short paragraph explaining why you want to sponsor AWAQ."
+  }
+},
+"contacto": {
+  "q1": {
+    "question": "How can I receive more information?",
+    "answer": "If you would like to receive updates and news about AWAQ, join our contact network. Near the bottom right of the main page, you will find the 'Register as Contact' button to leave your information and stay informed. This button is also available after clicking on Play."
+  }
+},
+"opinion": {
+  "q1": {
+    "question": "I have a complaint or suggestion",
+    "answer": "If you’d like to share feedback, simply click the smiley face button in the header. This will take you to a form where you can submit your comments."
+  },
+  "q2": {
+    "question": "Why do I need to provide my email when submitting feedback?",
+    "answer": "We need your email to follow up on your complaint or suggestion in a personalized way."
+  }
+},
+"idioma": {
+  "q1": {
+    "question": "How do I change the page language?",
+    "answer": "At the top right of the main page, you can find a dropdown button to change the language to your preference."
+  }
+},
+"mas": {
+  "q1": {
+    "question": "More questions?",
+    "answer": "If you have more specific questions or would like us to contact you personally, on the main page below the preview image of the game, you'll find a 'Contact Us' button where you can leave your information and any concerns you may have. This button is also available after clicking Play, on the right side."
+  }
+}
+},
+"crearCaso": {
+"titulo": "Complaints and Suggestions",
+"label_tipo": "Type of Opinion",
+"label_opiniones": "Comments or Suggestions",
+"label_email": "Email",
+"queja": "Complaint",
+"sugerencia": "Suggestion",
+"otro": "Other",
+"boton_enviar": "Submit",
+"alert_campos": "Please fill in all required fields",
+"success": "Feedback sent successfully",
+"error_general": "There was a problem creating the case. Please try again.",
+"error_crear": "Error creating case: ",
+"campo_obligatorio": "* this field is required so we can follow up on your case"
+},
+"contact": {
+"title": "Join our contact network",
+"name": "Full Name",
+"name_placeholder": "Your full name",
+"age_range": "Age Range",
+"age": {
+  "0_12": "0-12 years",
+  "13_17": "13-17 years",
+  "18_25": "18-25 years",
+  "26_35": "26-35 years",
+  "36_50": "36-50 years",
+  "51_plus": "51+ years"
+},
+"email": "Email",
+"email_placeholder": "youremail@example.com",
+"country": "Country",
+"country_placeholder": "Your country",
+"region": "Region/State",
+"region_placeholder": "Your region or state",
+"captcha_error": "Please verify you're not a robot",
+"success": "Registration successful!",
+"submit": "Join"
+},
+"sponsorForm": {
+"title": "Sponsor Application",
+"name": "Full Name",
+"name_placeholder": "Company/Contact Name",
+"email": "Email",
+"email_placeholder": "youremail@example.com",
+"website": "Website",
+"website_placeholder": "https://www.example.com",
+"reasons": "Reasons for Sponsorship",
+"reasons_placeholder": "Explain your reasons for sponsoring",
+"submit": "Submit Application",
+"success": "Sponsor application created successfully",
+"error": "There was a problem creating the sponsor application. Please try again.",
+"complete_all": "Please complete all required fields"
+},
+"puntuacion": {
+"error_envio": "Error sending the rating",
+"error_red":"Network error",
+"gusta": "Do you like the game?",
+"valoracion": "Your feedback helps us improve",
+"gracias":"Thank you for your feedback!",
+"problema": "Are you having a problem?",
+"reportar":"Report a bug",
+"Enviar": "Send"
+},
+"prospect": {
+"title": "Contact Us",
+"name": "Name:",
+"name_placeholder": "Enter your full name",
+"email": "Email:",
+"email_placeholder": "example@email.com",
+"description": "Description:",
+"description_placeholder": "Describe your request or inquiry",
+"submit": "Send Request"
+} 
+}

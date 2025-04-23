@@ -4,9 +4,26 @@ from simple_salesforce import Salesforce
 import logging
 from logging.handlers import RotatingFileHandler
 import os
+import json
 
 # Inicialización de la app Flask
 app = Flask(__name__)
+# Ruta ABSOLUTA al config.json (la más segura)
+#CONFIG_PATH = r'C:\Users\HP\Desktop\desarrollo\awaq2\AWAQ.EcoGuardians\EcoGuardians\json\config.json'
+
+# O si prefieres ruta relativa (desde paypal.py):
+CONFIG_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..', 'json', 'config.json'))
+
+# Verificación adicional
+if not os.path.exists(CONFIG_PATH):
+    raise FileNotFoundError(f"❌ No se encontró config.json en: {CONFIG_PATH}")
+
+# Cargar configuración
+with open(CONFIG_PATH, 'r', encoding='utf-8') as config_file:
+    config = json.load(config_file)
+
+print(f"✅ Configuración cargada correctamente desde: {CONFIG_PATH}")
+
 CORS(app, origins=["http://localhost:3000"])  # Ajusta si tu frontend está en otra URL
 
 # Configuración de logs
@@ -23,19 +40,18 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Conexión a Salesforce
+# Configuración Salesforce
 sf = None
+sf_connection_status = {'connected': False, 'error': None}
+
 try:
-    sf = Salesforce(
-        username='c3170600750@agentforce.com',
-        password='salesforcin2',
-        security_token='G0dXIw88ZtgYjiHNllRZ9gpHF',
-        consumer_key='3MVG9rZjd7MXFdLhTtQ3o7490SYfft0KQKGUGhfDAdo9IH8TvkFVU7ZbP51y9n42LRAPsKJXiHkAtvEuwZ.rK',
-        consumer_secret='DB514D96E146B86A35C94684D7632DB0F3D659741F42AC04C9437DEA1E9D1AB7'
-    )
-    logger.info("Conectado a Salesforce exitosamente")
+    sf = Salesforce(**config['salesforce'])  # Desempaqueta automáticamente las credenciales
+    sf.query("SELECT Id FROM User LIMIT 1")
+    sf_connection_status = {'connected': True, 'error': None}
+    print("\n✅ [SALESFORCE] Conexión exitosa")
 except Exception as e:
-    logger.error(f"Error al conectar con Salesforce: {e}")
+    sf_connection_status = {'connected': False, 'error': str(e)}
+    print(f"\n❌ [SALESFORCE] Error de conexión: {e}")
 
 # Ruta para recibir la puntuación
 @app.route('/valoracion', methods=['POST'])

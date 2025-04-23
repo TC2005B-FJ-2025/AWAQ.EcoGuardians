@@ -1,0 +1,211 @@
+2025-04-22 15:18:35,106 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-22 15:18:35,106 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-22 15:18:35,106 [INFO]  * Restarting with stat
+2025-04-22 15:18:36,873 [WARNING]  * Debugger is active!
+2025-04-22 15:18:36,880 [INFO]  * Debugger PIN: 632-706-984
+2025-04-22 15:33:23,200 [INFO] 127.0.0.1 - - [22/Apr/2025 15:33:23] "OPTIONS /valoracion HTTP/1.1" 200 -
+2025-04-22 15:33:23,458 [INFO] Valoración recibida: {'puntuacion': 5}
+2025-04-22 15:33:23,993 [INFO] Registro creado en Salesforce con ID 01fgK000000037ZQAQ
+2025-04-22 15:33:23,993 [INFO] 127.0.0.1 - - [22/Apr/2025 15:33:23] "POST /valoracion HTTP/1.1" 200 -
+2025-04-22 15:33:38,988 [INFO]  * Detected change in 'C:\\Users\\Mariana Aguilar\\Downloads\\AWAQrepo\\AWAQ.EcoGuardians\\EcoGuardians\\src\\back\\Back.py', reloading
+2025-04-22 15:33:39,161 [INFO]  * Restarting with stat
+2025-04-22 15:33:41,192 [WARNING]  * Debugger is active!
+2025-04-22 15:33:41,206 [INFO]  * Debugger PIN: 632-706-984
+2025-04-22 15:33:46,782 [INFO] 127.0.0.1 - - [22/Apr/2025 15:33:46] "OPTIONS /valoracion HTTP/1.1" 200 -
+2025-04-22 15:33:47,040 [INFO] Valoración recibida: {'puntuacion': 5}
+2025-04-22 15:33:47,160 [ERROR] Excepción al guardar en Salesforce: Resource Puntuacion__c Not Found. Response content: [{'errorCode': 'NOT_FOUND', 'message': 'The requested resource does not exist'}]
+2025-04-22 15:33:47,160 [INFO] 127.0.0.1 - - [22/Apr/2025 15:33:47] "[35m[1mPOST /valoracion HTTP/1.1[0m" 500 -
+2025-04-22 15:33:54,393 [INFO]  * Detected change in 'C:\\Users\\Mariana Aguilar\\Downloads\\AWAQrepo\\AWAQ.EcoGuardians\\EcoGuardians\\src\\back\\Back.py', reloading
+2025-04-22 15:33:54,551 [INFO]  * Restarting with stat
+2025-04-22 15:33:56,451 [WARNING]  * Debugger is active!
+2025-04-22 15:33:56,456 [INFO]  * Debugger PIN: 632-706-984
+2025-04-22 15:34:40,124 [INFO]  * Detected change in 'C:\\Users\\Mariana Aguilar\\Downloads\\AWAQrepo\\AWAQ.EcoGuardians\\EcoGuardians\\src\\back\\Back.py', reloading
+2025-04-22 15:34:40,272 [INFO]  * Restarting with stat
+2025-04-22 15:34:42,121 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-22 15:34:42,142 [WARNING]  * Debugger is active!
+2025-04-22 15:34:42,148 [INFO]  * Debugger PIN: 632-706-984
+2025-04-22 15:35:40,711 [INFO]  * Detected change in 'C:\\Users\\Mariana Aguilar\\Downloads\\AWAQrepo\\AWAQ.EcoGuardians\\EcoGuardians\\src\\back\\Back.py', reloading
+2025-04-22 15:35:40,872 [INFO]  * Restarting with stat
+2025-04-22 15:35:42,802 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-22 15:35:42,820 [WARNING]  * Debugger is active!
+2025-04-22 15:35:42,831 [INFO]  * Debugger PIN: 632-706-984
+2025-04-22 15:35:47,436 [INFO] 127.0.0.1 - - [22/Apr/2025 15:35:47] "OPTIONS /valoracion HTTP/1.1" 200 -
+2025-04-22 15:35:47,691 [INFO] 
+--- [POST] /valoracion ---
+2025-04-22 15:35:47,691 [INFO] Valoración recibida: {'puntuacion': 5}
+2025-04-22 15:35:47,924 [INFO] Registro creado en Salesforce con ID a00gK000003tatxQAA
+2025-04-22 15:35:47,924 [INFO] 127.0.0.1 - - [22/Apr/2025 15:35:47] "POST /valoracion HTTP/1.1" 200 -
+2025-04-22 17:33:50,177 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-22 17:33:50,224 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-22 17:33:50,224 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-22 17:33:50,226 [INFO]  * Restarting with stat
+2025-04-22 17:33:51,881 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-22 17:33:51,881 [WARNING]  * Debugger is active!
+2025-04-22 17:33:51,905 [INFO]  * Debugger PIN: 632-706-984
+2025-04-22 17:34:23,783 [INFO] 127.0.0.1 - - [22/Apr/2025 17:34:23] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-22 17:34:24,041 [INFO] 
+--- [POST] /Payment ---
+2025-04-22 17:34:24,041 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-22 17:34:24,041 [INFO] Monto de donación: 100.00
+2025-04-22 17:34:24,041 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-22 17:34:24,041 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/oauth2/token
+2025-04-22 17:34:24,562 [INFO] Response[200]: OK, Duration: 0.521027s.
+2025-04-22 17:34:24,562 [INFO] PayPal-Request-Id: f3aee7bf-c292-46dd-a9c6-f3cf82724618
+2025-04-22 17:34:24,562 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-22 17:34:25,367 [INFO] Response[201]: Created, Duration: 0.805512s.
+2025-04-22 17:34:25,381 [INFO] 127.0.0.1 - - [22/Apr/2025 17:34:25] "POST /payment HTTP/1.1" 200 -
+2025-04-22 17:34:31,602 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-22 17:34:31,602 [INFO] Pago cancelado por el usuario
+2025-04-22 17:34:31,602 [INFO] 127.0.0.1 - - [22/Apr/2025 17:34:31] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-22 17:34:31,910 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-22 17:34:31,910 [INFO] Pago cancelado por el usuario
+2025-04-22 17:34:31,910 [INFO] 127.0.0.1 - - [22/Apr/2025 17:34:31] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-22 17:34:52,630 [INFO] 127.0.0.1 - - [22/Apr/2025 17:34:52] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-22 17:34:52,886 [INFO] 
+--- [POST] /Payment ---
+2025-04-22 17:34:52,886 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-22 17:34:52,886 [INFO] Monto de donación: 100.00
+2025-04-22 17:34:52,886 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-22 17:34:52,886 [INFO] PayPal-Request-Id: 7b2b5cd7-2a54-439e-80f2-52df630820b3
+2025-04-22 17:34:52,886 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-22 17:34:53,746 [INFO] Response[201]: Created, Duration: 0.860031s.
+2025-04-22 17:34:53,746 [INFO] 127.0.0.1 - - [22/Apr/2025 17:34:53] "POST /payment HTTP/1.1" 200 -
+2025-04-22 17:38:55,776 [INFO] 127.0.0.1 - - [22/Apr/2025 17:38:55] "OPTIONS /execute-payment HTTP/1.1" 200 -
+2025-04-22 17:38:56,041 [INFO] 
+--- [POST] /execute-payment ---
+2025-04-22 17:38:56,041 [INFO] Request[GET]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAECPHI8K460645FF375320G
+2025-04-22 17:38:56,473 [INFO] Response[200]: OK, Duration: 0.431601s.
+2025-04-22 17:38:56,489 [INFO] Buscando pago en PayPal: PAYID-NAECPHI8K460645FF375320G
+2025-04-22 17:38:56,489 [INFO] PayPal-Request-Id: 212b3f02-d575-42ff-b791-76898fb44a50
+2025-04-22 17:38:56,489 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAECPHI8K460645FF375320G/execute
+2025-04-22 17:38:57,843 [INFO] Response[200]: OK, Duration: 1.354219s.
+2025-04-22 17:38:59,603 [INFO] Correo enviado a: mariana.agesp@gmail.com
+2025-04-22 17:38:59,603 [INFO] Creando registro en Salesforce...
+2025-04-22 17:39:00,368 [INFO] Registro creado en Salesforce. ID: 0n3gK00000001lhQAA
+2025-04-22 17:39:00,368 [INFO] 127.0.0.1 - - [22/Apr/2025 17:39:00] "POST /execute-payment HTTP/1.1" 200 -
+2025-04-22 18:10:36,377 [INFO] 127.0.0.1 - - [22/Apr/2025 18:10:36] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-22 18:10:36,631 [INFO] 
+--- [POST] /Payment ---
+2025-04-22 18:10:36,631 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-22 18:10:36,631 [INFO] Monto de donación: 50.00
+2025-04-22 18:10:36,632 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-22 18:10:36,632 [INFO] PayPal-Request-Id: 7ce84a34-c95b-4f2d-9378-76cd17657e2d
+2025-04-22 18:10:36,632 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-22 18:10:37,672 [INFO] Response[201]: Created, Duration: 1.40494s.
+2025-04-22 18:10:37,672 [INFO] 127.0.0.1 - - [22/Apr/2025 18:10:37] "POST /payment HTTP/1.1" 200 -
+2025-04-22 18:11:07,472 [INFO] 127.0.0.1 - - [22/Apr/2025 18:11:07] "OPTIONS /execute-payment HTTP/1.1" 200 -
+2025-04-22 18:11:07,782 [INFO] 
+--- [POST] /execute-payment ---
+2025-04-22 18:11:07,786 [INFO] Request[GET]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAEC77I4YJ48654HT918334W
+2025-04-22 18:11:08,208 [INFO] Response[200]: OK, Duration: 0.421947s.
+2025-04-22 18:11:08,211 [INFO] Buscando pago en PayPal: PAYID-NAEC77I4YJ48654HT918334W
+2025-04-22 18:11:08,211 [INFO] PayPal-Request-Id: 0d608e0f-835c-4fb4-8d61-f4bc10e8f5c6
+2025-04-22 18:11:08,211 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAEC77I4YJ48654HT918334W/execute
+2025-04-22 18:11:09,721 [INFO] Response[200]: OK, Duration: 1.510446s.
+2025-04-22 18:11:12,002 [INFO] Correo enviado a: mariana.agesp@gmail.com
+2025-04-22 18:11:12,002 [INFO] Creando registro en Salesforce...
+2025-04-22 18:11:12,728 [INFO] Registro creado en Salesforce. ID: 0n3gK00000001nJQAQ
+2025-04-22 18:11:12,743 [INFO] 127.0.0.1 - - [22/Apr/2025 18:11:12] "POST /execute-payment HTTP/1.1" 200 -
+2025-04-22 18:12:50,190 [INFO] 127.0.0.1 - - [22/Apr/2025 18:12:50] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-22 18:12:50,456 [INFO] 
+--- [POST] /Payment ---
+2025-04-22 18:12:50,456 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-22 18:12:50,456 [INFO] Monto de donación: 100.00
+2025-04-22 18:12:50,456 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-22 18:12:50,456 [INFO] PayPal-Request-Id: 8a76ee2f-774a-4ec7-9b0a-4d60c54ea411
+2025-04-22 18:12:50,456 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-22 18:12:51,254 [INFO] Response[201]: Created, Duration: 0.798094s.
+2025-04-22 18:12:51,262 [INFO] 127.0.0.1 - - [22/Apr/2025 18:12:51] "POST /payment HTTP/1.1" 200 -
+2025-04-22 18:12:57,074 [INFO] 127.0.0.1 - - [22/Apr/2025 18:12:57] "OPTIONS /execute-payment HTTP/1.1" 200 -
+2025-04-22 18:12:57,381 [INFO] 
+--- [POST] /execute-payment ---
+2025-04-22 18:12:57,385 [INFO] Request[GET]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAEDBAQ0S952372WP550161U
+2025-04-22 18:12:57,929 [INFO] Response[200]: OK, Duration: 0.543740s.
+2025-04-22 18:12:57,929 [INFO] Buscando pago en PayPal: PAYID-NAEDBAQ0S952372WP550161U
+2025-04-22 18:12:57,929 [INFO] PayPal-Request-Id: 9210381a-80a3-4d8d-9a93-fc619e5b1c40
+2025-04-22 18:12:57,929 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAEDBAQ0S952372WP550161U/execute
+2025-04-22 18:12:59,172 [INFO] Response[200]: OK, Duration: 1.243410s.
+2025-04-22 18:13:01,257 [INFO] Correo enviado a: mariana.agesp@gmail.com
+2025-04-22 18:13:01,257 [INFO] Creando registro en Salesforce...
+2025-04-22 18:13:01,713 [INFO] Registro creado en Salesforce. ID: 0n3gK00000001ovQAA
+2025-04-22 18:13:01,713 [INFO] 127.0.0.1 - - [22/Apr/2025 18:13:01] "POST /execute-payment HTTP/1.1" 200 -
+2025-04-22 18:17:51,029 [INFO] 127.0.0.1 - - [22/Apr/2025 18:17:51] "OPTIONS /sponsors HTTP/1.1" 200 -
+2025-04-22 18:17:51,033 [INFO] 
+--- [POST] /registro ---
+2025-04-22 18:17:51,036 [INFO] Creando contacto en Salesforce...
+2025-04-22 18:17:51,405 [INFO] Contacto creado en Salesforce. ID: a01gK000004fhQ5QAI
+2025-04-22 18:17:51,405 [INFO] 127.0.0.1 - - [22/Apr/2025 18:17:51] "POST /sponsors HTTP/1.1" 200 -
+2025-04-22 18:18:30,068 [INFO] 127.0.0.1 - - [22/Apr/2025 18:18:30] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-22 18:18:30,328 [INFO] 
+--- [POST] /contacto ---
+2025-04-22 18:18:30,328 [INFO] Creando contacto en Salesforce...
+2025-04-22 18:18:30,772 [INFO] 127.0.0.1 - - [22/Apr/2025 18:18:30] "POST /contacto HTTP/1.1" 200 -
+2025-04-22 18:21:30,071 [INFO] 127.0.0.1 - - [22/Apr/2025 18:21:30] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-22 18:21:30,336 [INFO] 
+--- [POST] /contacto ---
+2025-04-22 18:21:30,339 [INFO] Creando contacto en Salesforce...
+2025-04-22 18:21:30,650 [INFO] 127.0.0.1 - - [22/Apr/2025 18:21:30] "POST /contacto HTTP/1.1" 200 -
+2025-04-22 18:35:47,748 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-22 18:35:47,802 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-22 18:35:47,802 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-22 18:35:47,804 [INFO]  * Restarting with stat
+2025-04-22 18:35:49,650 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-22 18:35:49,668 [WARNING]  * Debugger is active!
+2025-04-22 18:35:49,676 [INFO]  * Debugger PIN: 632-706-984
+2025-04-22 18:36:20,861 [INFO] 127.0.0.1 - - [22/Apr/2025 18:36:20] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-22 18:36:21,123 [INFO] 
+--- [POST] /contacto ---
+2025-04-22 18:36:21,131 [INFO] Creando contacto en Salesforce...
+2025-04-22 18:36:21,578 [INFO] 127.0.0.1 - - [22/Apr/2025 18:36:21] "POST /contacto HTTP/1.1" 200 -
+2025-04-22 18:38:13,993 [INFO] 127.0.0.1 - - [22/Apr/2025 18:38:13] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-22 18:38:14,260 [INFO] 
+--- [POST] /contacto ---
+2025-04-22 18:38:14,263 [INFO] Creando contacto en Salesforce...
+2025-04-22 18:38:14,634 [INFO] 127.0.0.1 - - [22/Apr/2025 18:38:14] "POST /contacto HTTP/1.1" 200 -
+2025-04-22 18:39:04,786 [INFO] 127.0.0.1 - - [22/Apr/2025 18:39:04] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-22 18:39:05,090 [INFO] 
+--- [POST] /contacto ---
+2025-04-22 18:39:05,092 [INFO] Creando contacto en Salesforce...
+2025-04-22 18:39:05,439 [INFO] 127.0.0.1 - - [22/Apr/2025 18:39:05] "POST /contacto HTTP/1.1" 200 -
+2025-04-22 18:43:34,529 [INFO] 127.0.0.1 - - [22/Apr/2025 18:43:34] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-22 18:43:34,791 [INFO] 
+--- [POST] /contacto ---
+2025-04-22 18:43:34,793 [INFO] Creando contacto en Salesforce...
+2025-04-22 18:43:35,146 [INFO] 127.0.0.1 - - [22/Apr/2025 18:43:35] "POST /contacto HTTP/1.1" 200 -
+2025-04-22 18:46:40,594 [INFO] 127.0.0.1 - - [22/Apr/2025 18:46:40] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-22 18:46:40,837 [INFO] 
+--- [POST] /contacto ---
+2025-04-22 18:46:40,842 [INFO] Creando contacto en Salesforce...
+2025-04-22 18:46:41,551 [INFO] 127.0.0.1 - - [22/Apr/2025 18:46:41] "POST /contacto HTTP/1.1" 200 -
+2025-04-22 18:49:33,303 [INFO] 127.0.0.1 - - [22/Apr/2025 18:49:33] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-22 18:49:33,550 [INFO] 
+--- [POST] /contacto ---
+2025-04-22 18:49:33,553 [INFO] Creando contacto en Salesforce...
+2025-04-22 18:49:33,929 [INFO] 127.0.0.1 - - [22/Apr/2025 18:49:33] "POST /contacto HTTP/1.1" 200 -
+2025-04-22 18:50:04,712 [INFO] 127.0.0.1 - - [22/Apr/2025 18:50:04] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-22 18:50:05,022 [INFO] 
+--- [POST] /contacto ---
+2025-04-22 18:50:05,024 [INFO] Creando contacto en Salesforce...
+2025-04-22 18:50:05,395 [INFO] 127.0.0.1 - - [22/Apr/2025 18:50:05] "POST /contacto HTTP/1.1" 200 -
+2025-04-22 18:50:38,934 [INFO] 127.0.0.1 - - [22/Apr/2025 18:50:38] "OPTIONS /sponsors HTTP/1.1" 200 -
+2025-04-22 18:50:38,937 [INFO] 
+--- [POST] /registro ---
+2025-04-22 18:50:38,939 [INFO] Creando contacto en Salesforce...
+2025-04-22 18:50:39,322 [INFO] Contacto creado en Salesforce. ID: a01gK000004fg7SQAQ
+2025-04-22 18:50:39,324 [INFO] 127.0.0.1 - - [22/Apr/2025 18:50:39] "POST /sponsors HTTP/1.1" 200 -
+2025-04-22 18:51:19,619 [INFO] 127.0.0.1 - - [22/Apr/2025 18:51:19] "OPTIONS /valoracion HTTP/1.1" 200 -
+2025-04-22 18:51:19,884 [INFO] 
+--- [POST] /valoracion ---
+2025-04-22 18:51:19,885 [INFO] Valoración recibida: {'puntuacion': 4}
+2025-04-22 18:51:20,110 [INFO] Registro creado en Salesforce con ID a00gK000003ttoYQAQ
+2025-04-22 18:51:20,111 [INFO] 127.0.0.1 - - [22/Apr/2025 18:51:20] "POST /valoracion HTTP/1.1" 200 -
+2025-04-22 18:51:36,582 [INFO] 127.0.0.1 - - [22/Apr/2025 18:51:36] "OPTIONS /crear-caso HTTP/1.1" 200 -
+2025-04-22 18:51:36,584 [INFO] 
+--- [POST] /Crear-Caso ---
+2025-04-22 18:51:36,981 [INFO] Caso creado con éxito:
+2025-04-22 18:51:36,981 [INFO] 127.0.0.1 - - [22/Apr/2025 18:51:36] "POST /crear-caso HTTP/1.1" 200 -

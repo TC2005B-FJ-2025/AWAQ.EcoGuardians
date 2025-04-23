@@ -9,16 +9,17 @@ import imagenIzquierda from "../componentes/logos_unity.png";
 import imagenDerecha from "../componentes/logo_pontificia.png";
 import { useNavigate } from "react-router-dom";
 import SwipperImages from "./SwipperImages.js";
-
+import { useTranslation } from "react-i18next";
 
 // Componente principal 
 const BienvenidaComoInvitado = () => {
+    const { t } = useTranslation();
 
     const navigate = useNavigate(); // Hook para la navegación
     // Función para manejar el clic en el botón "JUGAR"
     const handleJugarClick = (event) => {
         event.preventDefault()
-        navigate("/juegoInvitado"); // Navega a la ruta "/juego"
+        navigate("/juego"); // Navega a la ruta "/juego"
     };
     return (
         <motion.section
@@ -30,7 +31,7 @@ const BienvenidaComoInvitado = () => {
             <Encabezado onHome={false}/>
 
             {/* Botón "Registrarse" */}
-            <div className="absolute top-20 right-4 sm:right-8 flex flex-col gap-4 z-50">
+            <div className="hidden  top-48 sm:top-36 right-4 sm:right-8 xl:flex xl:absolute flex-col gap-4 z-50 w-[200px] sm:w-[230px]">
                 {/* Botón Contactanos */}
                 <button
                     className="bg-white text-green-700 text-lg px-4 sm:px-6 py-2 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[230px]"
@@ -38,8 +39,9 @@ const BienvenidaComoInvitado = () => {
                     event.preventDefault();
                     navigate("../Prospecto");
                     }}
+                    aria-label={t("bienvenida.contactanos")}
                 >
-                    Contáctanos
+                    {t("bienvenida.contactanos")}
                 </button>
 
                 {/* Botón Sponsor */}
@@ -49,8 +51,9 @@ const BienvenidaComoInvitado = () => {
                     event.preventDefault();
                     navigate("../Sponsors");
                     }}
+                    aria-label={t("bienvenida.registro_sponsor")}
                 >
-                    Regístrate como Sponsor
+                    {t("bienvenida.registro_sponsor")}
                 </button>
 
                 {/* Botón Registrate */}
@@ -60,11 +63,11 @@ const BienvenidaComoInvitado = () => {
                     event.preventDefault();
                     navigate("../Contacto");
                     }}
+                    aria-label={t("bienvenida.registro_contacto")}
                 > 
-                    Regístrate como Contacto 
+                   {t("bienvenida.registro_contacto")} 
                 </button>
             </div>
-
 
             <div className="flex-grow relative">  
                 {/* Fondo del juego */}
@@ -86,27 +89,28 @@ const BienvenidaComoInvitado = () => {
                         <button
                             onClick={handleJugarClick} // Maneja el clic en el botón
                             className="absolute top-[70%] left-1/2 transform -translate-x-1/2 bg-white text-green-700 text-lg w-[280px] sm:w-[350px] py-2 rounded-full border-2 border-green-700 shadow-[4px_3px_0px_0px_rgba(47,85,47,1)]"
+                            aria-label={t("bienvenida.jugar")}
                         >
                             <div className="flex items-center gap-2 justify-start w-full pl-6"> 
                                 <div className="flex items-center justify-center w-8 h-8 border-2 border-green-700 rounded-full">
                                     <span className="text-green-700">▶</span> 
                                 </div>
-                                <span className="pl-3">Jugar</span>
+                                <span className="pl-3">{t("bienvenida.jugar")}</span>
                             </div>
                         </button>
                     </div>
 
                     {/* Logos institucionales */}
-                    <div className="absolute bottom-4 w-full flex justify-between px-4 sm:px-10">
+                    <div className="absolute bottom-4 md:w-full flex justify-between items-center px-4 sm:px-10 w-[100%] ">
                         <img 
                             src={imagenIzquierda} 
                             alt="Logo Unity" 
-                            className="w-[100px] h-[30px] sm:w-[150px] sm:h-[45px] md:w-[220px] md:h-[65px] translate-y-6 sm:translate-y-12 md:translate-y-16 lg:translate-y-20"
+                            className="w-[100px] h-[30px] sm:w-[150px] sm:h-[45px] md:w-[220px] xl:h-[110px] "
                         />
                         <img 
                             src={imagenDerecha} 
                             alt="Logo Universidad" 
-                            className="w-[80px] sm:w-[100px] md:w-[150px] -mr-5 translate-y-0"
+                            className="w-[80px] sm:w-[100px] md:w-[150px]"
                         />
                     </div>
                 </div>
