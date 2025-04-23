@@ -4,10 +4,12 @@ import Encabezado from "./encabezado";
 import { useNavigate } from "react-router-dom";
 import NotificationBanner from "../overlays/NotificationBanner";
 import { FaStar } from 'react-icons/fa';
+import { useTranslation } from "react-i18next";
 
 const VideojuegoInvitado = () => {
   const [isPortrait, setIsPortrait] = useState(false);
   const navigate = useNavigate();
+  const { t } = useTranslation(); 
 
   useEffect(() => {
     const checkOrientation = () => {
@@ -36,19 +38,19 @@ const VideojuegoInvitado = () => {
       </div>
 
       {/* Botones flotantes */}
-      <div className="fixed top-28 right-4 sm:right-6 flex flex-col gap-4 z-40 max-w-[90vw]">
+      <div className="xl:fixed 2xl:top-28 2xl:right-4 sm:right-6 2xl:flex-col xl:gap-4 z-40 2xl:max-w-[90vw] hidden xl:flex">
         <button
           className="bg-white text-green-700 text-sm px-3 sm:px-4 py-1.5 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[180px]"
           onClick={() => navigate("../Prospecto")}
         >
-          Contáctanos
+          {t("videogameGuest.contact")}
         </button>
 
         <button
           className="bg-white text-green-700 text-sm px-3 sm:px-4 py-1.5 rounded-full border-2 border-green-700 shadow-[2px_2px_0px_0px_rgba(47,85,47,1)] w-[180px]"
           onClick={() => navigate("../Sponsors")}
         >
-          Regístrate como Sponsor
+          {t("videogameGuest.registerSponsor")}
         </button>
 
         <button
@@ -64,7 +66,7 @@ const VideojuegoInvitado = () => {
         {isPortrait ? (
           <div className="text-center text-black">
             <p className="text-xl font-semibold mb-4">
-              📲 Por favor, gira tu dispositivo para jugar en modo horizontal.
+              {t("videogameGuest.rotateDevice")}
             </p>
           </div>
         ) : (

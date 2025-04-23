@@ -1,0 +1,12 @@
+2025-04-21 18:30:26,648 [INFO] Iniciando servidor Flask en modo desarrollo
+2025-04-21 18:30:26,733 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-21 18:30:26,733 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-21 18:30:26,735 [INFO]  * Restarting with stat
+2025-04-21 18:30:28,650 [INFO] Iniciando servidor Flask en modo desarrollo
+2025-04-21 18:30:28,667 [WARNING]  * Debugger is active!
+2025-04-21 18:30:28,676 [INFO]  * Debugger PIN: 102-914-109
+2025-04-21 18:30:46,538 [INFO] 127.0.0.1 - - [21/Apr/2025 18:30:46] "OPTIONS /valoracion HTTP/1.1" 200 -
+2025-04-21 18:30:46,793 [INFO] Valoración recibida: {'puntuacion': 4}
+2025-04-21 18:30:47,015 [INFO] Registro creado en Salesforce con ID 01fgK0000000317QAA
+2025-04-21 18:30:47,015 [INFO] 127.0.0.1 - - [21/Apr/2025 18:30:47] "POST /valoracion HTTP/1.1" 200 -

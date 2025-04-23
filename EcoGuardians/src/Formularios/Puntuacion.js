@@ -3,8 +3,10 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import fondoFormularios from "../componentes/fondoFormularios.png";
+import { useTranslation } from "react-i18next";
 
 function Puntuacion() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [rating, setRating] = useState(0);
   const [enviado, setEnviado] = useState(false);
@@ -30,11 +32,11 @@ function Puntuacion() {
       if (response.ok) {
         setEnviado(true);
       } else {
-        setError(data.error || "Error al enviar la valoración");
+        setError(data.error || t("puntuacion.error_envio"));
       }
     } catch (err) {
-      console.error("Error de red:", err);
-      setError("Error de red al enviar la valoración");
+      console.error(t("puntuacion.error_red"), err);
+      setError(t("puntuacion.error_red"));
     }
   };
 
@@ -59,8 +61,8 @@ function Puntuacion() {
       />
 
       <div className="mx-auto w-full text-center">
-        <h2 className="text-lg font-semibold mb-2">¿Te gusta el juego?</h2>
-        <p className="mb-2">Tu valoración nos ayuda a mejorar</p>
+        <h2 className="text-lg font-semibold mb-2">{t("puntuacion.gusta")}</h2>
+        <p className="mb-2">{t("puntuacion.valoracion")}</p>
       </div>
 
       <div className="flex justify-center mb-4">
@@ -88,18 +90,18 @@ function Puntuacion() {
 
       {enviado ? (
         <p className="text-green-600 font-semibold text-center">
-          ¡Gracias por tu valoración!
+          {t("puntuacion.gracias")}
         </p>
       ) : (
         <>
           <div className="mb-2 mx-auto text-center">
             <p className="text-[15px]">
-              ¿Tienes algún problema?{" "}
+              {t("puntuacion.problema")}{" "}
               <span
                 className="cursor-pointer text-verde-fuerte font-semibold"
                 onClick={() => navigate("/CrearCaso")}
               >
-                Reportar un error
+                {t("puntuacion.reportar")}
               </span>
             </p>
           </div>
@@ -111,7 +113,7 @@ function Puntuacion() {
             onClick={handleEnviar}
             disabled={rating === 0}
           >
-            Enviar
+            {t("puntuacion.Enviar")}
           </button>
         </>
       )}

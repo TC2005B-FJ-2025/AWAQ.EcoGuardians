@@ -4,13 +4,15 @@ import LogoAwaq from "../componentes/Imagen_logo_awaq.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import Contacto from "../Formularios/Contacto";
+import { useTranslation } from "react-i18next";
 
 const NotificationBanner = () => {
   const [showEmailInput, setShowEmailInput] = useState(false);
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  //const [email, setEmail] = useState("");
+  const [submitted/*, setSubmitted*/] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [shouldRender, setShouldRender] = useState(true);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -21,7 +23,7 @@ const NotificationBanner = () => {
 
   const handleClose = () => {
     setIsVisible(false);
-    setTimeout(() => setShouldRender(false), 1000);
+    setTimeout(() => setShouldRender(false), 200);
   };
 
   const handleSubscribe = () => {
@@ -29,7 +31,7 @@ const NotificationBanner = () => {
   };
 
 
-  const handleSubmitEmail = (e) => {
+  /*const handleSubmitEmail = (e) => {
     e.preventDefault();
     if (email) {
       setSubmitted(true);
@@ -38,13 +40,13 @@ const NotificationBanner = () => {
         setTimeout(() => setShouldRender(false), 1000);
       }, 1500);
     }
-  };
+  };*/
 
   // Si no debe renderizarse, retorna null
   if (!shouldRender) return null;
 
   if (showEmailInput && !submitted) {
-    return <Contacto onHandleClose={handleClose} />;
+    return <Contacto mostrarFondo={false} onHandleClose={handleClose} />;
   }  
 
   return (
@@ -63,21 +65,20 @@ const NotificationBanner = () => {
             className="w-[200px] mx-auto mb-2"
           />
           <p className="text-[16px] text-black mb-2 font-semibold text-center">
-            Suscríbete a nuestras notificaciones para recibir las últimas
-            actualizaciones y noticias relacionadas con AWAQ
+          {t("notification.message")}
           </p>
           <div className="flex justify-between">
             <button
               className="px-3 py-2 bg-white border-2 border-verde-claro text-gray-800 rounded-xl"
               onClick={handleClose}
             >
-              No, Gracias
+              {t("notification.noThanks")}
             </button>
             <button
               className="px-3 py-2 bg-verde-fuerte text-white rounded-xl"
               onClick={handleSubscribe}
             >
-              Volverme Contacto
+              {t("notification.becomeContact")}
             </button>
           </div>
         </>
@@ -85,7 +86,7 @@ const NotificationBanner = () => {
       
       {submitted && (
         <div className="flex flex-col items-center justify-center h-[192px]">
-          <p className="text-2xl">¡Muchas Gracias!</p>
+          <p className="text-2xl">{t("notification.thankYou")}</p>
           <span className="text-7xl text-verde-fuerte animate-[scaleUp_0.5s_ease-in-out] mt-3">
             <FontAwesomeIcon icon={faCircleCheck} />
           </span>

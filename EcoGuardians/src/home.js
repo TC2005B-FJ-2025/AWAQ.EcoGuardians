@@ -33,7 +33,7 @@ const Home = () => {
             <>
               <Encabezado onHome={true}/>
               <Inicio 
-                onBienvenidaComoInvitado={() => navigate("/bienvenidaInvitado")} 
+                onBienvenidaComoInvitado={() => navigate("/bienvenida")} 
                 onProspecto={() => navigate("/prospecto")}
               />
               <Nosotros />
@@ -43,7 +43,7 @@ const Home = () => {
                 onContacto={() => navigate("/Contacto")}
                 onSponsors={() => navigate("/Sponsors")}
               />
-              <Footer />
+              <Footer onProspecto={() => navigate("/prospecto")} />
 
             </>
 

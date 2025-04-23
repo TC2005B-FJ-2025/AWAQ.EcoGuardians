@@ -5,8 +5,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
 import fondoFormularios from "../componentes/fondoFormularios.png";
+import { useTranslation } from "react-i18next";
 
-function Contacto() {
+function Contacto({ mostrarFondo = true, onHandleClose }) {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     username: "",
@@ -28,12 +30,12 @@ function Contacto() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     if (!captchaVerified) {
-      setMensaje({ texto: "Por favor, verifica que no eres un robot", tipo: "error" });
+      setMensaje({ texto: t("contact.captcha_error"), tipo: "error" });
       return;
     }
-
+  
     try {
       const response = await fetch("http://localhost:5000/contacto", {
         method: "POST",
@@ -50,33 +52,44 @@ function Contacto() {
           role: "user"
         }),
       });
-
+  
       const data = await response.json();
-
+  
       if (!response.ok) throw new Error(data.error || "Error en el registro");
-
-      setMensaje({ texto: "¡Registro exitoso!", tipo: "success" });
-
+  
+      setMensaje({ texto: t("contact.success"), tipo: "success" });
+  
+      // Limpia los campos del formulario
+      setFormData({
+        name: "",
+        username: "",
+        password: "",
+        confirmarContrasena: "",
+        ageRange: "18-25",
+        country: "",
+        region: ""
+      });
+  
+      // Opcional: Borra el mensaje después de 5 segundos
       setTimeout(() => {
-        setFormData({
-          name: "",
-          username: "",
-          password: "",
-          confirmarContrasena: "",
-          ageRange: "18-25",
-          country: "",
-          region: ""
-        });
-        navigate(-1);
-      }, 2000);
-
+        setMensaje({ texto: "", tipo: "" });
+      }, 5000);
+  
+      // No cerramos el formulario automáticamente
+      // El usuario debe cerrarlo manualmente con la X
+  
     } catch (error) {
       setMensaje({ texto: error.message, tipo: "error" });
     }
   };
+  
 
   const handleClose = () => {
-    navigate(-1);
+    if (onHandleClose) {
+      onHandleClose();
+    } else {
+      navigate(-1);
+    }
   };
 
   return (
@@ -85,12 +98,16 @@ function Contacto() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: "100%" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed inset-0 z-[100] flex items-center justify-center px-4 bg-black/50"
-      style={{
-        backgroundImage: `url(${fondoFormularios})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center"
-      }}
+      className={`fixed inset-0 z-[100] flex items-center justify-center px-4 ${mostrarFondo ? "bg-black/50" : "bg-transparent"}`}
+      style={
+        mostrarFondo
+          ? {
+              backgroundImage: `url(${fondoFormularios})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center"
+            }
+          : {}
+      }
     >
       <div className="w-full max-w-[400px] relative p-6 bg-white rounded-xl shadow-lg backdrop-blur-sm">
         <FontAwesomeIcon
@@ -99,26 +116,27 @@ function Contacto() {
           onClick={handleClose}
         />
 
-        <h2 className="text-center font-semibold text-[22px] mb-4">Únete a nuestra red de contactos</h2>
+        <h2 className="text-center font-semibold text-[22px] mb-4">{t("contact.title")}</h2>
 
         <form className="flex flex-col" onSubmit={handleSubmit}>
           <div className="flex flex-col sm:flex-row justify-between gap-4">
             <div className="flex flex-col w-full gap-2">
-              <label htmlFor="name">Nombre Completo</label>
+              <label htmlFor="name">{t("contact.name")}</label>
               <input
                 id="name"
                 type="text"
                 name="name"
-                placeholder="Tu nombre completo"
+                placeholder={t("contact.name_placeholder")} 
                 required
                 value={formData.name}
                 onChange={handleChange}
                 className="border-2 border-black p-[6px] px-3 rounded-xl"
+                aria-label={t("contact.name")}
               />
             </div>
 
             <div className="flex flex-col w-full gap-2">
-              <label htmlFor="ageRange">Rango de Edad</label>
+              <label htmlFor="ageRange">{t("contact.age_range")}</label>
               <select
                 id="ageRange"
                 name="ageRange"
@@ -126,54 +144,58 @@ function Contacto() {
                 value={formData.ageRange}
                 onChange={handleChange}
                 className="border-2 border-black p-[6px] px-3 rounded-xl"
+                aria-label={t("contact.age_range")}
               >
-                <option value="0-12">0-12 años</option>
-                <option value="13-17">13-17 años</option>
-                <option value="18-25">18-25 años</option>
-                <option value="26-35">26-35 años</option>
-                <option value="36-50">36-50 años</option>
-                <option value="51+">51+ años</option>
+                <option value="0-12">{t("contact.age.0_12")}</option>
+                <option value="13-17">{t("contact.age.13_17")}</option>
+                <option value="18-25">{t("contact.age.18_25")}</option>
+                <option value="26-35">{t("contact.age.26_35")}</option>
+                <option value="36-50">{t("contact.age.36_50")}</option>
+                <option value="51+">{t("contact.age.51_plus")}</option>
               </select>
             </div>
           </div>
 
-          <label htmlFor="username" className="mt-4 mb-1">Correo Electrónico</label>
+          <label htmlFor="username" className="mt-4 mb-1">{t("contact.email")}</label>
           <input
             id="username"
             type="email"
             name="username"
-            placeholder="tucorreo@ejemplo.com"
+            placeholder={t("contact.email_placeholder")}
             required
             value={formData.username}
             onChange={handleChange}
             className="border-2 border-black p-[6px] px-3 rounded-xl mb-4"
+            aria-label={t("contact.email")}
           />
 
           <div className="flex flex-col sm:flex-row justify-between gap-4">
             <div className="flex flex-col w-full gap-2">
-              <label htmlFor="country">País</label>
+              <label htmlFor="country">{t("contact.country")}</label>
               <input
                 id="country"
                 type="text"
                 name="country"
-                placeholder="Tu país"
+                placeholder={t("contact.country_placeholder")} 
                 required
                 value={formData.country}
                 onChange={handleChange}
                 className="w-full border-2 border-black p-[6px] px-3 rounded-xl"
+                aria-label={t("contact.country")}
               />
             </div>
             <div className="flex flex-col w-full gap-2">
-              <label htmlFor="w-full region">Región/Estado</label>
+              <label htmlFor="region">{t("contact.region")}</label>
               <input
                 id="region"
                 type="text"
                 name="region"
-                placeholder="Tu región o estado"
+                placeholder={t("contact.region_placeholder")}
                 required
                 value={formData.region}
                 onChange={handleChange}
                 className="border-2 border-black p-[6px] px-3 rounded-xl"
+                aria-label={t("contact.region")}
               />
             </div>
           </div>
@@ -197,8 +219,9 @@ function Contacto() {
           <button
             type="submit"
             className="bg-verde-claro hover:bg-verde-fuerte mt-6 transition-colors rounded-3xl p-2 text-white font-medium"
+            aria-label={t("contact.submit")}
           >
-            Unirme
+            {t("contact.submit")} 
           </button>
         </form>
       </div>

@@ -1,8 +1,11 @@
 import { useState } from "react";
 import React from "react";
 import EncabezadoCrearCaso from "../InHome/encabezadoCrearCaso";
+import { useTranslation } from "react-i18next";
 
 function CrearCaso() {
+    const { t } = useTranslation();
+    
     const [formData, setFormData] = useState({
         subject: '',
         description: '',
@@ -26,7 +29,7 @@ function CrearCaso() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         if (!formData.tipo_opinion || !formData.supplied_email || !formData.opiniones_sugerencias) {
-            setMensaje({ texto: "Por favor completa todos los campos requeridos", tipo: "error" });
+            setMensaje({ texto: t("crearCaso.alert_campos"), tipo: "error" });
             limpiarMensaje();
             return;
         }
@@ -38,10 +41,10 @@ function CrearCaso() {
                 body: JSON.stringify(formData),
             });
 
-            const data = await response.json();
+            //const data = await response.json();
 
             if (response.ok) {
-                setMensaje({ texto: "¡Registro exitoso!", tipo: "exito" });
+                setMensaje({ texto: t("crearCaso.success"), tipo: "exito" });
                 setFormData({
                     subject: '',
                     description: '',
@@ -52,10 +55,10 @@ function CrearCaso() {
                     opiniones_sugerencias: ''
                 });
             } else {
-                setMensaje({ texto: "Hubo un problema al crear el caso. Intenta nuevamente.", tipo: "error" });
+                setMensaje({ texto: t("crearCaso.error_general"), tipo: "error" });
             }
         } catch (error) {
-            setMensaje({ texto: "Error al crear el caso: " + error.message, tipo: "error" });
+            setMensaje({ texto: t("crearCaso.error_crear") + error.message, tipo: "error" });
         }
 
         limpiarMensaje();
@@ -85,20 +88,21 @@ function CrearCaso() {
                 {
                     onSubmit: handleSubmit,
                     className: "w-full max-w-2xl bg-white p-6 rounded-2xl shadow-md border",
-                    style: { borderColor: colorVerde }
+                    style: { borderColor: colorVerde },
+                    "aria-label": t("crearCaso.titulo")
                 },
 
-                React.createElement("h2", { className: "text-xl font-bold mb-4 text-center text-green-800" }, "Quejas y Sugerencias"),
+                React.createElement("h2", { className: "text-xl font-bold mb-4 text-center text-green-800" },  t("crearCaso.titulo")),
 
-                createSelect("Tipo de Opinión", "tipo_opinion", formData.tipo_opinion, handleChange, colorVerde, [
-                    { value: "Queja", label: "Queja" },
-                    { value: "Sugerencia", label: "Sugerencia" },
-                    { value: "Otro", label: "Otro" }
+                createSelect(t("crearCaso.label_tipo"), "tipo_opinion", formData.tipo_opinion, handleChange, colorVerde, [
+                    { value: "Queja", label: t("crearCaso.queja") },
+                    { value: "Sugerencia", label: t("crearCaso.sugerencia") },
+                    { value: "Otro", label: t("crearCaso.otro") }
                 ]),
 
-                createTextArea("Opiniones o Sugerencias", "opiniones_sugerencias", formData.opiniones_sugerencias, handleChange, colorVerde),
+                createTextArea(t("crearCaso.label_opiniones"), "opiniones_sugerencias", formData.opiniones_sugerencias, handleChange, colorVerde),
 
-                createFieldWithNote("Correo Electrónico", "supplied_email", "email", formData.supplied_email, handleChange, colorVerde),
+                createFieldWithNote(t("crearCaso.label_email"), "supplied_email", "email", formData.supplied_email, handleChange, colorVerde,t),
 
                 // Mensaje bonito de éxito o error
                 mensaje.texto && React.createElement(
@@ -108,7 +112,8 @@ function CrearCaso() {
                             mensaje.tipo === "error"
                                 ? "bg-red-100 text-red-700 border border-red-300"
                                 : "bg-green-100 text-green-700 border border-green-300"
-                        }`
+                        }`,
+                        "aria-live": "polite"
                     },
                     mensaje.texto
                 ),
@@ -121,14 +126,14 @@ function CrearCaso() {
                         className: "mt-4 w-full text-white font-semibold py-2 rounded-xl transition hover:brightness-110",
                         style: { backgroundColor: colorVerde }
                     },
-                    "Enviar"
+                    t("crearCaso.boton_enviar")
                 )
             )
         )
     );
 }
 
-// Helpers
+/*Helpers
 function createField(label, name, type, value, onChange, borderColor) {
     return React.createElement(React.Fragment, null,
         React.createElement("label", { className: "block text-sm font-medium text-gray-700 mb-1 mt-4" }, label),
@@ -142,9 +147,9 @@ function createField(label, name, type, value, onChange, borderColor) {
             style: { borderColor }
         })
     );
-}
+}*/
 
-function createFieldWithNote(label, name, type, value, onChange, borderColor) {
+function createFieldWithNote(label, name, type, value, onChange, borderColor,t) {
     return React.createElement(React.Fragment, null,
         React.createElement("label", { className: "block text-sm font-medium text-gray-700 mb-1 mt-4" }, label),
         React.createElement("input", {
@@ -156,7 +161,7 @@ function createFieldWithNote(label, name, type, value, onChange, borderColor) {
             required: true,
             style: { borderColor }
         }),
-        React.createElement("p", { className: "text-xs text-gray-700 mt-1" }, "* este campo es obligatorio, para darle seguimiento a tu caso")
+        React.createElement("p", { className: "text-xs text-gray-700 mt-1" }, t("crearCaso.campo_obligatorio"))
     );
 }
 

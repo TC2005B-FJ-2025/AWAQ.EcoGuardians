@@ -42,3 +42,13 @@
 2025-04-18 20:16:57,262 [INFO] 
 --- [POST] /contacto ---
 2025-04-18 20:16:57,744 [INFO] 127.0.0.1 - - [18/Apr/2025 20:16:57] "POST /contacto HTTP/1.1" 200 -
+2025-04-21 14:34:05,774 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-21 14:34:05,775 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-21 14:34:05,776 [INFO]  * Restarting with stat
+2025-04-21 14:34:07,472 [WARNING]  * Debugger is active!
+2025-04-21 14:34:07,480 [INFO]  * Debugger PIN: 102-914-109
+2025-04-21 14:34:28,661 [INFO] 127.0.0.1 - - [21/Apr/2025 14:34:28] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-21 14:34:28,920 [INFO] 
+--- [POST] /contacto ---
+2025-04-21 14:34:29,387 [INFO] 127.0.0.1 - - [21/Apr/2025 14:34:29] "POST /contacto HTTP/1.1" 200 -
