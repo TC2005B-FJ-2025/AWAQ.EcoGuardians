@@ -74,7 +74,7 @@ function CrearCaso() {
 
     return React.createElement(
         "div",
-        { className: "min-h-screen bg-gray-50 pt-[120px] sm:pt-[100px]" },
+        { className: "mt-[120px] sm:mt-16 h-[calc(100vh-4rem)] overflow-y-scroll bg-gray-50"},
 
         // Encabezado
         React.createElement(EncabezadoCrearCaso, null),

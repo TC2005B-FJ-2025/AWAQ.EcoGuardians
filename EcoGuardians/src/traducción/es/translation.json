@@ -255,7 +255,11 @@
 "email_placeholder": "ejemplo@email.com",
 "description": "Descripción:",
 "description_placeholder": "Describe tu consulta o solicitud",
-"submit": "Enviar Solicitud"
+"submit": "Enviar Solicitud",
+"sending": "Enviando...",
+"errorConexion": "Error de conexión con el servidor",
+"errorForms": "Error al enviar el formulario",
+"Success": "Registro procesado correctamente"
 }  
 
 }
