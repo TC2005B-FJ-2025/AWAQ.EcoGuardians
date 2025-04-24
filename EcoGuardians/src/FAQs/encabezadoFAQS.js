@@ -41,7 +41,7 @@ const EncabezadoFAQS = ({ onHome }) => {
       <div className="flex-1 flex justify-end items-center gap-2 flex-wrap">
         {/* Botón Cases */}
         <Link to="/CrearCaso"
-        className="bg-[#2B5629] text-white border-2 border-white px-3.5 py-2 rounded-xl transition flex items-center justify-center hover:font-bold hover:text-white/80 transition"
+        className="bg-[#2B5629] text-white border-2 border-white px-3.5 py-2 rounded-xl flex items-center justify-center hover:font-bold hover:text-white/80 transition"
         aria-label="Crear caso"
         >
         <Smile className="w-5 h-5" />

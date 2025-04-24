@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 const VideojuegoInvitado = () => {
   const [isPortrait, setIsPortrait] = useState(false);
   const [showButtons, setShowButtons] = useState(true);
+  const [forzarModoMobile, setForzarModoMobile] = useState(false);
   const navigate = useNavigate();
   const { t } = useTranslation();
 
@@ -27,9 +28,10 @@ const VideojuegoInvitado = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowButtons(false);
-    }, 10000); // 20 segundos
+      setForzarModoMobile(true); // Activar encabezado móvil
+    }, 10000);
 
-    return () => clearTimeout(timer); // limpiar al desmontar
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -42,7 +44,7 @@ const VideojuegoInvitado = () => {
     >
       <NotificationBanner className="relative z-100" />
       <div>
-        <Encabezado />
+        <Encabezado forzarMobile={forzarModoMobile} />
       </div>
 
       {showButtons && (

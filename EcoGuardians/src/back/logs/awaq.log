@@ -486,3 +486,52 @@
 --- [POST] /Crear-Caso ---
 2025-04-24 01:04:21,679 [INFO] Caso creado con éxito:
 2025-04-24 01:04:21,679 [INFO] 127.0.0.1 - - [24/Apr/2025 01:04:21] "POST /crear-caso HTTP/1.1" 200 -
+2025-04-24 01:26:09,430 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-24 01:26:09,461 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 01:26:09,462 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-24 01:26:09,463 [INFO]  * Restarting with stat
+2025-04-24 01:26:11,607 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-24 01:26:11,622 [WARNING]  * Debugger is active!
+2025-04-24 01:26:11,629 [INFO]  * Debugger PIN: 102-914-109
+2025-04-24 01:29:34,764 [INFO] 127.0.0.1 - - [24/Apr/2025 01:29:34] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-24 01:29:35,012 [INFO] 
+--- [POST] /contacto ---
+2025-04-24 01:29:35,012 [INFO] Creando contacto en Salesforce...
+2025-04-24 01:29:35,497 [INFO] 127.0.0.1 - - [24/Apr/2025 01:29:35] "POST /contacto HTTP/1.1" 200 -
+2025-04-24 01:31:19,216 [INFO] 127.0.0.1 - - [24/Apr/2025 01:31:19] "OPTIONS /valoracion HTTP/1.1" 200 -
+2025-04-24 01:31:19,469 [INFO] 
+--- [POST] /valoracion ---
+2025-04-24 01:31:19,469 [INFO] Valoración recibida: {'puntuacion': 1}
+2025-04-24 01:31:19,770 [INFO] Registro creado en Salesforce con ID a00gK0000040At9QAE
+2025-04-24 01:31:19,770 [INFO] 127.0.0.1 - - [24/Apr/2025 01:31:19] "POST /valoracion HTTP/1.1" 200 -
+2025-04-24 01:31:51,060 [INFO] 127.0.0.1 - - [24/Apr/2025 01:31:51] "OPTIONS /crear-caso HTTP/1.1" 200 -
+2025-04-24 01:31:51,060 [INFO] 
+--- [POST] /Crear-Caso ---
+2025-04-24 01:31:51,618 [INFO] Caso creado con éxito:
+2025-04-24 01:31:51,619 [INFO] 127.0.0.1 - - [24/Apr/2025 01:31:51] "POST /crear-caso HTTP/1.1" 200 -
+2025-04-24 01:33:09,337 [INFO] 127.0.0.1 - - [24/Apr/2025 01:33:09] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-24 01:33:09,594 [INFO] 
+--- [POST] /Payment ---
+2025-04-24 01:33:09,594 [INFO] Email recibido: conchi@gmail.com
+2025-04-24 01:33:09,594 [INFO] Monto de donación: 50.00
+2025-04-24 01:33:09,594 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=conchi%40gmail.com
+2025-04-24 01:33:09,594 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/oauth2/token
+2025-04-24 01:33:10,293 [INFO] Response[200]: OK, Duration: 0.699156s.
+2025-04-24 01:33:10,294 [INFO] PayPal-Request-Id: 53c8c19f-0e37-426a-ac75-3570df2db682
+2025-04-24 01:33:10,294 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-24 01:33:11,485 [INFO] Response[201]: Created, Duration: 1.190922s.
+2025-04-24 01:33:11,490 [INFO] 127.0.0.1 - - [24/Apr/2025 01:33:11] "POST /payment HTTP/1.1" 200 -
+2025-04-24 01:33:36,748 [INFO] 127.0.0.1 - - [24/Apr/2025 01:33:36] "OPTIONS /execute-payment HTTP/1.1" 200 -
+2025-04-24 01:33:37,057 [INFO] 
+--- [POST] /execute-payment ---
+2025-04-24 01:33:37,061 [INFO] Request[GET]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAE6SNY41N901810A280822U
+2025-04-24 01:33:37,762 [INFO] Response[200]: OK, Duration: 0.700540s.
+2025-04-24 01:33:37,762 [INFO] Buscando pago en PayPal: PAYID-NAE6SNY41N901810A280822U
+2025-04-24 01:33:37,763 [INFO] PayPal-Request-Id: 71ac6f33-b714-42ae-a4ba-f64208a8c173
+2025-04-24 01:33:37,763 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAE6SNY41N901810A280822U/execute
+2025-04-24 01:33:39,604 [INFO] Response[200]: OK, Duration: 1.840981s.
+2025-04-24 01:33:42,883 [INFO] Correo enviado a: conchi@gmail.com
+2025-04-24 01:33:42,883 [INFO] Creando registro en Salesforce...
+2025-04-24 01:33:43,377 [INFO] Registro creado en Salesforce. ID: 0n3gK00000001wzQAA
+2025-04-24 01:33:43,377 [INFO] 127.0.0.1 - - [24/Apr/2025 01:33:43] "POST /execute-payment HTTP/1.1" 200 -
