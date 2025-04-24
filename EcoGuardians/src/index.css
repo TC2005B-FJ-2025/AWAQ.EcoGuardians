@@ -15,18 +15,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/* Estilo para navegadores WebKit (Chrome, Edge, Safari) */
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* Hacemos que no tenga fondo */
+
+/* Aplica solo al contenedor con scroll */
+div::-webkit-scrollbar {
+  width: 8px;
+}
+
+div::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+div::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Firefox */
-* {
-  scrollbar-width: none; /* Esto oculta el scrollbar en Firefox */
+div {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
 }
 
-/* Opcional: evita que se corte el scroll por completo */
-body {
-  overflow-y: scroll; /* Para mantener el scroll funcional aunque no se vea */
-}

@@ -32,16 +32,18 @@ const Encabezado = ({ onHome }) => {
               href="https://somosawaq.org"
               className="text-white font-bold text-sm no-underline"
             >
-              &lt; {t("header.back_AWAQ")}
+              {t("header.back_AWAQ")}
             </a>
           ) : (
+            <div className="flex-1 flex justify-start">
             <button
-              onClick={handleVolverClick}
-              className="bg-[#2B5629] text-white border-2 border-white px-3.5 py-2 text-sm rounded-xl hover:font-bold transition"
-              aria-label="Volver a la página de inicio"
+              onClick={() => navigate(-1)}
+              className="text-white font-bold text-sm no-underline"
+              aria-label={t("faqHeader.back")}
             >
-              {t("header.back")}
+              {t("faqHeader.back")}
             </button>
+          </div>
           )}
         </div>
 
@@ -50,7 +52,7 @@ const Encabezado = ({ onHome }) => {
           <img
             src={LogoHeader}
             alt="Logo AWAQ"
-            className="h-12 cursor-pointer"
+            className="h-12"
           />
         </div>
 

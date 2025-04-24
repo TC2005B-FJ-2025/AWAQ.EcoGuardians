@@ -11,7 +11,7 @@ export default function App() {
   return (
     <>
       <EncabezadoFAQS />
-
+      <div className="mt-16 h-[calc(100vh-4rem)] overflow-y-scroll">
       {/* Contenedor de preguntas frecuentes con fondo gris claro */}
       <div className="bg-gray-50 sm:pt-[100px] px-4 sm:px-8 md:px-16">
         <div className="text-center mb-4 py-10 px-2 sm:px-4">
@@ -38,6 +38,7 @@ export default function App() {
       </div>
 
       <Footer />
+      </div>
     </>
   );
 }

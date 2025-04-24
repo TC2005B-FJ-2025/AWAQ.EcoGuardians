@@ -32,6 +32,7 @@ const Home = () => {
         <AnimatePresence>
             <>
               <Encabezado onHome={true}/>
+              <div className="mt-16 h-[calc(100vh-4rem)] overflow-y-scroll">
               <Inicio 
                 onBienvenidaComoInvitado={() => navigate("/bienvenida")} 
                 onProspecto={() => navigate("/prospecto")}
@@ -44,7 +45,7 @@ const Home = () => {
                 onSponsors={() => navigate("/Sponsors")}
               />
               <Footer onProspecto={() => navigate("/prospecto")} />
-
+              </div>
             </>
 
         </AnimatePresence>

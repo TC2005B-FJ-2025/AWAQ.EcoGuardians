@@ -569,6 +569,70 @@ def create_sponsor():
     logger.info(f"📊 Response final: {response_data}")
     return jsonify(response_data)
 
+#prospectos ----------------------------------------------------------------------------------------------
+
+@app.route('/prospecto', methods=['POST'])
+def create_prospecto():
+    logger.info("\n--- [POST] /prospecto ---")
+    data = request.json
+    logger.info(f"📩 Datos recibidos: {data}")
+    name = data.get("name")
+    email = data.get("email")
+    descripcion = data.get("descripción")
+
+    if not email or not descripcion or not name:
+        error_msg = "Correo, nombre y descripción son campos obligatorios"
+        logger.error(f"Validación fallida: {error_msg}")
+        return jsonify({"error": error_msg}), 400
+
+    response_data = {
+        'message': 'Registro procesado correctamente',
+        'salesforce': {
+            'record_created': False,
+            'error': None
+        }
+    }
+
+    if sf_connection_status['connected']:
+        try:
+            logger.info("Intentando crear Lead en Salesforce...")
+
+            lead_data = {
+                'NombrePros__c': name,
+                'LastName': '-',
+                'Email': email,
+                'DescripcionPros__c': descripcion,
+                'Company': 'Persona fisica',
+                'OwnerId': "00GgK000000vn5d"
+            }
+
+            
+            # Opción 2: Si prefieres manejar manualmente los duplicados (elimina la línea anterior y usa esta):
+            response = sf.Lead.create(lead_data)
+
+            if response.get('success'):
+                record_id = response.get('id')
+                response_data['salesforce'].update({
+                    'record_created': True,
+                    'record_id': record_id
+                })
+                logger.info(f"Lead creado en Salesforce. ID: {record_id}")
+            else:
+                error_msg = str(response.get('errors', 'Error desconocido'))
+                response_data['salesforce']['error'] = error_msg
+                logger.error(f"Error al crear Lead: {error_msg}")
+
+        except Exception as sf_error:
+            error_msg = str(sf_error)
+            response_data['salesforce']['error'] = error_msg
+            logger.error(f"Excepción Salesforce: {error_msg}")
+
+    else:
+        response_data['salesforce']['error'] = "No conectado a Salesforce"
+        logger.error("No conectado a Salesforce")
+
+    logger.info(f"📊 Response final: {response_data}")
+    return jsonify(response_data)
 # main -----------------------------------------------------------------------------------------------------------
 
 if __name__ == '__main__':

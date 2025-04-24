@@ -254,6 +254,10 @@
 "email_placeholder": "example@email.com",
 "description": "Description:",
 "description_placeholder": "Describe your request or inquiry",
-"submit": "Send Request"
+"submit": "Send Request",
+"sending": "Sending...",
+"errorConexion": "Error connecting to the server",
+"errorForms": "Error sending the request",
+"Success": "Register successfully"
 } 
 }
