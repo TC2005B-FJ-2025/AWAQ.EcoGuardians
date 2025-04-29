@@ -535,3 +535,69 @@
 2025-04-24 01:33:42,883 [INFO] Creando registro en Salesforce...
 2025-04-24 01:33:43,377 [INFO] Registro creado en Salesforce. ID: 0n3gK00000001wzQAA
 2025-04-24 01:33:43,377 [INFO] 127.0.0.1 - - [24/Apr/2025 01:33:43] "POST /execute-payment HTTP/1.1" 200 -
+2025-04-29 12:44:43,792 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-29 12:44:43,950 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 12:44:43,950 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-29 12:44:43,950 [INFO]  * Restarting with stat
+2025-04-29 12:44:45,819 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-29 12:44:45,844 [WARNING]  * Debugger is active!
+2025-04-29 12:44:45,859 [INFO]  * Debugger PIN: 102-914-109
+2025-04-29 12:47:38,798 [INFO] 127.0.0.1 - - [29/Apr/2025 12:47:38] "OPTIONS /crear-caso HTTP/1.1" 200 -
+2025-04-29 12:47:38,802 [INFO] 
+--- [POST] /Crear-Caso ---
+2025-04-29 12:47:39,522 [INFO] Caso creado con éxito:
+2025-04-29 12:47:39,522 [INFO] 127.0.0.1 - - [29/Apr/2025 12:47:39] "POST /crear-caso HTTP/1.1" 200 -
+2025-04-29 12:48:14,987 [INFO] 127.0.0.1 - - [29/Apr/2025 12:48:14] "OPTIONS /prospecto HTTP/1.1" 200 -
+2025-04-29 12:48:14,991 [INFO] 
+--- [POST] /prospecto ---
+2025-04-29 12:48:15,012 [INFO] Intentando crear Lead en Salesforce...
+2025-04-29 12:48:15,699 [INFO] Lead creado en Salesforce. ID: 00QgK0000019joXUAQ
+2025-04-29 12:48:15,705 [INFO] 127.0.0.1 - - [29/Apr/2025 12:48:15] "POST /prospecto HTTP/1.1" 200 -
+2025-04-29 12:48:41,083 [INFO] 127.0.0.1 - - [29/Apr/2025 12:48:41] "OPTIONS /sponsors HTTP/1.1" 200 -
+2025-04-29 12:48:41,087 [INFO] 
+--- [POST] /registro ---
+2025-04-29 12:48:41,087 [INFO] Creando contacto en Salesforce...
+2025-04-29 12:48:41,768 [INFO] Contacto creado en Salesforce. ID: a01gK0000058HopQAE
+2025-04-29 12:48:41,768 [INFO] 127.0.0.1 - - [29/Apr/2025 12:48:41] "POST /sponsors HTTP/1.1" 200 -
+2025-04-29 12:49:01,319 [INFO] 127.0.0.1 - - [29/Apr/2025 12:49:01] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-29 12:49:01,576 [INFO] 
+--- [POST] /contacto ---
+2025-04-29 12:49:01,582 [INFO] Creando contacto en Salesforce...
+2025-04-29 12:49:02,342 [INFO] 127.0.0.1 - - [29/Apr/2025 12:49:02] "POST /contacto HTTP/1.1" 200 -
+2025-04-29 12:49:23,643 [INFO] 127.0.0.1 - - [29/Apr/2025 12:49:23] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-29 12:49:23,956 [INFO] 
+--- [POST] /Payment ---
+2025-04-29 12:49:23,956 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-29 12:49:23,956 [INFO] Monto de donación: 200.00
+2025-04-29 12:49:23,956 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-29 12:49:23,956 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/oauth2/token
+2025-04-29 12:49:24,826 [INFO] Response[200]: OK, Duration: 0.870235s.
+2025-04-29 12:49:24,831 [INFO] PayPal-Request-Id: 15d76607-1b53-4ba4-ae17-2c48b0a5de4f
+2025-04-29 12:49:24,831 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-29 12:49:25,679 [INFO] Response[201]: Created, Duration: 0.848236s.
+2025-04-29 12:49:25,686 [INFO] 127.0.0.1 - - [29/Apr/2025 12:49:25] "POST /payment HTTP/1.1" 200 -
+2025-04-29 12:49:46,503 [INFO] 127.0.0.1 - - [29/Apr/2025 12:49:46] "OPTIONS /execute-payment HTTP/1.1" 200 -
+2025-04-29 12:49:46,816 [INFO] 
+--- [POST] /execute-payment ---
+2025-04-29 12:49:46,820 [INFO] Request[GET]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAIR6NQ2BX79013AD009194P
+2025-04-29 12:49:47,239 [INFO] Response[200]: OK, Duration: 0.409883s.
+2025-04-29 12:49:47,239 [INFO] Buscando pago en PayPal: PAYID-NAIR6NQ2BX79013AD009194P
+2025-04-29 12:49:47,240 [INFO] PayPal-Request-Id: 578d2eec-6714-4a20-8edf-96decbca5088
+2025-04-29 12:49:47,240 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAIR6NQ2BX79013AD009194P/execute
+2025-04-29 12:49:48,440 [INFO] Response[200]: OK, Duration: 1.200238s.
+2025-04-29 12:49:50,331 [INFO] Correo enviado a: mariana.agesp@gmail.com
+2025-04-29 12:49:50,331 [INFO] Creando registro en Salesforce...
+2025-04-29 12:49:50,975 [INFO] Registro creado en Salesforce. ID: 0n3gK000000021pQAA
+2025-04-29 12:49:50,976 [INFO] 127.0.0.1 - - [29/Apr/2025 12:49:50] "POST /execute-payment HTTP/1.1" 200 -
+2025-04-29 12:50:09,828 [INFO] 127.0.0.1 - - [29/Apr/2025 12:50:09] "OPTIONS /valoracion HTTP/1.1" 200 -
+2025-04-29 12:50:10,083 [INFO] 
+--- [POST] /valoracion ---
+2025-04-29 12:50:10,083 [INFO] Valoración recibida: {'puntuacion': 1}
+2025-04-29 12:50:10,285 [INFO] Registro creado en Salesforce con ID a00gK000004LP1AQAW
+2025-04-29 12:50:10,285 [INFO] 127.0.0.1 - - [29/Apr/2025 12:50:10] "POST /valoracion HTTP/1.1" 200 -
+2025-04-29 12:54:19,074 [INFO] 127.0.0.1 - - [29/Apr/2025 12:54:19] "OPTIONS /crear-caso HTTP/1.1" 200 -
+2025-04-29 12:54:19,074 [INFO] 
+--- [POST] /Crear-Caso ---
+2025-04-29 12:54:19,510 [INFO] Caso creado con éxito:
+2025-04-29 12:54:19,510 [INFO] 127.0.0.1 - - [29/Apr/2025 12:54:19] "POST /crear-caso HTTP/1.1" 200 -

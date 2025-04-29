@@ -4,6 +4,24 @@ import AnimacionFadeUp from "../InHome/AnimacionFadeUp";
 
 const SponsorInfoSection = ({ onContacto, onSponsors }) => {
   const { t } = useTranslation();
+    // Función para procesar el texto con saltos de línea
+    const processTextWithLineBreaks = (text) => {
+      return text.split("\n").map((line, index) => {
+        const parts = line.split(/(\*\*.*?\*\*)/g); // Divide por texto entre ** **
+    
+        return (
+          <span key={index}>
+            {parts.map((part, i) => {
+              if (part.startsWith("**") && part.endsWith("**")) {
+                return <strong key={i}>{part.slice(2, -2)}</strong>; // Aplica negritas
+              }
+              return <span key={i}>{part}</span>;
+            })}
+            <br />
+          </span>
+        );
+      });
+    };
 
   return (
     <div className="w-full bg-white">
@@ -24,10 +42,10 @@ const SponsorInfoSection = ({ onContacto, onSponsors }) => {
               {t("sponsorSection.sponsorHeading")}
             </h2>
             <p className="text-sm text-gray-700 mb-1">
-              {t("sponsorSection.sponsorText1")}
+            {processTextWithLineBreaks(t("sponsorSection.sponsorText1"))}
             </p>
             <p className="text-sm text-gray-700 mb-4">
-              {t("sponsorSection.sponsorText2")}
+            {processTextWithLineBreaks(t("sponsorSection.sponsorText2"))}
             </p>
             <button
               onClick={onSponsors}
@@ -56,7 +74,7 @@ const SponsorInfoSection = ({ onContacto, onSponsors }) => {
               {t("sponsorSection.contactText1")}
             </p>
             <p className="text-sm text-gray-700 mb-4">
-              {t("sponsorSection.contactText2")}
+            {processTextWithLineBreaks(t("sponsorSection.contactText2"))}
             </p>
             <button
               onClick={onContacto}

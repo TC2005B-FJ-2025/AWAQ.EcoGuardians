@@ -6,7 +6,7 @@
     "es": "ES",
     "en": "EN",
     "back": "< Back",
-    "quejas": "Complaints",
+    "quejas": "Suggestions",
     "valoracion": "Rating"
   },
   "bienvenida": {
@@ -16,16 +16,16 @@
     "jugar": "Play"
   },
   "inicio": {
-  "presenta": "AWAQ presents",
+  "presenta": "✨ Awaq ONGD presents 🌎",
   "titulo": "Ecoguardians 2.0",
   "contactanos": "Contact us",
   "jugar": "Play",
   "sobre_nosotros": "About Us",
-  "titulo_seccion": "About us",
-  "descripcion_breve": "EcoGuardians 2.0 is an educational game designed to promote environmental awareness.",
-  "descripcion_larga": "AWAQ ONGD is a global organization committed to empowering and preserving communities in their mission to protect and restore biodiversity. Using emerging technologies to help people and communities around the world protect and restore their biodiversity.",
+  "titulo_seccion": "🎮 About Ecoguardianes 2.0 🌱",
+  "descripcion_breve": "Awaq Biological Stations is a program of Awaq ONGD",
+  "descripcion_larga": "We have explored this unique experience together with our allies 🌍 — the Pontifical University of Javeriana (Colombia) and the Technológico de Monterrey (Mexico) — so that we can discover it 🧭 and discover the purpose and importance of our biological stations 🏕️. Explore, learn and become convinced in a true Eco-friendly way! 🚀\n🌿 Enjoy this interactive adventure and discover how we are now redefining conservation!",
   "descripcion_expandida": " Since 2019, AWAQ has worked on projects that promote ecosystem conservation and positive impact on local communities. One of its main focuses is the Northern Caldas Biological Station (EBNC), a key space for research, ecotourism, and environmental awareness.",
-  "saber_mas": "Read more...",
+  "saber_mas": "Learn more about the Biological Station",
   "mostrar_menos": "Show less..."
   },
   "donaciones": {
@@ -36,8 +36,8 @@
   "reintentar": "Retry with current email",
   "otra_donacion": "Make another donation",
   "titulo": "Donations",
-  "subtitulo": "Would you like to help?",
-  "descripcion": "Your support helps us continue our mission. Please enter your details to process the donation.",
+  "subtitulo": "🤝 Would you like to help? 🌎",
+  "descripcion": "It is essential for you to continue building the change.\nEach donation we receive goes directly to keeping this platform alive (website and expansion) 💻✨ and in our fortress Biological Estations 🏕️🌿, true refuges of life and knowledge.\n🌟 With your help, more people will know our work and more communities will benefit from the conservation.\nStay with this mission and become part of the transformation! 🚀💚",
   "elegir_monto": "Choose an amount",
   "o_ingresa": "Or you can also",
   "placeholder_monto": "Enter the amount",
@@ -57,21 +57,21 @@
   },
   "sponsors": {
   "titulo": "Our Sponsors",
-  "descripcion": "Thanks to our partners, we continue to support impactful environmental and social projects.",
+  "descripcion": "To each person, institution and ally who has believed in us: **thank you!!.**\nYour support has been fundamental to making this project possible, boosting our biological states 🏕️🌱 and expanding our conservation vision to new generations.\n**We are here to help you building a greener, fairer and more sustainable future. 🌎💚**",
   "saber_mas": "Learn more...",
   "error_sponsor":"Error charging the sponsors:"
   },
   "sponsorSection": {
 "titleColabora": "Collaborate",
 "titleInformate": "Get Informed",
-"sponsorHeading": "Become a Sponsor",
-"sponsorText1": "Would you like to support us? Sign up as a sponsor!",
-"sponsorText2": "By becoming a sponsor...",
-"sponsorButton": "Register as Sponsor",
-"contactHeading": "Learn More",
-"contactText1": "Do you like what you see? Become a contact!",
-"contactText2": "By becoming a contact you'll receive all the news...",
-"contactButton": "Register as Contact"
+"sponsorHeading": "🤝Become a Sponsor🌿",
+"sponsorText1": "Would you like to be an active part of the change? \n**By joining as a sponsor, demonstrate to the world your real commitment to the conservation of the environment 🌎✨** and contribute to strong projects that protect life, boost communities and transform territories.",
+"sponsorText2": "**📣 Come to us and let your green hue be on the planet.** \nRegister today and be part of a new generation of natural allies! 🚀💚",
+"sponsorButton": "Request information",
+"contactHeading": "📬 Keep connected! 🌟",
+"contactText1": "Would you like to be the first to learn about our latest news, projects and upcoming adventures? 🚀🌿",
+"contactText2": "**Register and form part of our global community** committed to environmental conservation and innovation. \nNow let's make the difference! 💚\n",
+"contactButton": "Register with us"
 },
 "footer": {
 "contacto": "Contact",
@@ -184,9 +184,9 @@
 }
 },
 "crearCaso": {
-"titulo": "Complaints and Suggestions",
-"label_tipo": "Type of Opinion",
-"label_opiniones": "Comments or Suggestions",
+"titulo": "How can we help you?",
+"label_tipo": "What would you like to tell us?",
+"label_opiniones": "Comment",
 "label_email": "Email",
 "queja": "Complaint",
 "sugerencia": "Suggestion",

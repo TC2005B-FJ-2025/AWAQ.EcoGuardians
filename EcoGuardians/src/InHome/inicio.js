@@ -1,6 +1,6 @@
-import React, { useState } from "react";
 import awaq from "../componentes/Imagen_logo_awaq.png";
 import universidad from "../componentes/Imagen_logo_universidad.png";
+import logoSocioformador from "../componentes/logoSocioformador.jpeg";
 import SwipperImages from "./SwipperImages";
 import { useTranslation } from "react-i18next"; 
 import AnimacionFadeUp from "./AnimacionFadeUp";
@@ -47,44 +47,51 @@ const Inicio = ({ onBienvenidaComoInvitado, onProspecto }) => {
 };
 
 const Nosotros = () => {
-  const [mostrarTexto, setMostrarTexto] = useState(false);
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
+
+  // Función para procesar el texto con saltos de línea
+  const processTextWithLineBreaks = (text) => {
+    return text.split("\n").map((line, index) => (
+      <span key={index}>
+        {line}
+        <br />
+      </span>
+    ));
+  };
 
   return (
     <AnimacionFadeUp>
-    <section className="flex flex-col items-center text-center p-5 sm:p-10">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-verde-claro mb-5 text-justify">
-      {t("inicio.sobre_nosotros")}
-      </h2>
-      <div className="flex lg:flex-row flex-col items-center justify-center gap-6 max-w-4xl w-full">
-        <div className="flex items-center gap-5">
-          <img src={awaq} alt="Logo AWAQ" className="w-32 sm:w-48" />
-          <img src={universidad} alt="Logo Universidad" className="w-32 sm:w-48" />
+      <section className="flex flex-col items-center text-center p-5 sm:p-10">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-verde-claro mb-5 text-justify">
+          {t("inicio.sobre_nosotros")}
+        </h2>
+        <div className="flex lg:flex-row flex-col items-center justify-center gap-6 max-w-4xl w-full">
+        <div className="flex flex-wrap items-center justify-center gap-5 max-w-full">
+          <img src={awaq} alt="Logo AWAQ" className="w-24 sm:w-32" />
+          <img src={universidad} alt="Logo Universidad" className="w-24 sm:w-32" />
+          <img src={logoSocioformador} alt="Logo Socioformador" className="w-20 sm:w-24" />
         </div>
-        <div className="max-w-md text-justify">
-          <p className="mb-2">
-          {t("inicio.descripcion_breve")}
-          </p>
-          <h3 className="text-[22px] sm:text-[27px] font-semibold pb-1">
-          {t("inicio.titulo_seccion")}
-          </h3>
-          <p>
-          {t("inicio.descripcion_larga")}
-            {mostrarTexto && (
-              <>
-               {t("inicio.descripcion_expandida")}
-              </>
-            )}
-          </p>
-          <button
-            className="text-verde-claro font-bold mt-2 hover:underline"
-            onClick={() => setMostrarTexto(!mostrarTexto)}
-          >
-            {mostrarTexto ? t("inicio.mostrar_menos") : t("inicio.saber_mas")}
-          </button>
+          <div className="max-w-md text-justify">
+            <p className="mb-2">
+              {t("inicio.descripcion_breve")}
+            </p>
+            <h3 className="text-[22px] sm:text-[27px] font-semibold pb-1">
+              {t("inicio.titulo_seccion")}
+            </h3>
+            <p>
+              {processTextWithLineBreaks(t("inicio.descripcion_larga"))}
+            </p>
+            <a
+              href="https://www.somosawaq.org/eba"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-verde-claro font-bold mt-2 hover:underline inline-block"
+            >
+              {t("inicio.saber_mas")}
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </AnimacionFadeUp>
   );
 };

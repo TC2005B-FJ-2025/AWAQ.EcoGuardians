@@ -44,7 +44,7 @@ const Encabezado = ({ onHome, forzarMobile }) => {
                   {onHome ? (
                     <li className="px-4 py-2 hover:bg-[#1E3E1E] rounded-lg transition">
                       <a
-                        href="https://somosawaq.org"
+                        href="https://www.somosawaq.org/"
                         className="text-white no-underline"
                       >
                         &lt; {t("header.back_AWAQ")}
@@ -91,7 +91,7 @@ const Encabezado = ({ onHome, forzarMobile }) => {
           </div>
 
           {/* Logo */}
-          <div className="flex justify-center">
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <img src={LogoHeader} alt="Logo AWAQ" className="h-12" />
           </div>
 

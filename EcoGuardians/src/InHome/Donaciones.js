@@ -14,6 +14,14 @@ function Paypal() {
     const location = useLocation();
     const { t } = useTranslation();
     const navigate = useNavigate();
+    const processTextWithLineBreaks = (text) => {
+        return text.split("\n").map((line, index) => (
+          <span key={index}>
+            {line}
+            <br />
+          </span>
+        ));
+      };
 
     const validateEmail = (email) => {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -223,8 +231,8 @@ function Paypal() {
                         <div className="w-full md:w-1/2 p-6">
                             <h2 className="text-[#556B2F] text-sm font-semibold uppercase mb-2">{t("donaciones.titulo")}</h2>
                             <h1 className="text-3xl font-bold mb-4 text-[#3A3A3A]">{t("donaciones.subtitulo")}</h1>
-                            <p className="text-gray-600 text-md">
-                                {t("donaciones.descripcion")}
+                            <p className="text-gray-600 text-md, text-justify">
+                            {processTextWithLineBreaks(t("donaciones.descripcion"))}
                             </p>
                         </div>
                         <div className="w-full md:w-1/2 p-6 border-t md:border-t-0 md:border-l border-[#D1E0C2]">
