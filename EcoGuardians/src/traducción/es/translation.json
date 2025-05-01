@@ -12,7 +12,7 @@
   "bienvenida": {
     "contactanos": "Contáctanos",
     "registro_sponsor": "Regístrate como Sponsor",
-    "registro_contacto": "Regístrate como Contacto",
+    "registro_contacto": "Regístrate con nosotros",
     "jugar": "Jugar"
   },
   "inicio": {
@@ -94,7 +94,7 @@
 "notification": {
 "message": "Suscríbete a nuestras notificaciones para recibir las últimas actualizaciones y noticias relacionadas con AWAQ",
 "noThanks": "No, Gracias",
-"becomeContact": "Volverme Contacto",
+"becomeContact": "Regístrate con nosotros",
 "thankYou": "¡Muchas Gracias!"
 },
 "faqHeader": {
@@ -152,7 +152,7 @@
         "label": "Red de Contactos AWAQ",
         "q1": {
           "question": "¿Cómo puedo recibir más información?",
-          "answer": "Si te interesa recibir más información y noticias sobre AWAQ, vuélvete parte de nuestra red de contactos. En la página principal, casi al final del lado derecho, podrás encontrar el botón Regístrate como Contacto, donde podrás dejar tus datos para poder estar informado de todas las novedades. Este botón también lo podrás encontrar al dar click en Jugar. "
+          "answer": "Si te interesa recibir más información y noticias sobre AWAQ, vuélvete parte de nuestra red de contactos. En la página principal, casi al final del lado derecho, podrás encontrar el botón Regístrate con nosotros, donde podrás dejar tus datos para poder estar informado de todas las novedades. Este botón también lo podrás encontrar al dar click en Jugar. "
         }
       },
       "opinion": {

@@ -12,7 +12,7 @@
   "bienvenida": {
     "contactanos": "Contact us",
     "registro_sponsor": "Register as Sponsor",
-    "registro_contacto": "Register as Contact",
+    "registro_contacto": "Register with us",
     "jugar": "Play"
   },
   "inicio": {
@@ -94,7 +94,7 @@
 "notification": {
 "message": "Subscribe to our notifications to receive the latest updates and news related to AWAQ",
 "noThanks": "No, Thanks",
-"becomeContact": "Become a Contact",
+"becomeContact": "Register with us",
 "thankYou": "Thank you very much!"
 },
 "faqHeader": {
@@ -152,7 +152,7 @@
       "label": "AWAQ Contact Network",
       "q1": {
         "question": "How can I receive more information?",
-        "answer": "If you would like to receive updates and news about AWAQ, join our contact network. Near the bottom right of the main page, you will find the 'Register as Contact' button to leave your information and stay informed. This button is also available after clicking on Play. "
+        "answer": "If you would like to receive updates and news about AWAQ, join our contact network. Near the bottom right of the main page, you will find the Register with us button to leave your information and stay informed. This button is also available after clicking on Play. "
       }
     },
     "opinion": {
