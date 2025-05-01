@@ -1,0 +1,38 @@
+[
+    {
+      "filename": "sponsor1.png",
+      "alt": "Logo de la empresa 1",
+      "link": "https://tec.mx/es?srsltid=AfmBOoqUWgQY0hiPtSdNkA_PCOr_RfzzMdUQfjvTRgk6Z5DTqyHx5x5Y"
+    },
+    {
+        "filename": "Github.png",
+        "alt": "Logo de la empresa 2",
+        "link": "https://github.com/"
+      },
+      {
+        "filename": "micro.png",
+        "alt": "Logo de la empresa 3",
+        "link": "https://www.microsoft.com"
+      },
+      {
+        "filename": "universidad-ean-logo.png",
+        "alt": "Logo de la empresa 4",
+        "link": "https://universidadean.edu.co/"
+      },
+      {
+        "filename": "salesforce-Logo.png",
+        "alt": "Logo de la empresa 5",
+        "link": "https://www.salesforce.com"
+      },
+      {
+        "filename": "SENA-Logo.png",
+        "alt": "Logo de la empresa 6",
+        "link": "https://www.sena.edu.co/es-co/Paginas/default.aspx"
+      },
+    {
+      "filename": "chec-logo.png",
+      "alt": "Logo de la empresa 7",
+      "link": "https://www.chec.com.co/"
+    }
+  ]
+  

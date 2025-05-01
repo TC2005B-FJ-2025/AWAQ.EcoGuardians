@@ -1,4 +1,3 @@
-
 {
   "header": {
     "back_AWAQ": "< Volver a la página de AWAQ",
@@ -52,7 +51,7 @@
   "error_email_url": "Por favor ingresa un email válido antes de continuar",
   "backend_answer": "Backend respondió:",
   "backend_err": "Error al contactar el backend:",
-  "payment_cancel": "El pago fue cancelado por el usuario.",
+  "payment_cancel": "El pago fue cancelado.",
   "ir_inicio": "Volver a Inicio",
   "completado": "Gracias por su donación!"
   },
@@ -104,86 +103,85 @@
 "es": "ES",
 "en": "EN"
 },
-"faqs": {
-"title": "Ecoguardianes 2.0",
-"subtitle": "Preguntas Frecuentes",
-"categories": {
-  "ecoguardian": "EcoGuardians",
-  "donations": "Donaciones",
-  "sponsors": "Sponsors",
-  "contacto": "Red de Contactos AWAQ",
-  "opinion": "Quejas y sugerencias",
-  "idioma": "Idioma",
-  "general": "Generalidades",
-  "mas": "¿Más dudas?"
-},
-"ecoguardian": {
-  "q1": {
-    "question": "¿En qué consiste el juego?",
-    "answer": "El juego simula las instalaciones de AWAQ, en donde como jugador podrás interactuar con todo lo que hay en las instalaciones físicas y completar las actividades."
+  "faqs": {
+    "title": "Ecoguardianes 2.0",
+    "subtitle": "Preguntas Frecuentes",
+    "categories": {
+      "ecoguardian": {
+        "label": "EcoGuardians",
+        "q1": {
+          "question": "¿En qué consiste el juego?",
+          "answer": "El juego simula las instalaciones de AWAQ, en donde como jugador podrás interactuar con todo lo que hay en las instalaciones físicas y completar las actividades."
+        },
+        "q2": {
+          "question": "¿Cómo jugar?",
+          "answer": "Para empezar a jugar simplemente presiona el botón Jugar, si es tu primera vez jugando verás un tutorial que te indicará todos los comandos para interactuar"
+        },
+        "q3": {
+          "question": "¿Puedo jugar en el teléfono?",
+          "answer": "No, por el momento el juego está habilitado solamente para usarse en computadora."
+        },
+        "q4": {
+          "question": "¿Te gustaría calificar el juego?",
+          "answer": "Nos encanta saber tu opinión, califica qué te pareció el videojuego con el botón que contiene una estrella que se encuentra a lado del juego."
+        }
+      },
+      "donations": {
+        "label": "Donaciones",
+        "q1": {
+          "question": "¿En dónde puedo donar?",
+          "answer": "En la página principal, encontrarás un apartado de donaciones, el cual está conectado con Paypal, por medio de este recurso es que recibimos donaciones."
+        },
+        "q2": {
+          "question": "¿Qué necesito para donar?",
+          "answer": "Únicamente necesitas contar con una cuenta de paypal; se te solicitarán tus datos de paypal para proceder con la donación."
+        }
+      },
+      "sponsors": {
+        "label": "Sponsors",
+        "q1": {
+          "question": "¿Cómo me puedo volver sponsor de AWAQ?",
+          "answer": "Al dar click en Jugar, a tu derecha podrás ver diferentes botones, el botón Regístrate como Sponsor te redirigirá a un formulario donde podrás llenar tu solicitud. Este mismo botón también lo puedes encontrar en la página principal, casi al final del lado izquierdo."
+        },
+        "q2": {
+          "question": "¿Qué necesito para ser sponsor?",
+          "answer": "En el formulario mencionado anteriormente, deberás proporcionarnos el nombre de la empresa o contacto, un correo electrónico para contactarte, el URL del sitio web de la empresa patrocinadora y un breve párrafo con las razones para volverte patrocinador de AWAQ."
+        }
+      },
+      "contacto": {
+        "label": "Red de Contactos AWAQ",
+        "q1": {
+          "question": "¿Cómo puedo recibir más información?",
+          "answer": "Si te interesa recibir más información y noticias sobre AWAQ, vuélvete parte de nuestra red de contactos. En la página principal, casi al final del lado derecho, podrás encontrar el botón Regístrate como Contacto, donde podrás dejar tus datos para poder estar informado de todas las novedades. Este botón también lo podrás encontrar al dar click en Jugar. "
+        }
+      },
+      "opinion": {
+        "label": "Quejas y sugerencias",
+        "q1": {
+          "question": "Tengo alguna queja o alguna sugerencia",
+          "answer": "En caso de contar con alguna opinión que te gustaría darnos, únicamente presiona el botón del encabezado que tiene una carita feliz, este te redirigirá a un formulario de quejas y sugerencias por el cual podrás enviarnos tus comentarios"
+        },
+        "q2": {
+          "question": "¿Para qué debo brindar mi correo electrónico al enviar una opinión?",
+          "answer": "Es necesario que proporciones un correo electrónico al enviar una opinión para que se pueda dar seguimiento a tu queja o sugerencia de forma personalizada."
+        }
+      },
+      "idioma": {
+        "label": "Idioma",
+        "q1": {
+          "question": "¿Cómo cambiar el idioma de la página?",
+          "answer": "En la parte superior derecha de la página principal puedes encontrar un botón con una flecha desplegable y cambiar el idioma a tu preferencia."
+        }
+      },
+      "mas": {
+        "label": "¿Más dudas?",
+        "q1": {
+          "question": "¿Más dudas?",
+          "answer": "Si tienes dudas más específicas o deseas que te contactemos personalmente, en la página principal, debajo de la imagen de vista previa del juego, encontrarás el botón Contáctanos, donde podrás dejarnos tus datos y cualquier inquietud que tengas. Este mismo botón también se encuentra al dar click en Jugar, del lado derecho. "
+        }
+      }
+    }
   },
-  "q2": {
-    "question": "¿Cómo jugar?",
-    "answer": "Para empezar a jugar simplemente presiona el botón Jugar, si es tu primera vez jugando verás un tutorial que te indicará todos los comandos para interactuar"
-  },
-  "q3": {
-    "question": "¿Puedo jugar en el teléfono?",
-    "answer": "No, por el momento el juego está habilitado solamente para usarse en computadora."
-  },
-  "q4": {
-    "question": "¿Te gustaría calificar el juego?",
-    "answer": "Nos encanta saber tu opinión, califica qué te pareció el videojuego con el botón que contiene una estrella que se encuentra a lado del juego."
-  }
-},
-"donations": {
-  "q1": {
-    "question": "¿En dónde puedo donar?",
-    "answer": "En la página principal, encontrarás un apartado de donaciones, el cual está conectado con Paypal, por medio de este recurso es que recibimos donaciones."
-  },
-  "q2": {
-    "question": "¿Qué necesito para donar?",
-    "answer": "Únicamente necesitas contar con una cuenta de paypal; se te solicitarán tus datos de paypal para proceder con la donación."
-  }
-},
-"sponsors": {
-  "q1": {
-    "question": "¿Cómo me puedo volver sponsor de AWAQ?",
-    "answer": "Al dar click en Jugar, a tu derecha podrás ver diferentes botones, el botón Regístrate como Sponsor te redirigirá a un formulario donde podrás llenar tu solicitud. Este mismo botón también lo puedes encontrar en la página principal, casi al final del lado izquierdo."
-  },
-  "q2": {
-    "question": "¿Qué necesito para ser sponsor?",
-    "answer": "En el formulario mencionado anteriormente, deberás proporcionarnos el nombre de la empresa o contacto, un correo electrónico para contactarte, el URL del sitio web de la empresa patrocinadora y un breve párrafo con las razones para volverte patrocinador de AWAQ."
-  }
-},
-"contacto": {
-  "q1": {
-    "question": "¿Cómo puedo recibir más información?",
-    "answer": "Si te interesa recibir más información y noticias sobre AWAQ, vuélvete parte de nuestra red de contactos. En la página principal, casi al final del lado derecho, podrás encontrar el botón Regístrate como Contacto, donde podrás dejar tus datos para poder estar informado de todas las novedades. Este botón también lo podrás encontrar al dar click en Jugar. "
-  }
-},
-"opinion": {
-  "q1": {
-    "question": "Tengo alguna queja o alguna sugerencia",
-    "answer": "En caso de contar con alguna opinión que te gustaría darnos, únicamente presiona el botón del encabezado que tiene una carita feliz, este te redirigirá a un formulario de quejas y sugerencias por el cual podrás enviarnos tus comentarios"
-  },
-  "q2": {
-    "question": "¿Para qué debo brindar mi correo electrónico al enviar una opinión?",
-    "answer": "Es necesario que proporciones un correo electrónico al enviar una opinión para que se pueda dar seguimiento a tu queja o sugerencia de forma personalizada."
-  }
-},
-"idioma": {
-  "q1": {
-    "question": "¿Cómo cambiar el idioma de la página?",
-    "answer": "En la parte superior derecha de la página principal puedes encontrar un botón con una flecha desplegable y cambiar el idioma a tu preferencia."
-  }
-},
-"mas": {
-  "q1": {
-    "question": "¿Más dudas?",
-    "answer": "Si tienes dudas más específicas o deseas que te contactemos personalmente, en la página principal, debajo de la imagen de vista previa del juego, encontrarás el botón Contáctanos, donde podrás dejarnos tus datos y cualquier inquietud que tengas. Este mismo botón también se encuentra al dar click en Jugar, del lado derecho. "
-  }
-}
-},
 "crearCaso": {
 "titulo": "¿En que te podemos ayudar?",
 "label_tipo": "¿Que te gustaria contarnos?",
@@ -204,6 +202,10 @@
 "name": "Nombre Completo",
 "name_placeholder": "Tu nombre completo",
 "age_range": "Rango de Edad",
+"leido": "He leído y acepto las",
+"politica": "política de privacidad",
+"Requerido": "Requerido",
+"acepto": "Acepto recibir comunicaciones de marketing por correo electrónico de Awaq ONGD",
 "age": {
   "0_12": "0-12 años",
   "13_17": "13-17 años",
@@ -216,8 +218,8 @@
 "email_placeholder": "tucorreo@ejemplo.com",
 "country": "País",
 "country_placeholder": "Tu país",
-"region": "Región/Estado",
-"region_placeholder": "Tu región o estado",
+"region": "Región/Ciudad",
+"region_placeholder": "Tu región o ciudad",
 "captcha_error": "Por favor, verifica que no eres un robot",
 "success": "¡Registro exitoso!",
 "submit": "Unirme"
@@ -260,7 +262,203 @@
 "errorConexion": "Error de conexión con el servidor",
 "errorForms": "Error al enviar el formulario",
 "Success": "Registro procesado correctamente"
+},
+"countries": {
+  "afghanistan": "Afganistán",
+  "albania": "Albania",
+  "algeria": "Argelia",
+  "andorra": "Andorra",
+  "angola": "Angola",
+  "antigua and barbuda": "Antigua Y Barbuda",
+  "argentina": "Argentina",
+  "armenia": "Armenia",
+  "australia": "Australia",
+  "austria": "Austria",
+  "azerbaijan": "Azerbaiyán",
+  "bahamas": "Bahamas",
+  "bahrain": "Baréin",
+  "bangladesh": "Bangladés",
+  "barbados": "Barbados",
+  "belarus": "Bielorrusia",
+  "belgium": "Bélgica",
+  "belize": "Belice",
+  "benin": "Benín",
+  "bhutan": "Bután",
+  "bolivia": "Bolivia",
+  "bosnia and herzegovina": "Bosnia Y Herzegovina",
+  "botswana": "Botsuana",
+  "brazil": "Brasil",
+  "brunei": "Brunéi",
+  "bulgaria": "Bulgaria",
+  "burkina faso": "Burkina Faso",
+  "burundi": "Burundi",
+  "cabo verde": "Cabo Verde",
+  "cambodia": "Camboya",
+  "cameroon": "Camerún",
+  "canada": "Canadá",
+  "central african republic": "República Centroafricana",
+  "chad": "Chad",
+  "chile": "Chile",
+  "china": "China",
+  "colombia": "Colombia",
+  "comoros": "Comoras",
+  "congo (congo-brazzaville)": "Congo",
+  "costa rica": "Costa Rica",
+  "croatia": "Croacia",
+  "cuba": "Cuba",
+  "cyprus": "Chipre",
+  "czechia (czech republic)": "Chequia (República Checa)",
+  "denmark": "Dinamarca",
+  "djibouti": "Yibuti",
+  "dominica": "Dominica",
+  "dominican republic": "República Dominicana",
+  "ecuador": "Ecuador",
+  "egypt": "Egipto",
+  "el salvador": "El Salvador",
+  "equatorial guinea": "Guinea Ecuatorial",
+  "eritrea": "Eritrea",
+  "estonia": "Estonia",
+  "eswatini (fmr. \"swaziland\")": "Esuatini (Antes Suazilandia)",
+  "ethiopia": "Etiopía",
+  "fiji": "Fiyi",
+  "finland": "Finlandia",
+  "france": "Francia",
+  "gabon": "Gabón",
+  "gambia": "Gambia",
+  "georgia": "Georgia",
+  "germany": "Alemania",
+  "ghana": "Ghana",
+  "greece": "Grecia",
+  "grenada": "Granada",
+  "guatemala": "Guatemala",
+  "guinea": "Guinea",
+  "guinea-bissau": "Guinea-Bisáu",
+  "guyana": "Guyana",
+  "haiti": "Haití",
+  "honduras": "Honduras",
+  "hungary": "Hungría",
+  "iceland": "Islandia",
+  "india": "India",
+  "indonesia": "Indonesia",
+  "iran": "Irán",
+  "iraq": "Irak",
+  "ireland": "Irlanda",
+  "israel": "Israel",
+  "italy": "Italia",
+  "ivory coast (côte d'ivoire)": "Costa De Marfil",
+  "jamaica": "Jamaica",
+  "japan": "Japón",
+  "jordan": "Jordania",
+  "kazakhstan": "Kazajistán",
+  "kenya": "Kenia",
+  "kiribati": "Kiribati",
+  "korea, north (north korea)": "Corea Del Norte",
+  "korea, south (south korea)": "Corea Del Sur",
+  "kosovo": "Kosovo",
+  "kuwait": "Kuwait",
+  "kyrgyzstan": "Kirguistán",
+  "laos": "Laos",
+  "latvia": "Letonia",
+  "lebanon": "Líbano",
+  "lesotho": "Lesoto",
+  "liberia": "Liberia",
+  "libya": "Libia",
+  "liechtenstein": "Liechtenstein",
+  "lithuania": "Lituania",
+  "luxembourg": "Luxemburgo",
+  "madagascar": "Madagascar",
+  "malawi": "Malaui",
+  "malaysia": "Malasia",
+  "maldives": "Maldivas",
+  "mali": "Malí",
+  "malta": "Malta",
+  "marshall islands": "Islas Marshall",
+  "mauritania": "Mauritania",
+  "mauritius": "Mauricio",
+  "mexico": "México",
+  "micronesia": "Micronesia",
+  "moldova": "Moldavia",
+  "monaco": "Mónaco",
+  "mongolia": "Mongolia",
+  "montenegro": "Montenegro",
+  "morocco": "Marruecos",
+  "mozambique": "Mozambique",
+  "myanmar (burma)": "Myanmar (Birmania)",
+  "namibia": "Namibia",
+  "nauru": "Nauru",
+  "nepal": "Nepal",
+  "netherlands": "Países Bajos",
+  "new zealand": "Nueva Zelanda",
+  "nicaragua": "Nicaragua",
+  "niger": "Níger",
+  "nigeria": "Nigeria",
+  "north macedonia": "Macedonia Del Norte",
+  "norway": "Noruega",
+  "oman": "Omán",
+  "pakistan": "Pakistán",
+  "palau": "Palaos",
+  "panama": "Panamá",
+  "papua new guinea": "Papúa Nueva Guinea",
+  "paraguay": "Paraguay",
+  "peru": "Perú",
+  "philippines": "Filipinas",
+  "poland": "Polonia",
+  "portugal": "Portugal",
+  "qatar": "Catar",
+  "romania": "Rumanía",
+  "russia": "Rusia",
+  "rwanda": "Ruanda",
+  "saint kitts and nevis": "San Cristóbal Y Nieves",
+  "saint lucia": "Santa Lucía",
+  "saint vincent and the grenadines": "San Vicente Y Las Granadinas",
+  "samoa": "Samoa",
+  "san marino": "San Marino",
+  "sao tome and principe": "Santo Tomé Y Príncipe",
+  "saudi arabia": "Arabia Saudita",
+  "senegal": "Senegal",
+  "serbia": "Serbia",
+  "seychelles": "Seychelles",
+  "sierra leone": "Sierra Leona",
+  "singapore": "Singapur",
+  "slovakia": "Eslovaquia",
+  "slovenia": "Eslovenia",
+  "solomon islands": "Islas Salomón",
+  "somalia": "Somalia",
+  "south africa": "Sudáfrica",
+  "south sudan": "Sudán Del Sur",
+  "spain": "España",
+  "sri lanka": "Sri Lanka",
+  "sudan": "Sudán",
+  "suriname": "Surinam",
+  "sweden": "Suecia",
+  "switzerland": "Suiza",
+  "syria": "Siria",
+  "taiwan": "Taiwán",
+  "tajikistan": "Tayikistán",
+  "tanzania": "Tanzania",
+  "thailand": "Tailandia",
+  "timor-leste (east timor)": "Timor Oriental",
+  "togo": "Togo",
+  "tonga": "Tonga",
+  "trinidad and tobago": "Trinidad Y Tobago",
+  "tunisia": "Túnez",
+  "turkey": "Turquía",
+  "turkmenistan": "Turkmenistán",
+  "tuvalu": "Tuvalu",
+  "uganda": "Uganda",
+  "ukraine": "Ucrania",
+  "united arab emirates": "Emiratos Árabes Unidos",
+  "united kingdom": "Reino Unido",
+  "united states": "Estados Unidos",
+  "uruguay": "Uruguay",
+  "uzbekistan": "Uzbekistán",
+  "vanuatu": "Vanuatu",
+  "vatican city": "Ciudad Del Vaticano",
+  "venezuela": "Venezuela",
+  "vietnam": "Vietnam",
+  "yemen": "Yemen",
+  "zambia": "Zambia",
+  "zimbabwe": "Zimbabue"
 }  
-
 }
 

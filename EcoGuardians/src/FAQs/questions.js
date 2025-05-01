@@ -1,95 +1,31 @@
 import { useTranslation } from "react-i18next";
 
 export const useQuestions = () => {
-  const { t } = useTranslation();
-
-  return [
-    {
-      category: t("faqs.categories.ecoguardian"),
-      items: [
-        {
-          question: t("faqs.ecoguardian.q1.question"),
-          answer: t("faqs.ecoguardian.q1.answer"),
-        },
-        {
-          question: t("faqs.ecoguardian.q2.question"),
-          answer: t("faqs.ecoguardian.q2.answer"),
-        },
-        {
-          question: t("faqs.ecoguardian.q3.question"),
-          answer: t("faqs.ecoguardian.q3.answer"),
-        },
-        {
-          question: t("faqs.ecoguardian.q4.question"),
-          answer: t("faqs.ecoguardian.q4.answer"),
-        },
-      ],
-    },
-    {
-      category: t("faqs.categories.donations"),
-      items: [
-        {
-          question: t("faqs.donations.q1.question"),
-          answer: t("faqs.donations.q1.answer"),
-        },
-        {
-          question: t("faqs.donations.q2.question"),
-          answer: t("faqs.donations.q2.answer"),
-        },
-      ],
-    },
-    {
-      category: t("faqs.categories.sponsors"),
-      items: [
-        {
-          question: t("faqs.sponsors.q1.question"),
-          answer: t("faqs.sponsors.q1.answer"),
-        },
-        {
-          question: t("faqs.sponsors.q2.question"),
-          answer: t("faqs.sponsors.q2.answer"),
-        },
-      ],
-    },
-    {
-      category: t("faqs.categories.contacto"),
-      items: [
-        {
-          question: t("faqs.contacto.q1.question"),
-          answer: t("faqs.contacto.q1.answer"),
-        },
-      ],
-    },
-    {
-      category: t("faqs.categories.opinion"),
-      items: [
-        {
-          question: t("faqs.opinion.q1.question"),
-          answer: t("faqs.opinion.q1.answer"),
-        },
-        {
-          question: t("faqs.opinion.q2.question"),
-          answer: t("faqs.opinion.q2.answer"),
-        },
-      ],
-    },
-    {
-      category: t("faqs.categories.idioma"),
-      items: [
-        {
-          question: t("faqs.idioma.q1.question"),
-          answer: t("faqs.idioma.q1.answer"),
-        },
-      ],
-    },
-    {
-      category: t("faqs.categories.mas"),
-      items: [
-        {
-          question: t("faqs.mas.q1.question"),
-          answer: t("faqs.mas.q1.answer"),
-        },
-      ],
-    },
-  ];
+  const { t, i18n } = useTranslation();
+  
+  // Obtenemos todas las traducciones del namespace actual
+  const translations = i18n.getResourceBundle(i18n.language, i18n.options.defaultNS || 'translation');
+  
+  // Accedemos a la sección de FAQs
+  const faqsTranslations = translations.faqs?.categories;
+  
+  if (!faqsTranslations) return [];
+  
+  // Construimos las categorías dinámicamente
+  return Object.keys(faqsTranslations).map(categoryKey => {
+    const category = faqsTranslations[categoryKey];
+    
+    // Obtenemos todas las preguntas de esta categoría
+    const questions = Object.keys(category)
+      .filter(key => key.startsWith('q')) // Filtramos solo las preguntas (q1, q2, etc.)
+      .map(questionKey => ({
+        question: t(`faqs.categories.${categoryKey}.${questionKey}.question`),
+        answer: t(`faqs.categories.${categoryKey}.${questionKey}.answer`)
+      }));
+    
+    return {
+      category: t(`faqs.categories.${categoryKey}.label`),
+      items: questions
+    };
+  });
 };
