@@ -5,7 +5,25 @@ import AnimacionFadeUp from "../InHome/AnimacionFadeUp";
 const SponsorsSection = () => {
   const [sponsors, setSponsors] = useState([]);
   const { t } = useTranslation(); 
-
+  // Función para procesar el texto con saltos de línea
+  const processTextWithLineBreaks = (text) => {
+    return text.split("\n").map((line, index) => {
+      const parts = line.split(/(\*\*.*?\*\*)/g); // Divide por texto entre ** **
+  
+      return (
+        <span key={index}>
+          {parts.map((part, i) => {
+            if (part.startsWith("**") && part.endsWith("**")) {
+              return <strong key={i}>{part.slice(2, -2)}</strong>; // Aplica negritas
+            }
+            return <span key={i}>{part}</span>;
+          })}
+          <br />
+        </span>
+      );
+    });
+  };
+  
   useEffect(() => {
     fetch("/sponsors.json")
       .then((res) => res.json())
@@ -20,8 +38,8 @@ const SponsorsSection = () => {
     <AnimacionFadeUp> 
       <div className="text-center py-12 bg-gray-100 px-20">
         <h2 className="text-5xl font-bold text-verde-claro mb-3">{t("sponsors.titulo")}</h2>
-        <p className="text-lg text-gray-600 max-w-xl mx-auto mb-10">
-          {t("sponsors.descripcion")}
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-10">
+        {processTextWithLineBreaks(t("sponsors.descripcion"))}
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4" id="id">
           {sponsors.map((sponsor) => (

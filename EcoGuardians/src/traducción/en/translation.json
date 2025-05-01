@@ -6,26 +6,26 @@
     "es": "ES",
     "en": "EN",
     "back": "< Back",
-    "quejas": "Complaints",
+    "quejas": "Suggestions",
     "valoracion": "Rating"
   },
   "bienvenida": {
     "contactanos": "Contact us",
     "registro_sponsor": "Register as Sponsor",
-    "registro_contacto": "Register as Contact",
+    "registro_contacto": "Register with us",
     "jugar": "Play"
   },
   "inicio": {
-  "presenta": "AWAQ presents",
+  "presenta": "✨ Awaq ONGD presents 🌎",
   "titulo": "Ecoguardians 2.0",
   "contactanos": "Contact us",
   "jugar": "Play",
   "sobre_nosotros": "About Us",
-  "titulo_seccion": "About us",
-  "descripcion_breve": "EcoGuardians 2.0 is an educational game designed to promote environmental awareness.",
-  "descripcion_larga": "AWAQ ONGD is a global organization committed to empowering and preserving communities in their mission to protect and restore biodiversity. Using emerging technologies to help people and communities around the world protect and restore their biodiversity.",
+  "titulo_seccion": "🎮 About Ecoguardianes 2.0 🌱",
+  "descripcion_breve": "Awaq Biological Stations is a program of Awaq ONGD",
+  "descripcion_larga": "We have explored this unique experience together with our allies 🌍 — the Pontifical University of Javeriana (Colombia) and the Technológico de Monterrey (Mexico) — so that we can discover it 🧭 and discover the purpose and importance of our biological stations 🏕️. Explore, learn and become convinced in a true Eco-friendly way! 🚀\n🌿 Enjoy this interactive adventure and discover how we are now redefining conservation!",
   "descripcion_expandida": " Since 2019, AWAQ has worked on projects that promote ecosystem conservation and positive impact on local communities. One of its main focuses is the Northern Caldas Biological Station (EBNC), a key space for research, ecotourism, and environmental awareness.",
-  "saber_mas": "Read more...",
+  "saber_mas": "Learn more about the Biological Station",
   "mostrar_menos": "Show less..."
   },
   "donaciones": {
@@ -36,8 +36,8 @@
   "reintentar": "Retry with current email",
   "otra_donacion": "Make another donation",
   "titulo": "Donations",
-  "subtitulo": "Would you like to help?",
-  "descripcion": "Your support helps us continue our mission. Please enter your details to process the donation.",
+  "subtitulo": "🤝 Would you like to help? 🌎",
+  "descripcion": "It is essential for you to continue building the change.\nEach donation we receive goes directly to keeping this platform alive (website and expansion) 💻✨ and in our fortress Biological Estations 🏕️🌿, true refuges of life and knowledge.\n🌟 With your help, more people will know our work and more communities will benefit from the conservation.\nStay with this mission and become part of the transformation! 🚀💚",
   "elegir_monto": "Choose an amount",
   "o_ingresa": "Or you can also",
   "placeholder_monto": "Enter the amount",
@@ -51,27 +51,27 @@
   "error_email_url": "Please enter a valid email before continuing",
   "backend_answer": "Backend answer:",
   "backend_err": "Error contacting the backend:",
-  "payment_cancel": "The payment was cancelled by the user.",
+  "payment_cancel": "The payment was cancelled.",
   "ir_inicio": "Go to Home",
   "completado": "Thanks for your donation!"
   },
   "sponsors": {
   "titulo": "Our Sponsors",
-  "descripcion": "Thanks to our partners, we continue to support impactful environmental and social projects.",
+  "descripcion": "To each person, institution and ally who has believed in us: **thank you!!.**\nYour support has been fundamental to making this project possible, boosting our biological states 🏕️🌱 and expanding our conservation vision to new generations.\n**We are here to help you building a greener, fairer and more sustainable future. 🌎💚**",
   "saber_mas": "Learn more...",
   "error_sponsor":"Error charging the sponsors:"
   },
   "sponsorSection": {
 "titleColabora": "Collaborate",
 "titleInformate": "Get Informed",
-"sponsorHeading": "Become a Sponsor",
-"sponsorText1": "Would you like to support us? Sign up as a sponsor!",
-"sponsorText2": "By becoming a sponsor...",
-"sponsorButton": "Register as Sponsor",
-"contactHeading": "Learn More",
-"contactText1": "Do you like what you see? Become a contact!",
-"contactText2": "By becoming a contact you'll receive all the news...",
-"contactButton": "Register as Contact"
+"sponsorHeading": "🤝Become a Sponsor🌿",
+"sponsorText1": "Would you like to be an active part of the change? \n**By joining as a sponsor, demonstrate to the world your real commitment to the conservation of the environment 🌎✨** and contribute to strong projects that protect life, boost communities and transform territories.",
+"sponsorText2": "**📣 Come to us and let your green hue be on the planet.** \nRegister today and be part of a new generation of natural allies! 🚀💚",
+"sponsorButton": "Request information",
+"contactHeading": "📬 Keep connected! 🌟",
+"contactText1": "Would you like to be the first to learn about our latest news, projects and upcoming adventures? 🚀🌿",
+"contactText2": "**Register and form part of our global community** committed to environmental conservation and innovation. \nNow let's make the difference! 💚\n",
+"contactButton": "Register with us"
 },
 "footer": {
 "contacto": "Contact",
@@ -94,7 +94,7 @@
 "notification": {
 "message": "Subscribe to our notifications to receive the latest updates and news related to AWAQ",
 "noThanks": "No, Thanks",
-"becomeContact": "Become a Contact",
+"becomeContact": "Register with us",
 "thankYou": "Thank you very much!"
 },
 "faqHeader": {
@@ -104,89 +104,88 @@
 "en": "EN"
 },
 "faqs": {
-"title": "Ecoguardians 2.0",
-"subtitle": "Frequently Asked Questions",
-"categories": {
-  "ecoguardian": "EcoGuardians",
-  "donations": "Donations",
-  "sponsors": "Sponsors",
-  "contacto": "AWAQ Contact Network",
-  "opinion": "Complaints and Suggestions",
-  "idioma": "Language",
-  "general": "General",
-  "mas": "More questions?"
-},
-"ecoguardian": {
-  "q1": {
-    "question": "What is the game about?",
-    "answer": "The game simulates the AWAQ facilities, where as a player you can interact with everything in the physical space and complete activities."
-  },
-  "q2": {
-    "question": "How to play?",
-    "answer": "To start playing, just press the Play button. If it’s your first time, you’ll see a tutorial that will guide you through all the commands to interact."
-  },
-  "q3": {
-    "question": "Can I play on my phone?",
-    "answer": "Not yet. For now, the game is only available on computers."
-  },
-  "q4": {
-    "question": "Would you like to rate the game?",
-    "answer": "We love to hear your opinion! Rate your experience by clicking the star button next to the game."
+  "title": "Ecoguardians 2.0",
+  "subtitle": "Frequently Asked Questions",
+  "categories": {
+    "ecoguardian": {
+      "label": "EcoGuardians",
+      "q1": {
+        "question": "What is the game about?",
+        "answer": "The game simulates the AWAQ facilities, where as a player you can interact with everything in the physical space and complete activities."
+      },
+      "q2": {
+        "question": "How to play?",
+        "answer": "To start playing, just press the Play button. If it is your first time, you will see a tutorial that will guide you through all the commands to interact."
+      },
+      "q3": {
+        "question": "Can I play on my phone?",
+        "answer": "Not yet. For now, the game is only available on computers."
+      },
+      "q4": {
+        "question": "Would you like to rate the game?",
+        "answer": "We love to hear your opinion! Rate your experience by clicking the star button next to the game."
+      }
+    },
+    "donations": {
+      "label": "Donations",
+      "q1": {
+        "question": "Where can I donate?",
+        "answer": "On the main page, you will find a donation section connected to PayPal. This is the method we use to receive donations."
+      },
+      "q2": {
+        "question": "What do I need to donate?",
+        "answer": "You only need a PayPal account. Your PayPal details will be requested to proceed with the donation."
+      }
+    },
+    "sponsors": {
+      "label": "Sponsors",
+      "q1": {
+        "question": "How can I become a sponsor of AWAQ?",
+        "answer": "Clicking on Play will show several buttons on the right. The 'Register as Sponsor' button will take you to a form to submit your application. You can also find this button near the bottom left of the main page."
+      },
+      "q2": {
+        "question": "What do I need to become a sponsor?",
+        "answer": "In the mentioned form, you will need to provide your company or contact name, an email address, your companys website URL, and a short paragraph explaining why you want to sponsor AWAQ.."
+      }
+    },
+    "contacto": {
+      "label": "AWAQ Contact Network",
+      "q1": {
+        "question": "How can I receive more information?",
+        "answer": "If you would like to receive updates and news about AWAQ, join our contact network. Near the bottom right of the main page, you will find the Register with us button to leave your information and stay informed. This button is also available after clicking on Play. "
+      }
+    },
+    "opinion": {
+      "label": "Complaints and Suggestions",
+      "q1": {
+        "question": "I have a complaint or suggestion",
+        "answer": "If you would like to share feedback, simply click the smiley face button in the header. This will take you to a form where you can submit your comments."
+      },
+      "q2": {
+        "question": "Why do I need to provide my email when submitting feedback?",
+        "answer": "We need your email to follow up on your complaint or suggestion in a personalized way."
+      }
+    },
+    "idioma": {
+      "label": "Language",
+      "q1": {
+        "question": "How do I change the page language?",
+        "answer": "At the top right of the main page, you can find a dropdown button to change the language to your preference."
+      }
+    },
+    "mas": {
+      "label": "More questions?",
+      "q1": {
+        "question": "More questions?",
+        "answer": "If you have more specific questions or would like us to contact you personally, on the main page below the preview image of the game, you'll find a 'Contact Us' button where you can leave your information and any concerns you may have. This button is also available after clicking Play, on the right side."
+      }
+    }
   }
-},
-"donations": {
-  "q1": {
-    "question": "Where can I donate?",
-    "answer": "On the main page, you will find a donation section connected to PayPal. This is the method we use to receive donations."
-  },
-  "q2": {
-    "question": "What do I need to donate?",
-    "answer": "You only need a PayPal account. Your PayPal details will be requested to proceed with the donation."
-  }
-},
-"sponsors": {
-  "q1": {
-    "question": "How can I become a sponsor of AWAQ?",
-    "answer": "Clicking on Play will show several buttons on the right. The 'Register as Sponsor' button will take you to a form to submit your application. You can also find this button near the bottom left of the main page."
-  },
-  "q2": {
-    "question": "What do I need to become a sponsor?",
-    "answer": "In the mentioned form, you will need to provide your company or contact name, an email address, your companys website URL, and a short paragraph explaining why you want to sponsor AWAQ."
-  }
-},
-"contacto": {
-  "q1": {
-    "question": "How can I receive more information?",
-    "answer": "If you would like to receive updates and news about AWAQ, join our contact network. Near the bottom right of the main page, you will find the 'Register as Contact' button to leave your information and stay informed. This button is also available after clicking on Play."
-  }
-},
-"opinion": {
-  "q1": {
-    "question": "I have a complaint or suggestion",
-    "answer": "If you’d like to share feedback, simply click the smiley face button in the header. This will take you to a form where you can submit your comments."
-  },
-  "q2": {
-    "question": "Why do I need to provide my email when submitting feedback?",
-    "answer": "We need your email to follow up on your complaint or suggestion in a personalized way."
-  }
-},
-"idioma": {
-  "q1": {
-    "question": "How do I change the page language?",
-    "answer": "At the top right of the main page, you can find a dropdown button to change the language to your preference."
-  }
-},
-"mas": {
-  "q1": {
-    "question": "More questions?",
-    "answer": "If you have more specific questions or would like us to contact you personally, on the main page below the preview image of the game, you'll find a 'Contact Us' button where you can leave your information and any concerns you may have. This button is also available after clicking Play, on the right side."
-  }
-}
 },
 "crearCaso": {
-"titulo": "Complaints and Suggestions",
-"label_tipo": "Type of Opinion",
-"label_opiniones": "Comments or Suggestions",
+"titulo": "How can we help you?",
+"label_tipo": "What would you like to tell us?",
+"label_opiniones": "Comment",
 "label_email": "Email",
 "queja": "Complaint",
 "sugerencia": "Suggestion",
@@ -203,6 +202,10 @@
 "name": "Full Name",
 "name_placeholder": "Your full name",
 "age_range": "Age Range",
+"leido": "I have read and accept the",
+"politica": "privacy policy",
+"Requerido": "Required",
+"acepto": "I agree to receive marketing communications by email from Awaq ONGD",
 "age": {
   "0_12": "0-12 years",
   "13_17": "13-17 years",
@@ -215,8 +218,8 @@
 "email_placeholder": "youremail@example.com",
 "country": "Country",
 "country_placeholder": "Your country",
-"region": "Region/State",
-"region_placeholder": "Your region or state",
+"region": "Region/City",
+"region_placeholder": "Your region or city",
 "captcha_error": "Please verify you're not a robot",
 "success": "Registration successful!",
 "submit": "Join"
@@ -259,5 +262,202 @@
 "errorConexion": "Error connecting to the server",
 "errorForms": "Error sending the request",
 "Success": "Register successfully"
-} 
+},
+"countries": {
+    "afghanistan": "Afghanistan",
+    "albania": "Albania",
+    "algeria": "Algeria",
+    "andorra": "Andorra",
+    "angola": "Angola",
+    "antigua and barbuda": "Antigua And Barbuda",
+    "argentina": "Argentina",
+    "armenia": "Armenia",
+    "australia": "Australia",
+    "austria": "Austria",
+    "azerbaijan": "Azerbaijan",
+    "bahamas": "Bahamas",
+    "bahrain": "Bahrain",
+    "bangladesh": "Bangladesh",
+    "barbados": "Barbados",
+    "belarus": "Belarus",
+    "belgium": "Belgium",
+    "belize": "Belize",
+    "benin": "Benin",
+    "bhutan": "Bhutan",
+    "bolivia": "Bolivia",
+    "bosnia and herzegovina": "Bosnia And Herzegovina",
+    "botswana": "Botswana",
+    "brazil": "Brazil",
+    "brunei": "Brunei",
+    "bulgaria": "Bulgaria",
+    "burkina faso": "Burkina Faso",
+    "burundi": "Burundi",
+    "cabo verde": "Cabo Verde",
+    "cambodia": "Cambodia",
+    "cameroon": "Cameroon",
+    "canada": "Canada",
+    "central african republic": "Central African Republic",
+    "chad": "Chad",
+    "chile": "Chile",
+    "china": "China",
+    "colombia": "Colombia",
+    "comoros": "Comoros",
+    "congo (congo-brazzaville)": "Congo (Congo-Brazzaville)",
+    "costa rica": "Costa Rica",
+    "croatia": "Croatia",
+    "cuba": "Cuba",
+    "cyprus": "Cyprus",
+    "czechia (czech republic)": "Czechia (Czech Republic)",
+    "denmark": "Denmark",
+    "djibouti": "Djibouti",
+    "dominica": "Dominica",
+    "dominican republic": "Dominican Republic",
+    "ecuador": "Ecuador",
+    "egypt": "Egypt",
+    "el salvador": "El Salvador",
+    "equatorial guinea": "Equatorial Guinea",
+    "eritrea": "Eritrea",
+    "estonia": "Estonia",
+    "eswatini (fmr. \"swaziland\")": "Eswatini (Fmr. \"Swaziland\")",
+    "ethiopia": "Ethiopia",
+    "fiji": "Fiji",
+    "finland": "Finland",
+    "france": "France",
+    "gabon": "Gabon",
+    "gambia": "Gambia",
+    "georgia": "Georgia",
+    "germany": "Germany",
+    "ghana": "Ghana",
+    "greece": "Greece",
+    "grenada": "Grenada",
+    "guatemala": "Guatemala",
+    "guinea": "Guinea",
+    "guinea-bissau": "Guinea-Bissau",
+    "guyana": "Guyana",
+    "haiti": "Haiti",
+    "honduras": "Honduras",
+    "hungary": "Hungary",
+    "iceland": "Iceland",
+    "india": "India",
+    "indonesia": "Indonesia",
+    "iran": "Iran",
+    "iraq": "Iraq",
+    "ireland": "Ireland",
+    "israel": "Israel",
+    "italy": "Italy",
+    "ivory coast (côte d'ivoire)": "Ivory Coast (Côte D'Ivoire)",
+    "jamaica": "Jamaica",
+    "japan": "Japan",
+    "jordan": "Jordan",
+    "kazakhstan": "Kazakhstan",
+    "kenya": "Kenya",
+    "kiribati": "Kiribati",
+    "korea, north (north korea)": "Korea, North (North Korea)",
+    "korea, south (south korea)": "Korea, South (South Korea)",
+    "kosovo": "Kosovo",
+    "kuwait": "Kuwait",
+    "kyrgyzstan": "Kyrgyzstan",
+    "laos": "Laos",
+    "latvia": "Latvia",
+    "lebanon": "Lebanon",
+    "lesotho": "Lesotho",
+    "liberia": "Liberia",
+    "libya": "Libya",
+    "liechtenstein": "Liechtenstein",
+    "lithuania": "Lithuania",
+    "luxembourg": "Luxembourg",
+    "madagascar": "Madagascar",
+    "malawi": "Malawi",
+    "malaysia": "Malaysia",
+    "maldives": "Maldives",
+    "mali": "Mali",
+    "malta": "Malta",
+    "marshall islands": "Marshall Islands",
+    "mauritania": "Mauritania",
+    "mauritius": "Mauritius",
+    "mexico": "Mexico",
+    "micronesia": "Micronesia",
+    "moldova": "Moldova",
+    "monaco": "Monaco",
+    "mongolia": "Mongolia",
+    "montenegro": "Montenegro",
+    "morocco": "Morocco",
+    "mozambique": "Mozambique",
+    "myanmar (burma)": "Myanmar (Burma)",
+    "namibia": "Namibia",
+    "nauru": "Nauru",
+    "nepal": "Nepal",
+    "netherlands": "Netherlands",
+    "new zealand": "New Zealand",
+    "nicaragua": "Nicaragua",
+    "niger": "Niger",
+    "nigeria": "Nigeria",
+    "north macedonia": "North Macedonia",
+    "norway": "Norway",
+    "oman": "Oman",
+    "pakistan": "Pakistan",
+    "palau": "Palau",
+    "panama": "Panama",
+    "papua new guinea": "Papua New Guinea",
+    "paraguay": "Paraguay",
+    "peru": "Peru",
+    "philippines": "Philippines",
+    "poland": "Poland",
+    "portugal": "Portugal",
+    "qatar": "Qatar",
+    "romania": "Romania",
+    "russia": "Russia",
+    "rwanda": "Rwanda",
+    "saint kitts and nevis": "Saint Kitts And Nevis",
+    "saint lucia": "Saint Lucia",
+    "saint vincent and the grenadines": "Saint Vincent And The Grenadines",
+    "samoa": "Samoa",
+    "san marino": "San Marino",
+    "sao tome and principe": "Sao Tome And Principe",
+    "saudi arabia": "Saudi Arabia",
+    "senegal": "Senegal",
+    "serbia": "Serbia",
+    "seychelles": "Seychelles",
+    "sierra leone": "Sierra Leone",
+    "singapore": "Singapore",
+    "slovakia": "Slovakia",
+    "slovenia": "Slovenia",
+    "solomon islands": "Solomon Islands",
+    "somalia": "Somalia",
+    "south africa": "South Africa",
+    "south sudan": "South Sudan",
+    "spain": "Spain",
+    "sri lanka": "Sri Lanka",
+    "sudan": "Sudan",
+    "suriname": "Suriname",
+    "sweden": "Sweden",
+    "switzerland": "Switzerland",
+    "syria": "Syria",
+    "taiwan": "Taiwan",
+    "tajikistan": "Tajikistan",
+    "tanzania": "Tanzania",
+    "thailand": "Thailand",
+    "timor-leste (east timor)": "Timor-Leste (East Timor)",
+    "togo": "Togo",
+    "tonga": "Tonga",
+    "trinidad and tobago": "Trinidad And Tobago",
+    "tunisia": "Tunisia",
+    "turkey": "Turkey",
+    "turkmenistan": "Turkmenistan",
+    "tuvalu": "Tuvalu",
+    "uganda": "Uganda",
+    "ukraine": "Ukraine",
+    "united arab emirates": "United Arab Emirates",
+    "united kingdom": "United Kingdom",
+    "united states": "United States",
+    "uruguay": "Uruguay",
+    "uzbekistan": "Uzbekistan",
+    "vanuatu": "Vanuatu",
+    "vatican city": "Vatican City",
+    "venezuela": "Venezuela",
+    "vietnam": "Vietnam",
+    "yemen": "Yemen",
+    "zambia": "Zambia",
+    "zimbabwe": "Zimbabwe"
+  } 
 }

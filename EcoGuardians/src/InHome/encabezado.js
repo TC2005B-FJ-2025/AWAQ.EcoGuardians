@@ -44,10 +44,10 @@ const Encabezado = ({ onHome, forzarMobile }) => {
                   {onHome ? (
                     <li className="px-4 py-2 hover:bg-[#1E3E1E] rounded-lg transition">
                       <a
-                        href="https://somosawaq.org"
+                        href="https://www.somosawaq.org/"
                         className="text-white no-underline"
                       >
-                        &lt; {t("header.back_AWAQ")}
+                        {t("header.back_AWAQ")}
                       </a>
                     </li>
                   ) : (
@@ -56,7 +56,7 @@ const Encabezado = ({ onHome, forzarMobile }) => {
                         onClick={handleVolverClick}
                         className="text-white w-full text-left"
                       >
-                        &lt; {t("header.back")}
+                        {t("header.back")}
                       </button>
                     </li>
                   )}
@@ -85,13 +85,18 @@ const Encabezado = ({ onHome, forzarMobile }) => {
                       {t("header.valoracion")}
                     </Link>
                   </li>
+                  <li className="px-4 py-2 hover:bg-[#1E3E1E] rounded-lg transition">
+                    <Link to="/faqs" className="text-white">
+                      {t("header.faqs")}
+                    </Link>
+                  </li>
                 </ul>
               </div>
             )}
           </div>
 
           {/* Logo */}
-          <div className="flex justify-center">
+          <div className="flex justify-cente">
             <img src={LogoHeader} alt="Logo AWAQ" className="h-12" />
           </div>
 

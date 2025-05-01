@@ -535,3 +535,568 @@
 2025-04-24 01:33:42,883 [INFO] Creando registro en Salesforce...
 2025-04-24 01:33:43,377 [INFO] Registro creado en Salesforce. ID: 0n3gK00000001wzQAA
 2025-04-24 01:33:43,377 [INFO] 127.0.0.1 - - [24/Apr/2025 01:33:43] "POST /execute-payment HTTP/1.1" 200 -
+2025-04-29 12:44:43,792 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-29 12:44:43,950 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 12:44:43,950 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-29 12:44:43,950 [INFO]  * Restarting with stat
+2025-04-29 12:44:45,819 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-29 12:44:45,844 [WARNING]  * Debugger is active!
+2025-04-29 12:44:45,859 [INFO]  * Debugger PIN: 102-914-109
+2025-04-29 12:47:38,798 [INFO] 127.0.0.1 - - [29/Apr/2025 12:47:38] "OPTIONS /crear-caso HTTP/1.1" 200 -
+2025-04-29 12:47:38,802 [INFO] 
+--- [POST] /Crear-Caso ---
+2025-04-29 12:47:39,522 [INFO] Caso creado con éxito:
+2025-04-29 12:47:39,522 [INFO] 127.0.0.1 - - [29/Apr/2025 12:47:39] "POST /crear-caso HTTP/1.1" 200 -
+2025-04-29 12:48:14,987 [INFO] 127.0.0.1 - - [29/Apr/2025 12:48:14] "OPTIONS /prospecto HTTP/1.1" 200 -
+2025-04-29 12:48:14,991 [INFO] 
+--- [POST] /prospecto ---
+2025-04-29 12:48:15,012 [INFO] Intentando crear Lead en Salesforce...
+2025-04-29 12:48:15,699 [INFO] Lead creado en Salesforce. ID: 00QgK0000019joXUAQ
+2025-04-29 12:48:15,705 [INFO] 127.0.0.1 - - [29/Apr/2025 12:48:15] "POST /prospecto HTTP/1.1" 200 -
+2025-04-29 12:48:41,083 [INFO] 127.0.0.1 - - [29/Apr/2025 12:48:41] "OPTIONS /sponsors HTTP/1.1" 200 -
+2025-04-29 12:48:41,087 [INFO] 
+--- [POST] /registro ---
+2025-04-29 12:48:41,087 [INFO] Creando contacto en Salesforce...
+2025-04-29 12:48:41,768 [INFO] Contacto creado en Salesforce. ID: a01gK0000058HopQAE
+2025-04-29 12:48:41,768 [INFO] 127.0.0.1 - - [29/Apr/2025 12:48:41] "POST /sponsors HTTP/1.1" 200 -
+2025-04-29 12:49:01,319 [INFO] 127.0.0.1 - - [29/Apr/2025 12:49:01] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-29 12:49:01,576 [INFO] 
+--- [POST] /contacto ---
+2025-04-29 12:49:01,582 [INFO] Creando contacto en Salesforce...
+2025-04-29 12:49:02,342 [INFO] 127.0.0.1 - - [29/Apr/2025 12:49:02] "POST /contacto HTTP/1.1" 200 -
+2025-04-29 12:49:23,643 [INFO] 127.0.0.1 - - [29/Apr/2025 12:49:23] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-29 12:49:23,956 [INFO] 
+--- [POST] /Payment ---
+2025-04-29 12:49:23,956 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-29 12:49:23,956 [INFO] Monto de donación: 200.00
+2025-04-29 12:49:23,956 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-29 12:49:23,956 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/oauth2/token
+2025-04-29 12:49:24,826 [INFO] Response[200]: OK, Duration: 0.870235s.
+2025-04-29 12:49:24,831 [INFO] PayPal-Request-Id: 15d76607-1b53-4ba4-ae17-2c48b0a5de4f
+2025-04-29 12:49:24,831 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-29 12:49:25,679 [INFO] Response[201]: Created, Duration: 0.848236s.
+2025-04-29 12:49:25,686 [INFO] 127.0.0.1 - - [29/Apr/2025 12:49:25] "POST /payment HTTP/1.1" 200 -
+2025-04-29 12:49:46,503 [INFO] 127.0.0.1 - - [29/Apr/2025 12:49:46] "OPTIONS /execute-payment HTTP/1.1" 200 -
+2025-04-29 12:49:46,816 [INFO] 
+--- [POST] /execute-payment ---
+2025-04-29 12:49:46,820 [INFO] Request[GET]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAIR6NQ2BX79013AD009194P
+2025-04-29 12:49:47,239 [INFO] Response[200]: OK, Duration: 0.409883s.
+2025-04-29 12:49:47,239 [INFO] Buscando pago en PayPal: PAYID-NAIR6NQ2BX79013AD009194P
+2025-04-29 12:49:47,240 [INFO] PayPal-Request-Id: 578d2eec-6714-4a20-8edf-96decbca5088
+2025-04-29 12:49:47,240 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAIR6NQ2BX79013AD009194P/execute
+2025-04-29 12:49:48,440 [INFO] Response[200]: OK, Duration: 1.200238s.
+2025-04-29 12:49:50,331 [INFO] Correo enviado a: mariana.agesp@gmail.com
+2025-04-29 12:49:50,331 [INFO] Creando registro en Salesforce...
+2025-04-29 12:49:50,975 [INFO] Registro creado en Salesforce. ID: 0n3gK000000021pQAA
+2025-04-29 12:49:50,976 [INFO] 127.0.0.1 - - [29/Apr/2025 12:49:50] "POST /execute-payment HTTP/1.1" 200 -
+2025-04-29 12:50:09,828 [INFO] 127.0.0.1 - - [29/Apr/2025 12:50:09] "OPTIONS /valoracion HTTP/1.1" 200 -
+2025-04-29 12:50:10,083 [INFO] 
+--- [POST] /valoracion ---
+2025-04-29 12:50:10,083 [INFO] Valoración recibida: {'puntuacion': 1}
+2025-04-29 12:50:10,285 [INFO] Registro creado en Salesforce con ID a00gK000004LP1AQAW
+2025-04-29 12:50:10,285 [INFO] 127.0.0.1 - - [29/Apr/2025 12:50:10] "POST /valoracion HTTP/1.1" 200 -
+2025-04-29 12:54:19,074 [INFO] 127.0.0.1 - - [29/Apr/2025 12:54:19] "OPTIONS /crear-caso HTTP/1.1" 200 -
+2025-04-29 12:54:19,074 [INFO] 
+--- [POST] /Crear-Caso ---
+2025-04-29 12:54:19,510 [INFO] Caso creado con éxito:
+2025-04-29 12:54:19,510 [INFO] 127.0.0.1 - - [29/Apr/2025 12:54:19] "POST /crear-caso HTTP/1.1" 200 -
+2025-04-29 15:32:38,178 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-29 15:32:38,230 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 15:32:38,230 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-29 15:32:38,243 [INFO]  * Restarting with stat
+2025-04-29 15:32:39,994 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-29 15:32:40,016 [WARNING]  * Debugger is active!
+2025-04-29 15:32:40,028 [INFO]  * Debugger PIN: 102-914-109
+2025-04-29 15:41:56,757 [INFO] 127.0.0.1 - - [29/Apr/2025 15:41:56] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-29 15:41:57,015 [INFO] 
+--- [POST] /contacto ---
+2025-04-29 15:41:57,031 [INFO] Creando contacto en Salesforce...
+2025-04-29 15:41:57,889 [INFO] 127.0.0.1 - - [29/Apr/2025 15:41:57] "POST /contacto HTTP/1.1" 200 -
+2025-04-29 15:56:58,677 [INFO] 127.0.0.1 - - [29/Apr/2025 15:56:58] "OPTIONS /valoracion HTTP/1.1" 200 -
+2025-04-29 15:56:58,934 [INFO] 
+--- [POST] /valoracion ---
+2025-04-29 15:56:58,934 [INFO] Valoración recibida: {'puntuacion': 5}
+2025-04-29 15:56:59,351 [INFO] Registro creado en Salesforce con ID a00gK000004M5LJQA0
+2025-04-29 15:56:59,351 [INFO] 127.0.0.1 - - [29/Apr/2025 15:56:59] "POST /valoracion HTTP/1.1" 200 -
+2025-04-29 15:58:37,153 [INFO] 127.0.0.1 - - [29/Apr/2025 15:58:37] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-29 15:58:37,403 [INFO] 
+--- [POST] /Payment ---
+2025-04-29 15:58:37,403 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-29 15:58:37,403 [INFO] Monto de donación: 1.00
+2025-04-29 15:58:37,403 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-29 15:58:37,403 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/oauth2/token
+2025-04-29 15:58:38,449 [INFO] Response[200]: OK, Duration: 1.45210s.
+2025-04-29 15:58:38,449 [INFO] PayPal-Request-Id: 7436aad1-bb16-4c7f-a76e-4992ec47f2ca
+2025-04-29 15:58:38,449 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-29 15:58:39,507 [INFO] Response[201]: Created, Duration: 1.57953s.
+2025-04-29 15:58:39,514 [INFO] 127.0.0.1 - - [29/Apr/2025 15:58:39] "POST /payment HTTP/1.1" 200 -
+2025-04-29 15:59:39,898 [INFO] 127.0.0.1 - - [29/Apr/2025 15:59:39] "OPTIONS /execute-payment HTTP/1.1" 200 -
+2025-04-29 15:59:40,153 [INFO] 
+--- [POST] /execute-payment ---
+2025-04-29 15:59:40,153 [INFO] Request[GET]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAIUXDY3UV8759860047200X
+2025-04-29 15:59:40,978 [INFO] Response[200]: OK, Duration: 0.824330s.
+2025-04-29 15:59:40,982 [INFO] Buscando pago en PayPal: PAYID-NAIUXDY3UV8759860047200X
+2025-04-29 15:59:40,982 [INFO] PayPal-Request-Id: d2755afb-f8d5-4976-a06c-229dd81bb9c0
+2025-04-29 15:59:40,982 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAIUXDY3UV8759860047200X/execute
+2025-04-29 15:59:42,069 [INFO] Response[200]: OK, Duration: 1.86966s.
+2025-04-29 15:59:44,387 [INFO] Correo enviado a: mariana.agesp@gmail.com
+2025-04-29 15:59:44,387 [INFO] Creando registro en Salesforce...
+2025-04-29 15:59:44,911 [INFO] Registro creado en Salesforce. ID: 0n3gK000000023RQAQ
+2025-04-29 15:59:44,928 [INFO] 127.0.0.1 - - [29/Apr/2025 15:59:44] "POST /execute-payment HTTP/1.1" 200 -
+2025-04-30 12:58:46,217 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-30 12:58:46,262 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-30 12:58:46,262 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-30 12:58:46,262 [INFO]  * Restarting with stat
+2025-04-30 12:58:47,998 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-30 12:58:48,013 [WARNING]  * Debugger is active!
+2025-04-30 12:58:48,021 [INFO]  * Debugger PIN: 102-914-109
+2025-04-30 13:00:34,195 [INFO] 127.0.0.1 - - [30/Apr/2025 13:00:34] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-30 13:00:34,449 [INFO] 
+--- [POST] /Payment ---
+2025-04-30 13:00:34,450 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-30 13:00:34,450 [INFO] Monto de donación: 5.00
+2025-04-30 13:00:34,451 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-30 13:00:34,451 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/oauth2/token
+2025-04-30 13:00:35,439 [INFO] Response[200]: OK, Duration: 0.987645s.
+2025-04-30 13:00:35,440 [INFO] PayPal-Request-Id: 46164e10-a623-4782-aa5f-9f728dde9108
+2025-04-30 13:00:35,440 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-30 13:00:36,648 [INFO] Response[201]: Created, Duration: 1.208211s.
+2025-04-30 13:00:36,663 [INFO] 127.0.0.1 - - [30/Apr/2025 13:00:36] "POST /payment HTTP/1.1" 200 -
+2025-04-30 13:01:01,437 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:01:01,437 [INFO] Pago cancelado por el usuario
+2025-04-30 13:01:01,438 [INFO] 127.0.0.1 - - [30/Apr/2025 13:01:01] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:01:01,746 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:01:01,746 [INFO] Pago cancelado por el usuario
+2025-04-30 13:01:01,746 [INFO] 127.0.0.1 - - [30/Apr/2025 13:01:01] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:01:02,052 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:01:02,052 [INFO] Pago cancelado por el usuario
+2025-04-30 13:01:02,052 [INFO] 127.0.0.1 - - [30/Apr/2025 13:01:02] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:10:56,381 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:10:56,381 [INFO] Pago cancelado por el usuario
+2025-04-30 13:10:56,381 [INFO] 127.0.0.1 - - [30/Apr/2025 13:10:56] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:10:58,033 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:10:58,034 [INFO] Pago cancelado por el usuario
+2025-04-30 13:10:58,035 [INFO] 127.0.0.1 - - [30/Apr/2025 13:10:58] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:11:17,520 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:11:17,521 [INFO] Pago cancelado por el usuario
+2025-04-30 13:11:17,521 [INFO] 127.0.0.1 - - [30/Apr/2025 13:11:17] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:11:37,108 [INFO] 127.0.0.1 - - [30/Apr/2025 13:11:37] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-30 13:11:37,416 [INFO] 
+--- [POST] /Payment ---
+2025-04-30 13:11:37,416 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-30 13:11:37,416 [INFO] Monto de donación: 5.00
+2025-04-30 13:11:37,416 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-30 13:11:37,416 [INFO] PayPal-Request-Id: a44c0474-92ba-4fd1-9e25-950575a0223b
+2025-04-30 13:11:37,416 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-30 13:11:38,736 [INFO] Response[201]: Created, Duration: 1.320075s.
+2025-04-30 13:11:38,741 [INFO] 127.0.0.1 - - [30/Apr/2025 13:11:38] "POST /payment HTTP/1.1" 200 -
+2025-04-30 13:11:45,413 [INFO] 127.0.0.1 - - [30/Apr/2025 13:11:45] "OPTIONS /execute-payment HTTP/1.1" 200 -
+2025-04-30 13:11:45,722 [INFO] 
+--- [POST] /execute-payment ---
+2025-04-30 13:11:45,722 [INFO] Request[GET]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAJHL2Q6WB192053J550484X
+2025-04-30 13:11:46,179 [INFO] Response[200]: OK, Duration: 0.457271s.
+2025-04-30 13:11:46,179 [INFO] Buscando pago en PayPal: PAYID-NAJHL2Q6WB192053J550484X
+2025-04-30 13:11:46,179 [INFO] PayPal-Request-Id: 8117373a-d849-4c75-bb56-4e1aff6aafa2
+2025-04-30 13:11:46,179 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAJHL2Q6WB192053J550484X/execute
+2025-04-30 13:11:47,534 [INFO] Response[200]: OK, Duration: 1.355430s.
+2025-04-30 13:11:51,069 [INFO] Correo enviado a: mariana.agesp@gmail.com
+2025-04-30 13:11:51,069 [INFO] Creando registro en Salesforce...
+2025-04-30 13:11:52,334 [INFO] Registro creado en Salesforce. ID: 0n3gK0000000253QAA
+2025-04-30 13:11:52,334 [INFO] 127.0.0.1 - - [30/Apr/2025 13:11:52] "POST /execute-payment HTTP/1.1" 200 -
+2025-04-30 13:12:26,792 [INFO] 127.0.0.1 - - [30/Apr/2025 13:12:26] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-30 13:12:27,099 [INFO] 
+--- [POST] /Payment ---
+2025-04-30 13:12:27,099 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-30 13:12:27,099 [INFO] Monto de donación: 50.00
+2025-04-30 13:12:27,100 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-30 13:12:27,100 [INFO] PayPal-Request-Id: 80c648fd-e8fc-4a7a-9c00-a501e27be4ca
+2025-04-30 13:12:27,100 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-30 13:12:28,221 [INFO] Response[201]: Created, Duration: 1.120410s.
+2025-04-30 13:12:28,226 [INFO] 127.0.0.1 - - [30/Apr/2025 13:12:28] "POST /payment HTTP/1.1" 200 -
+2025-04-30 13:12:33,211 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:12:33,212 [INFO] Pago cancelado por el usuario
+2025-04-30 13:12:33,212 [INFO] 127.0.0.1 - - [30/Apr/2025 13:12:33] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:12:33,516 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:12:33,516 [INFO] Pago cancelado por el usuario
+2025-04-30 13:12:33,516 [INFO] 127.0.0.1 - - [30/Apr/2025 13:12:33] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:12:33,821 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:12:33,821 [INFO] Pago cancelado por el usuario
+2025-04-30 13:12:33,821 [INFO] 127.0.0.1 - - [30/Apr/2025 13:12:33] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:12:37,233 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:12:37,233 [INFO] Pago cancelado por el usuario
+2025-04-30 13:12:37,234 [INFO] 127.0.0.1 - - [30/Apr/2025 13:12:37] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:12:38,999 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:12:38,999 [INFO] Pago cancelado por el usuario
+2025-04-30 13:12:38,999 [INFO] 127.0.0.1 - - [30/Apr/2025 13:12:38] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:12:41,147 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:12:41,147 [INFO] Pago cancelado por el usuario
+2025-04-30 13:12:41,147 [INFO] 127.0.0.1 - - [30/Apr/2025 13:12:41] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:12:57,553 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:12:57,553 [INFO] Pago cancelado por el usuario
+2025-04-30 13:12:57,553 [INFO] 127.0.0.1 - - [30/Apr/2025 13:12:57] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:14:12,854 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:14:12,854 [INFO] Pago cancelado por el usuario
+2025-04-30 13:14:12,854 [INFO] 127.0.0.1 - - [30/Apr/2025 13:14:12] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:14:25,751 [INFO] 127.0.0.1 - - [30/Apr/2025 13:14:25] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-30 13:14:26,060 [INFO] 
+--- [POST] /Payment ---
+2025-04-30 13:14:26,060 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-30 13:14:26,060 [INFO] Monto de donación: 50.00
+2025-04-30 13:14:26,060 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-30 13:14:26,060 [INFO] PayPal-Request-Id: 1cb5e329-e1c7-4c97-90e2-6f6216adaf80
+2025-04-30 13:14:26,060 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-30 13:14:26,963 [INFO] Response[201]: Created, Duration: 0.902902s.
+2025-04-30 13:14:26,967 [INFO] 127.0.0.1 - - [30/Apr/2025 13:14:26] "POST /payment HTTP/1.1" 200 -
+2025-04-30 13:14:35,039 [INFO] 127.0.0.1 - - [30/Apr/2025 13:14:35] "OPTIONS /execute-payment HTTP/1.1" 200 -
+2025-04-30 13:14:35,347 [INFO] 
+--- [POST] /execute-payment ---
+2025-04-30 13:14:35,351 [INFO] Request[GET]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAJHNEQ31T341768A3475624
+2025-04-30 13:14:35,775 [INFO] Response[200]: OK, Duration: 0.423781s.
+2025-04-30 13:14:35,775 [INFO] Buscando pago en PayPal: PAYID-NAJHNEQ31T341768A3475624
+2025-04-30 13:14:35,775 [INFO] PayPal-Request-Id: a471d3ee-12d8-4ab2-9d8c-5cda3330f2f8
+2025-04-30 13:14:35,775 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAJHNEQ31T341768A3475624/execute
+2025-04-30 13:14:36,947 [INFO] Response[200]: OK, Duration: 1.171529s.
+2025-04-30 13:14:39,072 [INFO] Correo enviado a: mariana.agesp@gmail.com
+2025-04-30 13:14:39,087 [INFO] Creando registro en Salesforce...
+2025-04-30 13:14:39,474 [INFO] Registro creado en Salesforce. ID: 0n3gK000000026fQAA
+2025-04-30 13:14:39,474 [INFO] 127.0.0.1 - - [30/Apr/2025 13:14:39] "POST /execute-payment HTTP/1.1" 200 -
+2025-04-30 13:14:46,422 [INFO] 127.0.0.1 - - [30/Apr/2025 13:14:46] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-30 13:14:46,742 [INFO] 
+--- [POST] /Payment ---
+2025-04-30 13:14:46,742 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-30 13:14:46,742 [INFO] Monto de donación: 100.00
+2025-04-30 13:14:46,742 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-30 13:14:46,743 [INFO] PayPal-Request-Id: 94f2cc4c-ceb1-490e-929c-670e316acf53
+2025-04-30 13:14:46,743 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-30 13:14:47,595 [INFO] Response[201]: Created, Duration: 0.851476s.
+2025-04-30 13:14:47,595 [INFO] 127.0.0.1 - - [30/Apr/2025 13:14:47] "POST /payment HTTP/1.1" 200 -
+2025-04-30 13:14:53,234 [INFO] 127.0.0.1 - - [30/Apr/2025 13:14:53] "OPTIONS /execute-payment HTTP/1.1" 200 -
+2025-04-30 13:14:53,541 [INFO] 
+--- [POST] /execute-payment ---
+2025-04-30 13:14:53,546 [INFO] Request[GET]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAJHNJY6CS66665SG317644C
+2025-04-30 13:14:54,404 [INFO] Response[200]: OK, Duration: 0.858838s.
+2025-04-30 13:14:54,406 [INFO] Buscando pago en PayPal: PAYID-NAJHNJY6CS66665SG317644C
+2025-04-30 13:14:54,406 [INFO] PayPal-Request-Id: d2f2f1cb-8cdd-4c04-b4fa-3b6355ed635b
+2025-04-30 13:14:54,406 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAJHNJY6CS66665SG317644C/execute
+2025-04-30 13:14:55,555 [INFO] Response[200]: OK, Duration: 1.149593s.
+2025-04-30 13:14:57,941 [INFO] Correo enviado a: mariana.agesp@gmail.com
+2025-04-30 13:14:57,941 [INFO] Creando registro en Salesforce...
+2025-04-30 13:14:58,372 [INFO] Registro creado en Salesforce. ID: 0n3gK000000028HQAQ
+2025-04-30 13:14:58,372 [INFO] 127.0.0.1 - - [30/Apr/2025 13:14:58] "POST /execute-payment HTTP/1.1" 200 -
+2025-04-30 13:15:18,173 [INFO] 127.0.0.1 - - [30/Apr/2025 13:15:18] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-30 13:15:18,487 [INFO] 
+--- [POST] /Payment ---
+2025-04-30 13:15:18,487 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-30 13:15:18,487 [INFO] Monto de donación: 100.00
+2025-04-30 13:15:18,487 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-30 13:15:18,487 [INFO] PayPal-Request-Id: 6ce4ebeb-397a-43d9-b0e1-3238bee5a9fe
+2025-04-30 13:15:18,488 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-30 13:15:19,883 [INFO] Response[201]: Created, Duration: 1.394920s.
+2025-04-30 13:15:19,888 [INFO] 127.0.0.1 - - [30/Apr/2025 13:15:19] "POST /payment HTTP/1.1" 200 -
+2025-04-30 13:15:24,103 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:15:24,103 [INFO] Pago cancelado por el usuario
+2025-04-30 13:15:24,103 [INFO] 127.0.0.1 - - [30/Apr/2025 13:15:24] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:15:24,411 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:15:24,412 [INFO] Pago cancelado por el usuario
+2025-04-30 13:15:24,412 [INFO] 127.0.0.1 - - [30/Apr/2025 13:15:24] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:15:24,716 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:15:24,716 [INFO] Pago cancelado por el usuario
+2025-04-30 13:15:24,717 [INFO] 127.0.0.1 - - [30/Apr/2025 13:15:24] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:15:26,902 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:15:26,902 [INFO] Pago cancelado por el usuario
+2025-04-30 13:15:26,902 [INFO] 127.0.0.1 - - [30/Apr/2025 13:15:26] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:19:30,307 [INFO] 127.0.0.1 - - [30/Apr/2025 13:19:30] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-30 13:19:30,553 [INFO] 
+--- [POST] /Payment ---
+2025-04-30 13:19:30,553 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-30 13:19:30,553 [INFO] Monto de donación: 200.00
+2025-04-30 13:19:30,554 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-30 13:19:30,554 [INFO] PayPal-Request-Id: 42c4eaf6-88f0-41a1-b7f9-fd093e1edb53
+2025-04-30 13:19:30,554 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-30 13:19:31,962 [INFO] Response[201]: Created, Duration: 1.407699s.
+2025-04-30 13:19:31,967 [INFO] 127.0.0.1 - - [30/Apr/2025 13:19:31] "POST /payment HTTP/1.1" 200 -
+2025-04-30 13:19:37,158 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:19:37,158 [INFO] Pago cancelado por el usuario
+2025-04-30 13:19:37,158 [INFO] 127.0.0.1 - - [30/Apr/2025 13:19:37] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:19:37,467 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:19:37,467 [INFO] Pago cancelado por el usuario
+2025-04-30 13:19:37,467 [INFO] 127.0.0.1 - - [30/Apr/2025 13:19:37] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:19:37,773 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:19:37,773 [INFO] Pago cancelado por el usuario
+2025-04-30 13:19:37,773 [INFO] 127.0.0.1 - - [30/Apr/2025 13:19:37] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:19:41,154 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:19:41,155 [INFO] Pago cancelado por el usuario
+2025-04-30 13:19:41,155 [INFO] 127.0.0.1 - - [30/Apr/2025 13:19:41] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:24:54,775 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:24:54,775 [INFO] Pago cancelado por el usuario
+2025-04-30 13:24:54,775 [INFO] 127.0.0.1 - - [30/Apr/2025 13:24:54] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:24:56,289 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:24:56,289 [INFO] Pago cancelado por el usuario
+2025-04-30 13:24:56,290 [INFO] 127.0.0.1 - - [30/Apr/2025 13:24:56] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:24:58,708 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:24:58,708 [INFO] Pago cancelado por el usuario
+2025-04-30 13:24:58,709 [INFO] 127.0.0.1 - - [30/Apr/2025 13:24:58] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:24:59,344 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:24:59,344 [INFO] Pago cancelado por el usuario
+2025-04-30 13:24:59,345 [INFO] 127.0.0.1 - - [30/Apr/2025 13:24:59] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:25:01,484 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:25:01,484 [INFO] Pago cancelado por el usuario
+2025-04-30 13:25:01,484 [INFO] 127.0.0.1 - - [30/Apr/2025 13:25:01] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:25:01,741 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:25:01,741 [INFO] Pago cancelado por el usuario
+2025-04-30 13:25:01,741 [INFO] 127.0.0.1 - - [30/Apr/2025 13:25:01] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:25:01,789 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:25:01,789 [INFO] Pago cancelado por el usuario
+2025-04-30 13:25:01,789 [INFO] 127.0.0.1 - - [30/Apr/2025 13:25:01] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:25:15,172 [INFO] 127.0.0.1 - - [30/Apr/2025 13:25:15] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-30 13:25:15,478 [INFO] 
+--- [POST] /Payment ---
+2025-04-30 13:25:15,479 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-30 13:25:15,479 [INFO] Monto de donación: 50.00
+2025-04-30 13:25:15,479 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-30 13:25:15,479 [INFO] PayPal-Request-Id: 94a172b3-939a-4b41-bcb5-ab73340aa53a
+2025-04-30 13:25:15,480 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-30 13:25:16,736 [INFO] Response[201]: Created, Duration: 1.256097s.
+2025-04-30 13:25:16,740 [INFO] 127.0.0.1 - - [30/Apr/2025 13:25:16] "POST /payment HTTP/1.1" 200 -
+2025-04-30 13:25:21,278 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:25:21,278 [INFO] Pago cancelado por el usuario
+2025-04-30 13:25:21,278 [INFO] 127.0.0.1 - - [30/Apr/2025 13:25:21] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:25:21,582 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:25:21,582 [INFO] Pago cancelado por el usuario
+2025-04-30 13:25:21,582 [INFO] 127.0.0.1 - - [30/Apr/2025 13:25:21] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:25:21,887 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:25:21,887 [INFO] Pago cancelado por el usuario
+2025-04-30 13:25:21,887 [INFO] 127.0.0.1 - - [30/Apr/2025 13:25:21] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:25:23,991 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:25:23,991 [INFO] Pago cancelado por el usuario
+2025-04-30 13:25:23,991 [INFO] 127.0.0.1 - - [30/Apr/2025 13:25:23] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:35:03,906 [INFO] 127.0.0.1 - - [30/Apr/2025 13:35:03] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-30 13:35:04,160 [INFO] 
+--- [POST] /Payment ---
+2025-04-30 13:35:04,160 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-30 13:35:04,160 [INFO] Monto de donación: 200.00
+2025-04-30 13:35:04,160 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-30 13:35:04,161 [INFO] PayPal-Request-Id: 4d8a48fc-81ca-4693-8073-517abf338713
+2025-04-30 13:35:04,161 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-30 13:35:05,522 [INFO] Response[201]: Created, Duration: 1.359644s.
+2025-04-30 13:35:05,526 [INFO] 127.0.0.1 - - [30/Apr/2025 13:35:05] "POST /payment HTTP/1.1" 200 -
+2025-04-30 13:35:58,739 [INFO] 127.0.0.1 - - [30/Apr/2025 13:35:58] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-30 13:35:59,045 [INFO] 
+--- [POST] /Payment ---
+2025-04-30 13:35:59,045 [INFO] Email recibido: mariana.ageps@gmail.com
+2025-04-30 13:35:59,045 [INFO] Monto de donación: 200.00
+2025-04-30 13:35:59,045 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.ageps%40gmail.com
+2025-04-30 13:35:59,045 [INFO] PayPal-Request-Id: 0f72df61-6e31-43e2-840f-b837e2786c70
+2025-04-30 13:35:59,045 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-30 13:35:59,885 [INFO] Response[201]: Created, Duration: 0.840689s.
+2025-04-30 13:35:59,890 [INFO] 127.0.0.1 - - [30/Apr/2025 13:35:59] "POST /payment HTTP/1.1" 200 -
+2025-04-30 13:36:04,680 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:36:04,680 [INFO] Pago cancelado por el usuario
+2025-04-30 13:36:04,681 [INFO] 127.0.0.1 - - [30/Apr/2025 13:36:04] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:36:04,984 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:36:04,984 [INFO] Pago cancelado por el usuario
+2025-04-30 13:36:04,984 [INFO] 127.0.0.1 - - [30/Apr/2025 13:36:04] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:36:05,289 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:36:05,289 [INFO] Pago cancelado por el usuario
+2025-04-30 13:36:05,289 [INFO] 127.0.0.1 - - [30/Apr/2025 13:36:05] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:37:49,866 [INFO] 127.0.0.1 - - [30/Apr/2025 13:37:49] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-30 13:37:50,122 [INFO] 
+--- [POST] /Payment ---
+2025-04-30 13:37:50,122 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-30 13:37:50,122 [INFO] Monto de donación: 200.00
+2025-04-30 13:37:50,122 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-30 13:37:50,122 [INFO] PayPal-Request-Id: 2fba1666-47c0-48be-bcbb-489cabcf8959
+2025-04-30 13:37:50,122 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-30 13:37:50,934 [INFO] Response[201]: Created, Duration: 0.812488s.
+2025-04-30 13:37:50,941 [INFO] 127.0.0.1 - - [30/Apr/2025 13:37:50] "POST /payment HTTP/1.1" 200 -
+2025-04-30 13:39:02,024 [INFO] 127.0.0.1 - - [30/Apr/2025 13:39:02] "OPTIONS /execute-payment HTTP/1.1" 200 -
+2025-04-30 13:39:02,279 [INFO] 
+--- [POST] /execute-payment ---
+2025-04-30 13:39:02,283 [INFO] Request[GET]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAJHYDQ273722033X204700G
+2025-04-30 13:39:02,685 [INFO] Response[200]: OK, Duration: 0.402083s.
+2025-04-30 13:39:02,687 [INFO] Buscando pago en PayPal: PAYID-NAJHYDQ273722033X204700G
+2025-04-30 13:39:02,687 [INFO] PayPal-Request-Id: 1160e538-9c54-4961-9d83-c40fee541c91
+2025-04-30 13:39:02,687 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment/PAYID-NAJHYDQ273722033X204700G/execute
+2025-04-30 13:39:05,172 [INFO] Response[200]: OK, Duration: 2.485018s.
+2025-04-30 13:39:07,536 [INFO] Correo enviado a: mariana.agesp@gmail.com
+2025-04-30 13:39:07,536 [INFO] Creando registro en Salesforce...
+2025-04-30 13:39:08,198 [INFO] Registro creado en Salesforce. ID: 0n3gK000000029tQAA
+2025-04-30 13:39:08,198 [INFO] 127.0.0.1 - - [30/Apr/2025 13:39:08] "POST /execute-payment HTTP/1.1" 200 -
+2025-04-30 13:47:39,773 [INFO] 127.0.0.1 - - [30/Apr/2025 13:47:39] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-30 13:47:40,028 [INFO] 
+--- [POST] /Payment ---
+2025-04-30 13:47:40,028 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-30 13:47:40,028 [INFO] Monto de donación: 3.00
+2025-04-30 13:47:40,028 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-30 13:47:40,028 [INFO] PayPal-Request-Id: c7e54323-1d34-4a59-8104-b57ce7f57fa6
+2025-04-30 13:47:40,028 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-30 13:47:41,139 [INFO] Response[201]: Created, Duration: 1.110540s.
+2025-04-30 13:47:41,144 [INFO] 127.0.0.1 - - [30/Apr/2025 13:47:41] "POST /payment HTTP/1.1" 200 -
+2025-04-30 13:47:45,821 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:47:45,821 [INFO] Pago cancelado por el usuario
+2025-04-30 13:47:45,821 [INFO] 127.0.0.1 - - [30/Apr/2025 13:47:45] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:47:46,127 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:47:46,127 [INFO] Pago cancelado por el usuario
+2025-04-30 13:47:46,127 [INFO] 127.0.0.1 - - [30/Apr/2025 13:47:46] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:47:46,434 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:47:46,434 [INFO] Pago cancelado por el usuario
+2025-04-30 13:47:46,434 [INFO] 127.0.0.1 - - [30/Apr/2025 13:47:46] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:47:58,739 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:47:58,739 [INFO] Pago cancelado por el usuario
+2025-04-30 13:47:58,739 [INFO] 127.0.0.1 - - [30/Apr/2025 13:47:58] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:48:24,262 [INFO] 127.0.0.1 - - [30/Apr/2025 13:48:24] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-30 13:48:24,569 [INFO] 
+--- [POST] /Payment ---
+2025-04-30 13:48:24,570 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-30 13:48:24,570 [INFO] Monto de donación: 50.00
+2025-04-30 13:48:24,570 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-30 13:48:24,570 [INFO] PayPal-Request-Id: f7baa5e1-908e-4683-9a00-03bbe7a1716c
+2025-04-30 13:48:24,571 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-30 13:48:25,480 [INFO] Response[201]: Created, Duration: 0.909070s.
+2025-04-30 13:48:25,484 [INFO] 127.0.0.1 - - [30/Apr/2025 13:48:25] "POST /payment HTTP/1.1" 200 -
+2025-04-30 13:48:35,260 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:48:35,260 [INFO] Pago cancelado por el usuario
+2025-04-30 13:48:35,260 [INFO] 127.0.0.1 - - [30/Apr/2025 13:48:35] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:48:35,563 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:48:35,563 [INFO] Pago cancelado por el usuario
+2025-04-30 13:48:35,563 [INFO] 127.0.0.1 - - [30/Apr/2025 13:48:35] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:48:35,869 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:48:35,870 [INFO] Pago cancelado por el usuario
+2025-04-30 13:48:35,870 [INFO] 127.0.0.1 - - [30/Apr/2025 13:48:35] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:49:07,655 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:49:07,655 [INFO] Pago cancelado por el usuario
+2025-04-30 13:49:07,655 [INFO] 127.0.0.1 - - [30/Apr/2025 13:49:07] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:49:31,866 [INFO] 127.0.0.1 - - [30/Apr/2025 13:49:31] "OPTIONS /payment HTTP/1.1" 200 -
+2025-04-30 13:49:32,171 [INFO] 
+--- [POST] /Payment ---
+2025-04-30 13:49:32,171 [INFO] Email recibido: mariana.agesp@gmail.com
+2025-04-30 13:49:32,171 [INFO] Monto de donación: 100.00
+2025-04-30 13:49:32,173 [INFO] URL de retorno construida: http://localhost:3000/execute-payment?email=mariana.agesp%40gmail.com
+2025-04-30 13:49:32,173 [INFO] PayPal-Request-Id: d1642ac5-55de-4e54-aa7e-91dbb15fc9fc
+2025-04-30 13:49:32,173 [INFO] Request[POST]: https://api.sandbox.paypal.com/v1/payments/payment
+2025-04-30 13:49:33,181 [INFO] Response[201]: Created, Duration: 1.8327s.
+2025-04-30 13:49:33,186 [INFO] 127.0.0.1 - - [30/Apr/2025 13:49:33] "POST /payment HTTP/1.1" 200 -
+2025-04-30 13:49:38,434 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:49:38,434 [INFO] Pago cancelado por el usuario
+2025-04-30 13:49:38,435 [INFO] 127.0.0.1 - - [30/Apr/2025 13:49:38] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 13:49:38,742 [INFO] 
+--- [POST] /cancel-payment ---
+2025-04-30 13:49:38,742 [INFO] Pago cancelado por el usuario
+2025-04-30 13:49:38,743 [INFO] 127.0.0.1 - - [30/Apr/2025 13:49:38] "GET /cancel-payment HTTP/1.1" 200 -
+2025-04-30 17:56:08,102 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-30 17:56:08,151 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-30 17:56:08,151 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-30 17:56:08,157 [INFO]  * Restarting with stat
+2025-04-30 17:56:09,961 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-30 17:56:09,977 [WARNING]  * Debugger is active!
+2025-04-30 17:56:09,985 [INFO]  * Debugger PIN: 102-914-109
+2025-04-30 18:03:30,151 [INFO] 127.0.0.1 - - [30/Apr/2025 18:03:30] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-30 18:03:30,403 [INFO] 
+--- [POST] /contacto ---
+2025-04-30 18:03:30,412 [INFO] Creando contacto en Salesforce...
+2025-04-30 18:03:32,082 [INFO] 127.0.0.1 - - [30/Apr/2025 18:03:32] "POST /contacto HTTP/1.1" 200 -
+2025-04-30 21:13:48,362 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-30 21:13:48,443 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-30 21:13:48,443 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-30 21:13:48,443 [INFO]  * Restarting with stat
+2025-04-30 21:13:51,492 [INFO] -- Iniciando servidor Flask en modo desarrollo -------------------------------
+2025-04-30 21:13:51,518 [WARNING]  * Debugger is active!
+2025-04-30 21:13:51,523 [INFO]  * Debugger PIN: 102-914-109
+2025-04-30 21:14:14,026 [INFO] 127.0.0.1 - - [30/Apr/2025 21:14:14] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-30 21:14:14,292 [INFO] 
+--- [POST] /contacto ---
+2025-04-30 21:14:14,303 [INFO] Creando contacto en Salesforce...
+2025-04-30 21:14:14,720 [INFO] 127.0.0.1 - - [30/Apr/2025 21:14:14] "POST /contacto HTTP/1.1" 200 -
+2025-04-30 21:17:35,821 [INFO] 127.0.0.1 - - [30/Apr/2025 21:17:35] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-30 21:17:36,080 [INFO] 
+--- [POST] /contacto ---
+2025-04-30 21:17:36,083 [INFO] Creando contacto en Salesforce...
+2025-04-30 21:17:36,726 [INFO] 127.0.0.1 - - [30/Apr/2025 21:17:36] "POST /contacto HTTP/1.1" 200 -
+2025-04-30 21:18:12,920 [INFO] 127.0.0.1 - - [30/Apr/2025 21:18:12] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-30 21:18:13,229 [INFO] 
+--- [POST] /contacto ---
+2025-04-30 21:18:13,235 [INFO] Creando contacto en Salesforce...
+2025-04-30 21:18:13,907 [INFO] 127.0.0.1 - - [30/Apr/2025 21:18:13] "POST /contacto HTTP/1.1" 200 -
+2025-04-30 21:18:45,249 [INFO] 127.0.0.1 - - [30/Apr/2025 21:18:45] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-30 21:18:45,560 [INFO] 
+--- [POST] /contacto ---
+2025-04-30 21:18:45,562 [INFO] Creando contacto en Salesforce...
+2025-04-30 21:18:46,213 [ERROR] Excepción Salesforce: Malformed request https://orgfarm-6aa8a27413-dev-ed.develop.my.salesforce.com/services/data/v59.0/sobjects/ContactRequest/. Response content: [{'message': 'Country: valor inapropiado para el campo de lista de selección restringida: Canada', 'errorCode': 'INVALID_OR_NULL_FOR_RESTRICTED_PICKLIST', 'fields': ['Country__c']}]
+2025-04-30 21:18:46,221 [INFO] 127.0.0.1 - - [30/Apr/2025 21:18:46] "POST /contacto HTTP/1.1" 200 -
+2025-04-30 21:25:10,008 [INFO] 127.0.0.1 - - [30/Apr/2025 21:25:10] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-30 21:25:10,263 [INFO] 
+--- [POST] /contacto ---
+2025-04-30 21:25:10,263 [INFO] Creando contacto en Salesforce...
+2025-04-30 21:25:11,146 [ERROR] Excepción Salesforce: Malformed request https://orgfarm-6aa8a27413-dev-ed.develop.my.salesforce.com/services/data/v59.0/sobjects/ContactRequest/. Response content: [{'message': 'Country: valor inapropiado para el campo de lista de selección restringida: Canada', 'errorCode': 'INVALID_OR_NULL_FOR_RESTRICTED_PICKLIST', 'fields': ['Country__c']}]
+2025-04-30 21:25:11,146 [INFO] 127.0.0.1 - - [30/Apr/2025 21:25:11] "POST /contacto HTTP/1.1" 200 -
+2025-04-30 21:29:23,928 [INFO] 127.0.0.1 - - [30/Apr/2025 21:29:23] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-30 21:29:24,185 [INFO] 
+--- [POST] /contacto ---
+2025-04-30 21:29:24,188 [INFO] Creando contacto en Salesforce...
+2025-04-30 21:29:27,169 [INFO] 127.0.0.1 - - [30/Apr/2025 21:29:27] "POST /contacto HTTP/1.1" 200 -
+2025-04-30 21:40:03,170 [INFO] 127.0.0.1 - - [30/Apr/2025 21:40:03] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-30 21:40:03,407 [INFO] 
+--- [POST] /contacto ---
+2025-04-30 21:40:03,407 [INFO] Creando contacto en Salesforce...
+2025-04-30 21:40:04,195 [ERROR] Excepción Salesforce: Malformed request https://orgfarm-6aa8a27413-dev-ed.develop.my.salesforce.com/services/data/v59.0/sobjects/ContactRequest/. Response content: [{'message': 'Country: valor inapropiado para el campo de lista de selección restringida: Mexico', 'errorCode': 'INVALID_OR_NULL_FOR_RESTRICTED_PICKLIST', 'fields': ['Country__c']}]
+2025-04-30 21:40:04,199 [INFO] 127.0.0.1 - - [30/Apr/2025 21:40:04] "POST /contacto HTTP/1.1" 200 -
+2025-04-30 21:40:50,467 [INFO] 127.0.0.1 - - [30/Apr/2025 21:40:50] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-30 21:40:50,771 [INFO] 
+--- [POST] /contacto ---
+2025-04-30 21:40:50,771 [INFO] Creando contacto en Salesforce...
+2025-04-30 21:40:51,529 [INFO] 127.0.0.1 - - [30/Apr/2025 21:40:51] "POST /contacto HTTP/1.1" 200 -
+2025-04-30 21:46:01,222 [INFO] 127.0.0.1 - - [30/Apr/2025 21:46:01] "OPTIONS /contacto HTTP/1.1" 200 -
+2025-04-30 21:46:01,479 [INFO] 
+--- [POST] /contacto ---
+2025-04-30 21:46:01,482 [INFO] Creando contacto en Salesforce...
+2025-04-30 21:46:03,344 [INFO] 127.0.0.1 - - [30/Apr/2025 21:46:03] "POST /contacto HTTP/1.1" 200 -

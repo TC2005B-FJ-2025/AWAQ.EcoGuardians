@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import AnimacionFadeUp from "../InHome/AnimacionFadeUp";
+import fondoFormularios from "../componentes/fondoFormularios.png";
 
 function Paypal() {
     const [amount, setAmount] = useState("");
@@ -14,56 +15,21 @@ function Paypal() {
     const location = useLocation();
     const { t } = useTranslation();
     const navigate = useNavigate();
+    const processTextWithLineBreaks = (text) => {
+        return text.split("\n").map((line, index) => (
+          <span key={index}>
+            {line}
+            <br />
+          </span>
+        ));
+      };
+    const [isCancelFlow, setIsCancelFlow] = useState(false);
 
     const validateEmail = (email) => {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
     };
-
-    useEffect(() => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const paymentId = urlParams.get('paymentId');
-        const payerId = urlParams.get('PayerID');
-        const emailFromUrl = urlParams.get('email');
-
-        if (location.pathname === "/cancel-payment") {
-            fetch("http://localhost:5000/cancel-payment")
-                .then((res) => res.json())
-                .then((data) => {
-                    console.log(t("donaciones.backend_answer"), data);
-                })
-                .catch((err) => {
-                    console.error(t("backend_err"), err);
-                });
-
-            setPaymentStatus({
-                success: false,
-                message: t("donaciones.payment_cancel"),
-            });
-            return;
-        }
-
-        if (paymentId && payerId) {
-            const finalEmail = emailFromUrl || email;
-
-            if (!validateEmail(finalEmail)) {
-                setPaymentStatus({
-                    success: false,
-                    message: t("donaciones.error_email_url")
-                });
-                return;
-            }
-
-            if (emailFromUrl && emailFromUrl !== email) {
-                setEmail(emailFromUrl);
-            }
-
-            executePayment(paymentId, payerId, finalEmail);
-            window.history.replaceState({}, document.title, window.location.pathname);
-        }
-    }, []);
-
-    const executePayment = async (paymentId, payerId, emailToUse) => {
+    const executePayment = useCallback(async (paymentId, payerId, emailToUse) => {
         setIsProcessing(true);
         try {
             const response = await fetch("http://localhost:5000/execute-payment", {
@@ -75,20 +41,20 @@ function Paypal() {
                     email: emailToUse
                 }),
             });
-
+    
             const data = await response.json();
-
+    
             if (!response.ok) {
                 throw new Error(data.error || t("donaciones.error_ejecucion"));
             }
-
+    
             setPaymentStatus({
                 success: true,
                 message: t("donaciones.completado"),
                 amount: data.amount || (customAmount || amount),
                 emailSent: data.email_sent
             });
-
+    
         } catch (error) {
             setPaymentStatus({
                 success: false,
@@ -97,7 +63,58 @@ function Paypal() {
         } finally {
             setIsProcessing(false);
         }
-    };
+    }, [amount, customAmount, t]);
+    
+    useEffect(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const paymentId = urlParams.get('paymentId');
+        const payerId = urlParams.get('PayerID');
+        const emailFromUrl = urlParams.get('email');
+    
+        if (location.pathname === "/cancel-payment") {
+            setIsCancelFlow(true);
+            fetch("http://localhost:5000/cancel-payment")
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(t("donaciones.backend_answer"), data);
+                })
+                .catch((err) => {
+                    console.error(t("backend_err"), err);
+                });
+    
+            setPaymentStatus({
+                success: false,
+                message: t("donaciones.payment_cancel"),
+            });
+    
+            // Redirigir a la página principal después de 3 segundos
+            const timer = setTimeout(() => {
+                navigate("/");
+            }, 3000);
+    
+            return () => clearTimeout(timer); // Limpiar el timeout al desmontar
+    
+        }
+    
+        if (paymentId && payerId) {
+            const finalEmail = emailFromUrl || email;
+    
+            if (!validateEmail(finalEmail)) {
+                setPaymentStatus({
+                    success: false,
+                    message: t("donaciones.error_email_url")
+                });
+                return;
+            }
+    
+            if (emailFromUrl && emailFromUrl !== email) {
+                setEmail(emailFromUrl);
+            }
+    
+            executePayment(paymentId, payerId, finalEmail);
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    }, [email, executePayment, location.pathname, t, navigate]);    
 
     const handleDonate = async () => {
         setIsProcessing(true);
@@ -176,10 +193,18 @@ function Paypal() {
     return (
         <div className="flex justify-center items-center min-h-screen bg-white px-4">
             {paymentStatus ? (
-                <AnimacionFadeUp>
-                    
-                    <div className="rounded-3xl p-10 max-w-3xl shadow-xl bg-white text-center border border-[#D1E0C2]">
-                        <div className={`p-6 rounded-xl ${paymentStatus.success ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}>
+
+                      <div className="relative w-full flex justify-center items-center min-h-screen">
+                        <div className="fixed inset-0 bg-cover bg-center bg-no-repeat z-0" 
+                            style={{ backgroundImage: `url(${fondoFormularios})` }}>
+                        </div>
+
+                        <div className="relative z-10 rounded-3xl p-6 max-w-sm w-full shadow-xl bg-white text-center border border-[#D1E0C2] mx-auto">
+                        <div
+                            className={`p-6 rounded-xl ${
+                            paymentStatus.success ? "bg-white text-green-800" : "bg-white text-red-800"
+                            }`}
+                        >
                             <h2 className="text-xl font-bold mb-2">{paymentStatus.message}</h2>
                             {paymentStatus.amount && (
                                 <p className="text-lg">{t("donaciones.monto")} <span className="font-bold">${paymentStatus.amount}</span></p>
@@ -195,6 +220,7 @@ function Paypal() {
                                     {t("donaciones.reintentar")}
                                 </button>
                             )}
+                            {!isCancelFlow && (
                             <div className="flex flex-col items-center space-y-4 mt-6">
                                 <button
                                     onClick={() => {
@@ -213,9 +239,11 @@ function Paypal() {
                                     {t("donaciones.ir_inicio")}
                                 </button>
                             </div>
+                            )}
                         </div>
                     </div>
-                </AnimacionFadeUp>
+                    </div>	
+
             ) : (
                 <AnimacionFadeUp>
                     
@@ -223,8 +251,8 @@ function Paypal() {
                         <div className="w-full md:w-1/2 p-6">
                             <h2 className="text-[#556B2F] text-sm font-semibold uppercase mb-2">{t("donaciones.titulo")}</h2>
                             <h1 className="text-3xl font-bold mb-4 text-[#3A3A3A]">{t("donaciones.subtitulo")}</h1>
-                            <p className="text-gray-600 text-md">
-                                {t("donaciones.descripcion")}
+                            <p className="text-gray-600 text-justify text-md">
+                            {processTextWithLineBreaks(t("donaciones.descripcion"))}
                             </p>
                         </div>
                         <div className="w-full md:w-1/2 p-6 border-t md:border-t-0 md:border-l border-[#D1E0C2]">
